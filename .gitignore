@@ -1,0 +1,34 @@
+# Compiled Python files
+*.pyc
+*.pyo
+__pycache__/
+
+# SQLite database (for local development)
+*.sqlite3
+
+# Static and media files
+/staticfiles/
+/media/
+
+# Virtual environment
+venv/
+.env
+
+# Logs
+*.log
+
+# Environment variable files
+env.py
+
+# IDE and editor settings
+.vscode/
+.idea/
+
+# Dependency directories
+env/
+lib/
+bin/
+
+# Cache and debug files
+*.cache
+debug.log
