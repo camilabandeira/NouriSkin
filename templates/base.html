@@ -4,20 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NouriSkin  - Skincare for You</title>
-    <!-- Link to the base.css -->
+    <title>NouriSkin - Skincare for You</title>
+
+    <!-- Base CSS -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c8d73db8f2.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>NouriSkin</h1>
-        <nav>
-        </nav>
+    <header class="navbar-header">
+        <nav class="navbar">
+            <button class="navbar-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+                <i id="menu-icon" class="fa-solid fa-bars"></i>
+                <i id="close-icon" class="fa-solid fa-xmark hidden"></i>
+            </button>
+            <div class="navbar-logo">NouriSkin</div>
+            <ul class="navbar-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="navbar-icons">
+                <a href="#"><i class="fas fa-user"></i></a> 
+                <a href="#"><i class="fas fa-search"></i></a> 
+                <a href="#"><i class="fas fa-shopping-bag"></i></a> 
+            </div>
+        </nav>        
     </header>
     <main>
         {% block content %}{% endblock %}
     </main>
     <footer>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
