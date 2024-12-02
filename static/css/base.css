@@ -22,6 +22,25 @@ img {
     display: block;
 }
 
+fieldset {
+    border: 0;
+}
+
+textarea,
+select,
+input,
+button {
+    border: 0;
+    outline: 0;
+    font: inherit;
+}
+
+button {
+    background: none;
+    cursor: pointer;
+}
+
+
 /* Variables */
 :root {
     --white: #FCFCFC;
@@ -98,6 +117,10 @@ body {
 .navbar-icons {
     display: flex;
     gap: 0.75rem;
+}
+
+.hidden {
+    display: none !important;
 }
 
 .fa-solid,
