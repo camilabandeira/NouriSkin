@@ -191,7 +191,6 @@ body {
 
     .navbar-logo {
         order: 2;
-        font-size: 1.1rem;
         position: relative;
         right: 0.2rem;
         margin-right: auto;
@@ -199,14 +198,21 @@ body {
 
     .fa-solid,
     .fas {
-        font-size: 0.875rem;
+        font-size: 1.3rem;
+    }
+
+    #menu-icon {
+        position: relative;
+        top: 3px;
+        font-size: 1.5rem;
     }
 
     .navbar-icons {
         gap: 0.5rem;
         position: relative;
-        top: 0.4rem;
+        top: 0.6rem;
         padding: 1rem;
+
         order: 3;
         margin: 0 auto;
 
