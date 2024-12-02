@@ -116,6 +116,8 @@ body {
 .navbar-icons {
     display: flex;
     gap: 1.3rem;
+    top: 0.4rem;
+    position: relative;
 }
 
 .hidden {
@@ -132,7 +134,7 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    bottom: 0.4rem;
+    bottom: 0.5rem;
 }
 
 .search-form {
@@ -201,18 +203,10 @@ body {
         font-size: 1.3rem;
     }
 
-    #menu-icon {
-        position: relative;
-        top: 3px;
-        font-size: 1.5rem;
-    }
-
     .navbar-icons {
-        gap: 0.5rem;
-        position: relative;
+        gap: 0.7rem;
         top: 0.6rem;
-        padding: 1rem;
-
+        left: 1.3rem;
         order: 3;
         margin: 0 auto;
 
