@@ -10,3 +10,18 @@ function toggleMenu() {
     // Toggle visibility of the menu
     navbarMenu.classList.toggle('active');
 }
+
+// Toggle the visibility of the search form
+const searchIcon = document.getElementById('search-icon');
+const searchForm = document.querySelector('.search-form');
+
+
+searchIcon.addEventListener('click', () => {
+    searchForm.classList.toggle('active');
+});
+
+searchIcon.addEventListener('click', () => {
+    if (searchForm.classList.contains('active')) {
+        searchForm.querySelector('.search-input').focus();
+    }
+});

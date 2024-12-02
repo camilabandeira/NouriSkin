@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header class="navbar-header">
         <nav class="navbar">
             <button class="navbar-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
@@ -35,15 +36,22 @@
                 <li><a href="#">Contact Us</a></li>
             </ul>
             <div class="navbar-icons">
-                <a href="#"><i class="fas fa-user"></i></a> 
-                <a href="#"><i class="fas fa-search"></i></a> 
-                <a href="#"><i class="fas fa-shopping-bag"></i></a> 
-            </div>
+                <a href="#"><i class="fas fa-user"></i></a>
+                <div class="search-container">
+                    <i id="search-icon" class="fas fa-search"></i>
+                    <form class="search-form" action="/search" method="GET">
+                        <input class="search-input" type="text" name="q" placeholder="Search..." />
+                    </form>
+                </div>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+            </div>            
         </nav>        
     </header>
+
     <main>
         {% block content %}{% endblock %}
     </main>
+    
     <footer>
     </footer>
 

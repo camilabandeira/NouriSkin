@@ -40,7 +40,6 @@ button {
     cursor: pointer;
 }
 
-
 /* Variables */
 :root {
     --white: #FCFCFC;
@@ -116,7 +115,7 @@ body {
 
 .navbar-icons {
     display: flex;
-    gap: 0.75rem;
+    gap: 1.3rem;
 }
 
 .hidden {
@@ -125,11 +124,42 @@ body {
 
 .fa-solid,
 .fas {
+    font-size: 1.2rem;
     color: var(--black);
 }
 
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    bottom: 0.4rem;
+}
+
+.search-form {
+    position: relative;
+    overflow: hidden;
+    width: 0;
+    transition: width 0.4s ease;
+    display: flex;
+    align-items: center;
+}
+
+.search-form.active {
+    width: 15.625rem;
+    margin-left: 0.625rem;
+    border-radius: 3.75rem;
+}
+
+.search-input {
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
 /* media queries */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .navbar-header {
         padding: 1rem;
     }
@@ -140,13 +170,15 @@ body {
 
     .navbar-menu {
         display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         top: 3.5rem;
         left: 0;
         right: 0;
-        flex-direction: column;
         padding: 1rem 0;
-        align-items: center;
+        height: 100vw;
     }
 
     .navbar-menu.active {
@@ -160,15 +192,22 @@ body {
     .navbar-logo {
         order: 2;
         font-size: 1.1rem;
-        margin-left: 1.875rem;
+        position: relative;
+        right: 0.2rem;
+        margin-right: auto;
     }
+}
 
-    .navbar-icons {
-        order: 3;
-    }
+.navbar-icons {
+    gap: 0.5rem;
+    position: relative;
+    top: 0.4rem;
+    padding: 1rem;
+    order: 3;
 
-    .fa-solid,
-    .fas {
-        font-size: 0.875rem;
-    }
+}
+
+.fa-solid,
+.fas {
+    font-size: 0.875rem;
 }
