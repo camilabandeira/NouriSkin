@@ -48,12 +48,57 @@
         </nav>        
     </header>
 
-    <main>
+    <main class="main">
         {% block content %}{% endblock %}
     </main>
-
-    <footer>
-    </footer>
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Logo Section -->
+                <div class="footer-logo">
+                    <h2>NOURISKIN</h2>
+                </div>
+                <!-- Shop Links -->
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">Bestsellers</a></li>
+                        <li><a href="#">Retinols</a></li>
+                        <li><a href="#">Moisturisers</a></li>
+                        <li><a href="#">Masks</a></li>
+                        <li><a href="#">Serums</a></li>
+                        <li><a href="#">Sales</a></li>
+                    </ul>
+                </div>
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Return & Refund</a></li>
+                        <li><a href="#"> Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Information -->
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Customer Service: (123-456-7890)</p>
+                    <p>Email: support@NouriSkin.com</p>
+                    <p>Hours: Mon-Fri, 9 AM - 5 PM</p>
+                </div>
+                <!-- Social Media -->
+                <div class="footer-column social-media">
+                    <h3>Social</h3>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>© 2024 <a href="https://github.com/camilabandeira/NouriSkin" target="_blank">NouriSkin</a>. All Rights Reserved.</p>
+            </div>
+        </footer>
 
     <!-- JavaScript -->
     <script src="{% static 'js/script.js' %}"></script>
