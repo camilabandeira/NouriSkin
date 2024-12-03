@@ -98,7 +98,6 @@ body {
 .navbar-menu li a {
     color: var(--black);
     position: relative;
-    top: 2rem;
 }
 
 .navbar-menu li a::after {
@@ -277,7 +276,7 @@ footer a {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 4.7rem;
+        top: 4rem;
         left: 0;
         right: 0;
         padding: 1rem;
@@ -291,6 +290,13 @@ footer a {
 
     .navbar-menu.active {
         display: flex;
+    }
+
+    .navbar-menu.active li a {
+        display: block;
+        position: relative;
+        top: 2rem;
+        padding: 1rem 0;
     }
 
     .navbar-toggle {
