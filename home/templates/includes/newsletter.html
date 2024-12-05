@@ -1,17 +1,19 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static '/css/newsletter.css' %}">
-<section class="newsletter">
+<section class="newsletter" role="region" aria-labelledby="newsletter-heading">
     <div class="newsletter-container">
-        <h1>Get Glowing With Exclusive Updates</h1>
-        <p>
-            Stay In The Know With Personalized Skincare Insights, Limited-Time Offers, 
-            And The Latest NouriSkin News.
+        <h1 id="newsletter-heading">Get Glowing With Exclusive Updates</h1>
+        <p id="newsletter-description">
+            Stay in the know with personalized skincare insights, limited-time offers, 
+            and the latest NouriSkin news.
         </p>
-        <form class="newsletter-form">
-            <input type="email" placeholder="you@example.com" required />
-            <button type="submit">Submit</button>
+        <form class="newsletter-form" aria-describedby="newsletter-description">
+            <label for="email" class="visually-hidden"></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required aria-required="true" aria-label="Enter your email address" />
+            <button type="submit" aria-label="Submit your email to subscribe to the newsletter">
+                Submit
+            </button>
         </form>
     </div>
 </section>
-

@@ -2,28 +2,26 @@
 
 <link rel="stylesheet" href="{% static '/css/best-sellers.css' %}">
 
-<section class="best-sellers-container">
-
-    <h2>Best Sellers</h2>
-    <div class="product-grid">
-
-        <div class="product-card">
+<section class="best-sellers-container" role="region" aria-labelledby="best-sellers-heading">
+    <h2 id="best-sellers-heading">Best Sellers</h2>
+    <div class="product-grid" role="list">
+        
+        <div class="product-card" role="listitem" aria-labelledby="retinol-title" aria-describedby="retinol-description retinol-price retinol-rating">
             <div class="product-image">
-                <img src="{% static '' %}" alt="Retinol 0.1% Night Mask">
+                <img src="#" alt="Retinol 0.1% Night Mask - packaging of the product">
             </div>
-            <h3 class="product-title">Retinol 0.1% Night Mask</h3>
-            <p class="product-description">With 0.1% Retinol and Hydrating Botanicals, this mask renews and nourishes overnight.</p>
-            <div class="product-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
+            <h3 id="retinol-title" class="product-title">Retinol 0.1% Night Mask</h3>
+            <p id="retinol-description" class="product-description">With 0.1% Retinol and Hydrating Botanicals, this mask renews and nourishes overnight.</p>
+            <div id="retinol-rating" class="product-rating" aria-label="4.5 out of 5 stars">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star-half-alt" aria-hidden="true"></i>
             </div>
-            <p class="product-price">€95,00</p>
-            <button class="add-to-cart-btn">Add to Cart</button>
+            <p id="retinol-price" class="product-price" aria-label="Price: 95 euros">€95,00</p>
+            <button class="add-to-cart-btn" aria-label="Add Retinol 0.1% Night Mask to your cart">Add to Cart</button>
         </div>
 
     </div>
-    </section>
-
+</section>

@@ -1,11 +1,11 @@
 {% load static %}
 <link rel="stylesheet" href="{% static '/css/showcase.css' %}">
-<section class="product-showcase">
+<section class="product-showcase" role="region" aria-labelledby="product-showcase-heading">
   <div class="image-container">
-    <img src="{% static 'images/showcase.webp' %}" alt="NouriSkin Skincare Collection">
+    <img src="{% static 'images/showcase.webp' %}" alt="NouriSkin Skincare Collection displayed with vibrant packaging" aria-describedby="product-showcase-description" width="480" height="480" loading="lazy">
   </div>
   <div class="text-container">
-    <h2>A Complete Collection for Every Skin Need</h2>
-    <p>Explore a curated range of skincare essentials, crafted to cleanse, hydrate, and rejuvenate. From lightweight serums to nourishing creams, each product is designed to complement your routine and deliver visible results with every use.</p>
+    <h2 id="product-showcase-heading">A Complete Collection for Every Skin Need</h2>
+    <p id="product-showcase-description">Explore a curated range of skincare essentials, crafted to cleanse, hydrate, and rejuvenate. From lightweight serums to nourishing creams, each product is designed to complement your routine and deliver visible results with every use.</p>
   </div>
 </section>

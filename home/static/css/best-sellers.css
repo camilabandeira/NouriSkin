@@ -62,7 +62,7 @@
 
 .product-description {
     font-size: 14px;
-    color: var(--gray-light);
+    color: hsl(0deg 0% 24.03%);
     margin-bottom: 12px;
     text-align: left;
 }
