@@ -1,1 +1,1 @@
-web: gunicorn Nouriskin.wsgi
+web: gunicorn nouriskin.wsgi
