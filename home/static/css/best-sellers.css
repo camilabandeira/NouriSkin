@@ -89,7 +89,7 @@
 
 .add-to-cart-btn {
     background-color: var(--black);
-    color: var(--white);
+    color: var(--btn-text);
     border: none;
     border-radius: 0.25rem;
     padding: 0.625rem 1.25rem;

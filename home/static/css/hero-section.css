@@ -1,0 +1,116 @@
+.hero-section {
+    background-color: var(--light-gray);
+    height: 70vh;
+}
+
+.hero-content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image {
+    background-image: url('../images/hero-image.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-gray);
+    position: absolute;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    position: relative;
+    left: 50%;
+    top: 32%;
+    max-width: 42%;
+
+}
+
+.hero-text h1 {
+    font-size: 2.7rem;
+    font-weight: 400;
+}
+
+.hero-text p {
+    font-size: 1.4rem;
+}
+
+.cta-button {
+    background-color: var(--black);
+    color: var(--btn-text);
+    border-radius: 0.25rem;
+    padding: 0.6rem;
+    text-align: center;
+    max-width: 12rem;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+    .hero-image {
+        background-position: 30% 10%;
+    }
+
+    .hero-text {
+        left: 53%;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.3rem;
+    }
+
+    .cta-button {
+        font-size: 1.1rem;
+        padding: 0.5rem;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .hero-image {
+        background-position: 30% 10%;
+
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .hero-image {
+        width: 100%;
+        position: static;
+        background-position: 19% 12%;
+    }
+
+    .hero-text {
+        position: static;
+        padding: 7%;
+        min-width: 100%;
+    }
+
+}
