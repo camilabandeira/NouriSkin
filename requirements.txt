@@ -4,3 +4,4 @@ django-allauth==65.3.0
 gunicorn==20.1.0
 setuptools==75.6.0
 sqlparse==0.5.2
+whitenoise==6.8.2
