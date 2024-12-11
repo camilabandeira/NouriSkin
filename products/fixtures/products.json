@@ -1,0 +1,362 @@
+[
+    {
+        "model": "products.product",
+        "pk": 1,
+        "fields": {
+            "name": "Nouriskin Retinol Renewal 1",
+            "description": "A beginner-friendly retinol serum that helps improve skin texture and reduce fine lines.",
+            "price": "39.99",
+            "sku": "SKU001",
+            "category": 1,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 2,
+        "fields": {
+            "name": "Nouriskin Retinol Renewal 2",
+            "description": "An advanced formula retinol serum for smoother, younger-looking skin.",
+            "price": "42.50",
+            "sku": "SKU002",
+            "category": 1,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "name": "Nouriskin Retinol Renewal 3",
+            "description": "High-strength retinol serum designed to refine pores and even out skin tone.",
+            "price": "44.99",
+            "sku": "SKU003",
+            "category": 1,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 4,
+        "fields": {
+            "name": "Nouriskin Retinol Renewal 4",
+            "description": "A gentle retinol blend that targets subtle signs of aging while maintaining moisture.",
+            "price": "38.00",
+            "sku": "SKU004",
+            "category": 1,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 5,
+        "fields": {
+            "name": "Nouriskin Retinol Renewal 5",
+            "description": "Potent retinol enhanced with botanicals for a radiant and revitalized complexion.",
+            "price": "45.50",
+            "sku": "SKU005",
+            "category": 1,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 6,
+        "fields": {
+            "name": "Nouriskin Retinol Renewal 6",
+            "description": "High-grade retinol serum for advanced users aiming for significant texture improvement.",
+            "price": "49.99",
+            "sku": "SKU006",
+            "category": 1,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 7,
+        "fields": {
+            "name": "Nouriskin Deep Moisture Cream",
+            "description": "A rich moisturiser that provides long-lasting hydration and leaves skin feeling supple.",
+            "price": "29.99",
+            "sku": "SKU007",
+            "category": 2,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 8,
+        "fields": {
+            "name": "Nouriskin Light Day Moisturiser",
+            "description": "A lightweight daily moisturiser infused with vitamins and hyaluronic acid.",
+            "price": "25.00",
+            "sku": "SKU008",
+            "category": 2,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 9,
+        "fields": {
+            "name": "Nouriskin Calming Night Cream",
+            "description": "A soothing nighttime moisturiser that helps calm and repair skin overnight.",
+            "price": "32.99",
+            "sku": "SKU009",
+            "category": 2,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 10,
+        "fields": {
+            "name": "Nouriskin Hydration Boost Balm",
+            "description": "A concentrated balm delivering intense moisture to dry, dehydrated skin.",
+            "price": "34.50",
+            "sku": "SKU010",
+            "category": 2,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 11,
+        "fields": {
+            "name": "Nouriskin Daily Defense Moisturiser",
+            "description": "A protective moisturiser with SPF to shield your skin from environmental stressors.",
+            "price": "29.00",
+            "sku": "SKU011",
+            "category": 2,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 12,
+        "fields": {
+            "name": "Nouriskin Ultra-Rich Cream",
+            "description": "A luxurious, ultra-rich moisturiser for very dry skin types.",
+            "price": "35.99",
+            "sku": "SKU012",
+            "category": 2,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 13,
+        "fields": {
+            "name": "Nouriskin Revitalizing Clay Mask",
+            "description": "A purifying clay mask that draws out impurities and refines pores.",
+            "price": "24.99",
+            "sku": "SKU013",
+            "category": 3,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 14,
+        "fields": {
+            "name": "Nouriskin Brightening Sheet Mask",
+            "description": "A sheet mask infused with brightening agents for a more radiant complexion.",
+            "price": "7.99",
+            "sku": "SKU014",
+            "category": 3,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 15,
+        "fields": {
+            "name": "Nouriskin Hydrating Gel Mask",
+            "description": "A cooling gel mask that restores moisture and soothes stressed skin.",
+            "price": "19.99",
+            "sku": "SKU015",
+            "category": 3,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 16,
+        "fields": {
+            "name": "Nouriskin Detox Charcoal Mask",
+            "description": "A detoxifying charcoal mask that helps clear pores and balance oily skin.",
+            "price": "22.50",
+            "sku": "SKU016",
+            "category": 3,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 17,
+        "fields": {
+            "name": "Nouriskin Nourishing Cream Mask",
+            "description": "A creamy, nutrient-rich mask for a soft, supple skin finish.",
+            "price": "27.00",
+            "sku": "SKU017",
+            "category": 3,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 18,
+        "fields": {
+            "name": "Nouriskin Vitamin Infusion Mask",
+            "description": "A mask enriched with vitamins to revive dull, tired-looking skin.",
+            "price": "29.99",
+            "sku": "SKU018",
+            "category": 3,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 19,
+        "fields": {
+            "name": "Nouriskin Hydrating Serum",
+            "description": "A lightweight serum infused with hyaluronic acid for deep hydration.",
+            "price": "29.99",
+            "sku": "SKU019",
+            "category": 4,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 20,
+        "fields": {
+            "name": "Nouriskin Brightening Serum",
+            "description": "A vitamin C-packed serum that promotes a brighter, more even skin tone.",
+            "price": "33.50",
+            "sku": "SKU020",
+            "category": 4,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 21,
+        "fields": {
+            "name": "Nouriskin Anti-Aging Serum",
+            "description": "A serum with peptides to reduce the appearance of fine lines and wrinkles.",
+            "price": "39.00",
+            "sku": "SKU021",
+            "category": 4,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 22,
+        "fields": {
+            "name": "Nouriskin Clarifying Serum",
+            "description": "A BHA-based serum to help clear pores and prevent breakouts.",
+            "price": "28.99",
+            "sku": "SKU022",
+            "category": 4,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 23,
+        "fields": {
+            "name": "Nouriskin Firming Serum",
+            "description": "A collagen-boosting serum that helps improve skin elasticity.",
+            "price": "44.50",
+            "sku": "SKU023",
+            "category": 4,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 24,
+        "fields": {
+            "name": "Nouriskin Glow Serum",
+            "description": "A radiance-enhancing serum that leaves your skin glowing and smooth.",
+            "price": "36.99",
+            "sku": "SKU024",
+            "category": 4,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 25,
+        "fields": {
+            "name": "Nouriskin Special Sale Moisturiser",
+            "description": "A limited-time offer moisturiser at a discounted price.",
+            "price": "15.99",
+            "sku": "SKU025",
+            "category": 5,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 26,
+        "fields": {
+            "name": "Nouriskin Clearance Retinol",
+            "description": "A retinol serum on clearance, perfect for trying out retinol at a low cost.",
+            "price": "19.99",
+            "sku": "SKU026",
+            "category": 5,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 27,
+        "fields": {
+            "name": "Nouriskin Discounted Mask Bundle",
+            "description": "A set of three masks offered at a special bundle price.",
+            "price": "22.00",
+            "sku": "SKU027",
+            "category": 5,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 28,
+        "fields": {
+            "name": "Nouriskin Sale Serum",
+            "description": "A bestselling serum now available at a reduced price.",
+            "price": "18.50",
+            "sku": "SKU028",
+            "category": 5,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 29,
+        "fields": {
+            "name": "Nouriskin Seasonal Offer Cleanser",
+            "description": "A gentle cleanser on seasonal sale, limited stock.",
+            "price": "14.99",
+            "sku": "SKU029",
+            "category": 5,
+            "image": "products/placeholder.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 30,
+        "fields": {
+            "name": "Nouriskin Festive Discount Toner",
+            "description": "A toner offered at a festive discount, while supplies last.",
+            "price": "12.99",
+            "sku": "SKU030",
+            "category": 5,
+            "image": "products/placeholder.jpg"
+        }
+    }
+]

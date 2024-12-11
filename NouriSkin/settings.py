@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+from decouple import config
 if os.path.isfile('env.py'):
     import env
 
@@ -27,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$=dxp^qntm+=9&8sv!dfr$o*4m+=umix77dx5asmmumiro&l%v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS =  ['localhost', '127.0.0.1', '.herokuapp.com', '192.168.0.66']
 
@@ -45,6 +46,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'home',
+    'products',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -129,6 +132,20 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+# Media files
+MEDIA_URL = '/media/'  
+MEDIA_ROOT = BASE_DIR / 'media' 
+
+
+# AWS S3 settings
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_REGION_NAME = config('AWS_S3_REGION_NAME', default='us-east-1')
+AWS_QUERYSTRING_AUTH = config('AWS_QUERYSTRING_AUTH', default='False').lower() == 'true'
+
+MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # Allauth settings
 SITE_ID = 1
