@@ -56,6 +56,10 @@ h6 {
     font-size: 1rem;
 }
 
+.filter-group a {
+    color: var(--black);
+}
+
 .mobile-filter {
     display: flex;
     justify-content: flex-end;
@@ -155,6 +159,12 @@ h6 {
     margin-bottom: 1rem;
 }
 
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .product-info {
     display: flex;
     flex-direction: column;
@@ -170,7 +180,7 @@ h6 {
 
 .product-description {
     font-size: 0.875rem;
-    color: var(--gray-light);
+    color: var(--gray-dark);
     margin-top: -1rem;
 }
 
