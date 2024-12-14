@@ -21,27 +21,41 @@
                 </select>
             </div>
             <div class="filter-group">
-                <h3>Type</h3>
                 <ul>
-                    <li>Type 1 (10)</li>
-                    <li>Type 2 (15)</li>
+                    {% for skin_type in skin_types %}
+                    <li>
+                        <a href="?skin_type={{ skin_type.id }}">
+                            {{ skin_type.friendly_name }} ({{ skin_type.product_count }})
+                        </a>
+                    </li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="filter-group">
-                <h3>Concern/Need</h3>
+                <h3>Skin Concerns</h3>
                 <ul>
-                    <li>Concern 1 (8)</li>
-                    <li>Concern 2 (12)</li>
+                    {% for concern in concerns %}
+                    <li>
+                        <a href="?concern={{ concern.name }}">
+                            {{ concern.friendly_name }} ({{ concern.product_count }})
+                        </a>
+                    </li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="filter-group">
-                <h3>Ingredients</h3>
+                <h3>Products</h3>
                 <ul>
-                    <li>Retinol (8)</li>
-                    <li>Hyaluronic Acid (3)</li>
-                    <li>Vitamin C (7)</li>
-                    <li>Niacinamide (5)</li>
-                    <li>Peptides (1)</li>
+                    <li>
+                        <a href="{% url 'products' %}" class="all-products-link">All Products</a>
+                    </li>
+                    {% for category in categories %}
+                    <li>
+                        <a href="?category={{ category.name }}">
+                            {{ category.friendly_name }} ({{ category.product_count }})
+                        </a>
+                    </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -62,15 +76,21 @@
     <div id="filter-popup" class="popup">
         <div class="popup-content"></div>
     </div>
+
     <section class="products-content">
         <div class="products-grid">
+            {% for product in products %}
             <div class="product-card">
-                <div class="product-image"></div>
+                <div class="product-image">
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                    {% else %}
+                        <img src="{% static 'images/placeholder.png' %}" alt="Placeholder">
+                    {% endif %}
+                </div>
                 <div class="product-info">
-                    <h4 class="product-title">Retinol 0.1% Night Mask</h4>
-                    <p class="product-description">
-                        With 0.1% Retinol and Hydrating Botanicals, This Mask Renews And Nourishes Overnight.
-                    </p>
+                    <h4 class="product-title">{{ product.name }}</h4>
+                    <p class="product-description">{{ product.description }}</p>
                     <div class="product-rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -78,46 +98,14 @@
                         <i class="fas fa-star"></i>
                         <i class="far fa-star"></i>
                     </div>
-                    <p class="product-price">€55,00</p>
+                    <p class="product-price">€{{ product.price }}</p>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="product-image"></div>
-                <div class="product-info">
-                    <h4 class="product-title">Retinol 0.1% Night Mask</h4>
-                    <p class="product-description">
-                        With 0.1% Retinol and Hydrating Botanicals, This Mask Renews And Nourishes Overnight.
-                    </p>
-                    <div class="product-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <p class="product-price">€55,00</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image"></div>
-                <div class="product-info">
-                    <h4 class="product-title">Retinol 0.1% Night Mask</h4>
-                    <p class="product-description">
-                        With 0.1% Retinol and Hydrating Botanicals, This Mask Renews And Nourishes Overnight.
-                    </p>
-                    <div class="product-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <p class="product-price">€55,00</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
+            {% endfor %}
+            {% if products.count == 0 %}
+                <p>No products found in this category.</p>
+            {% endif %}
         </div>
     </section>
 </div>
