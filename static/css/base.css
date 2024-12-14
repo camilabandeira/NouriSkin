@@ -50,6 +50,7 @@ button {
     --gray-light: #9F9F9F;
     --font-family: 'Afacad', serif;
     --btn-text: #ededed;
+    --line-break: #d9d9d9;
 }
 
 /* Global */
@@ -70,7 +71,7 @@ body {
 /* Navbar */
 .navbar-header {
     padding: 1.4rem 5rem;
-    border-bottom: 0.0625rem solid #d9d9d9;
+    border-bottom: 0.0625rem solid var(--line-break);
 }
 
 .navbar {
