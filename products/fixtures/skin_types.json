@@ -1,0 +1,42 @@
+[
+    {
+        "model": "products.skintype",
+        "pk": 1,
+        "fields": {
+            "name": "dry",
+            "friendly_name": "Dry Skin"
+        }
+    },
+    {
+        "model": "products.skintype",
+        "pk": 2,
+        "fields": {
+            "name": "oily",
+            "friendly_name": "Oily Skin"
+        }
+    },
+    {
+        "model": "products.skintype",
+        "pk": 3,
+        "fields": {
+            "name": "combination",
+            "friendly_name": "Combination Skin"
+        }
+    },
+    {
+        "model": "products.skintype",
+        "pk": 4,
+        "fields": {
+            "name": "normal",
+            "friendly_name": "Normal Skin"
+        }
+    },
+    {
+        "model": "products.skintype",
+        "pk": 5,
+        "fields": {
+            "name": "sensitive",
+            "friendly_name": "Sensitive Skin"
+        }
+    }
+]
