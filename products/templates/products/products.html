@@ -7,7 +7,7 @@
 
 <div class="products-title-page">
     <h1>Shop All</h1>
-    <h6>30 Products</h6>
+<h5>({{product_count}} products)</h5>
 </div>
 <div class="products-container">
     <aside>
@@ -21,6 +21,8 @@
                 </select>
             </div>
             <div class="filter-group">
+                <h3>Skin Type</h3>
+
                 <ul>
                     {% for skin_type in skin_types %}
                     <li>
@@ -89,7 +91,11 @@
                     {% endif %}
                 </div>
                 <div class="product-info">
-                    <h4 class="product-title">{{ product.name }}</h4>
+                    <h4 class="product-title">
+                        <a href="{% url 'product_detail' product.id %}">
+                            {{ product.name }}
+                        </a>
+                    </h4>
                     <p class="product-description">{{ product.description }}</p>
                     <div class="product-rating">
                         <i class="fas fa-star"></i>
@@ -108,6 +114,7 @@
             {% endif %}
         </div>
     </section>
+    
 </div>
 <script src="{% static 'js/products.js' %}"></script>
 {% endblock %}
