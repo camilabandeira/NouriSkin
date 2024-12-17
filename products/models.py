@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import JSONField
 
 
 
@@ -37,6 +38,8 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     concern = models.ManyToManyField(Concern, blank=True)
     skin_types = models.ManyToManyField('SkinType', related_name='products', blank=True)
+    key_ingredients = models.JSONField(blank=True, null=True)
+    how_to_use = models.TextField(blank=True, null=True) 
     sku = models.CharField(max_length=100, unique=True, null=True, blank=True)
     name = models.CharField(max_length=255)
     description = models.TextField()

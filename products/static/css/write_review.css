@@ -1,0 +1,269 @@
+.review-page-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 75rem;
+    margin: 0 auto;
+    margin-top: 2.4rem;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+}
+
+.review-card-header {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.card-header-image {
+    width: 22rem;
+    height: auto;
+    overflow: hidden;
+}
+
+.card-header-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.card-header-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card-header-title h2 {
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.rating {
+    display: flex;
+    gap: 0.0625rem;
+    font-size: 1rem;
+}
+
+.card-form {
+    display: flex;
+    align-items: center;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9375rem;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.3125rem;
+}
+
+.form-group input {
+    padding: 0.5rem 0.625rem;
+    border: 0.0625rem solid var(--line-break);
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--olive-light);
+}
+
+.form-group input:hover {
+    border-color: var(--gray-light);
+}
+
+.card-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skin-type,
+.age-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.skin-type h3,
+.age-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.skin-type-options,
+.age-options {
+    display: flex;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.skin-type-options input[type="radio"],
+.age-options input[type="radio"] {
+    display: none;
+}
+
+
+.skin-type-options label span,
+.age-options label span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--line-break, hsl(0, 0%, 80%));
+    border-radius: 1.25rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.skin-type-options label span:hover,
+.age-options label span:hover {
+    background-color: var(--olive-light, hsl(0, 0%, 98%));
+    border-color: hsl(58, 51%, 46%);
+}
+
+.skin-type-options input[type="radio"]:checked+span,
+.age-options input[type="radio"]:checked+span {
+    background-color: var(--olive-light, hsl(80, 63%, 93%));
+    border-color: hsl(58, 51%, 46%);
+    font-weight: 500;
+}
+
+.card-text_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 2rem;
+}
+
+.card-text_area textarea {
+    width: 100%;
+    max-width: 40rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 0.25rem;
+    outline: none;
+    resize: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-text_area textarea:focus {
+    border-color: var(--line-break);
+    box-shadow: 0 0 5px rgba(224, 224, 224, 0.3);
+}
+
+.card-submit {
+    width: 100%;
+}
+
+.card-submit button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: var(--white);
+    background: var(--black);
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.card-submit button:hover {
+    background: var(--gray-dark);
+}
+
+
+@media (max-width: 1024px) {
+    .review-card {
+        width: 80%;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .review-card {
+        width: 90%;
+        padding: 1rem;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .review-card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .card-header-image {
+        width: 100%;
+    }
+
+    .card-header-title h2 {
+        font-size: 0.8rem;
+    }
+
+    .rating {
+        font-size: 0.8rem;
+    }
+
+    .form-group input {
+        padding: 0.5rem 0.625rem;
+        font-size: 0.8rem;
+    }
+
+    .skin-type h3,
+    .age-title {
+        font-size: 1rem;
+    }
+
+    .skin-type-options span,
+    .age-options span {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 390px) {
+
+
+    .review-card-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .skin-type h3,
+    .age-title {
+        font-size: 0.9rem;
+    }
+
+    .skin-type-options span,
+    .age-options span {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.7rem;
+    }
+}

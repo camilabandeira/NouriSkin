@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+{{ product.name }}
+{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/product_detail.css' %}" />
+
+<section class="product-detail-section" aria-labelledby="product-title">
+  <div class="breadcrumb-navigation" aria-label="Breadcrumb">
+    <a href="{% url 'homepage' %}">Home</a> &gt; <a href="{% url 'products' %}">Products</a> &gt;
+    <span aria-current="page">{{ product.name }}</span>
+  </div>
+
+  <div class="product-detail-container">
+    <div class="product-detail-image">
+      <img src="{{ product.image.url }}" alt="Image of {{ product.name }}" width="400" height="400" loading="lazy"/>
+    </div>
+
+    <div class="product-detail-content">
+      <div class="content-header">
+        <h1 id="product-title">{{ product.name }}</h1>
+
+        <div class="content-header-feedback">
+          <div class="content-header-rating" aria-label="Product rating">
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+          </div>
+          <div class="content-header-reviews">
+            <span>(30) comments</span>
+          </div>
+        </div>
+
+        <div class="content-header-price">
+          <span>€{{ product.price }}</span>
+        </div>
+      </div>
+
+      <div class="content-body">
+        <div class="content-body-description">
+          <p>{{ product.description }}</p>
+        </div>
+
+        <div class="product-actions">
+          <div class="quantity-selector" aria-label="Quantity selector">
+            <button class="quantity-btn decrement" aria-label="Decrease quantity">
+              <i class="fa-solid fa-minus" aria-hidden="true"></i>
+            </button>
+            <input
+              type="number"
+              class="quantity-input"
+              value="1"
+              min="1"
+              max="99"
+              aria-label="Product quantity"
+            />
+            <button class="quantity-btn increment" aria-label="Increase quantity">
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="add-to-cart-container">
+            <button aria-label="Add {{ product.name }} to cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="shipping-info">
+          <span class="shipping-text">
+            <img src="{% static 'images/shipping-icon.svg' %}" alt="Shipping Icon" width="21" height="auto" />
+            Free Shipping on Orders Over €50
+          </span>
+          <span class="return-text">
+            <img src="{% static 'images/return-icon.svg' %}" alt="Return Icon" width="21" height="auto" />
+            Free 30-day returns
+          </span>
+        </div>
+
+        <div class="product-info">
+          <div class="key-ingredients">
+            <h3>Key Ingredients</h3>
+            <button class="plus-minus-btn" aria-expanded="false" aria-controls="key-ingredients-content">+</button>
+            <div id="key-ingredients-content" class="content-toggle" style="display: none">
+              <ul>
+                {% for ingredient in product.key_ingredients %}
+                <li>{{ ingredient }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+
+          <div class="how-to-use">
+            <h3>How To Use</h3>
+            <button class="plus-minus-btn" aria-expanded="false" aria-controls="how-to-use-content">+</button>
+            <div id="how-to-use-content" class="content-toggle" style="display: none">
+              <p>{{ product.how_to_use }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section">
+  <div class="reviews-container">
+    <h2>Customer Reviews</h2>
+    <div class="filter-review-container">
+      <div class="filter-review">
+        <select id="filter-review">
+          <option value="filter" disabled selected>Filter</option>
+          <option value="most-recent">Most Recent</option>
+          <option value="highest-rating">Highest Rating</option>
+          <option value="lowest-rating">Lowest Rating</option>
+        </select>
+      </div>
+
+      <div class="write-review">
+          <a href="{% url 'write_review' product.id %}" class="btn">Write a Review</a>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-header">
+        <div class="customer-name" aria-label="Customer name">
+          <h5>Camila</h5>
+        </div>
+        <div class="customer-date" aria-label="Customer date">
+          <time>March 15, 2024</time>
+        </div>
+      </div>
+      <div class="customer-review-text" aria-label="Customer review">
+        <p>
+          Absolutely love NouriSkin’s Botanical Hydrating Serum! It’s lightweight, absorbs quickly, and leaves
+          my skin hydrated and glowing. Perfect under makeup and a must-have in my routine!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{% static 'js/products.js' %}"></script>
+
+{% endblock %}

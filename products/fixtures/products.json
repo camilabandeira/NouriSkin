@@ -17,7 +17,13 @@
             "skin_types": [
                 1,
                 3
-            ]
+            ],
+            "key_ingredients": [
+                "Retinol",
+                "Hyaluronic Acid",
+                "Vitamin E"
+            ],
+            "how_to_use": "Apply a small amount to the face after cleansing, avoiding the eye area. Use in the evening, followed by a moisturizer. Use sunscreen during the day."
         }
     },
     {
@@ -38,7 +44,13 @@
             "skin_types": [
                 2,
                 3
-            ]
+            ],
+            "key_ingredients": [
+                "Retinol",
+                "Niacinamide",
+                "Ceramides"
+            ],
+            "how_to_use": "Apply a thin layer to clean, dry skin in the evening. Follow with a hydrating moisturizer. Wear sunscreen during the day."
         }
     },
     {
@@ -59,7 +71,13 @@
             "skin_types": [
                 2,
                 4
-            ]
+            ],
+            "key_ingredients": [
+                "Retinol",
+                "Salicylic Acid",
+                "Green Tea Extract"
+            ],
+            "how_to_use": "Use in the evening after cleansing and toning. Start with a small amount and gradually increase as tolerated. Apply moisturizer afterward. Use SPF during the day."
         }
     },
     {
@@ -80,7 +98,13 @@
             "skin_types": [
                 1,
                 5
-            ]
+            ],
+            "key_ingredients": [
+                "Retinol",
+                "Shea Butter",
+                "Aloe Vera"
+            ],
+            "how_to_use": "Apply evenly to clean skin at night, avoiding the eye area. Follow with a nourishing moisturizer. Use sunscreen during the day."
         }
     },
     {
@@ -101,7 +125,13 @@
             "skin_types": [
                 3,
                 5
-            ]
+            ],
+            "key_ingredients": [
+                "Retinol",
+                "Botanical Extracts",
+                "Vitamin C"
+            ],
+            "how_to_use": "Dispense 1-2 pumps and gently smooth onto clean skin in the evening. Follow with a moisturizer and avoid sunlight without SPF."
         }
     },
     {
@@ -123,7 +153,13 @@
                 1,
                 2,
                 3
-            ]
+            ],
+            "key_ingredients": [
+                "Retinol",
+                "Peptides",
+                "Licorice Root Extract"
+            ],
+            "how_to_use": "Apply 1-2 drops to clean, dry skin in the evening. Follow with a moisturizer. Always wear SPF during the day."
         }
     },
     {
@@ -143,7 +179,13 @@
             "skin_types": [
                 1,
                 4
-            ]
+            ],
+            "key_ingredients": [
+                "Shea Butter",
+                "Hyaluronic Acid",
+                "Vitamin E"
+            ],
+            "how_to_use": "Massage a generous amount onto clean skin in the morning and evening. Reapply as needed for extra hydration."
         }
     },
     {
@@ -164,7 +206,13 @@
                 1,
                 4,
                 5
-            ]
+            ],
+            "key_ingredients": [
+                "Hyaluronic Acid",
+                "Vitamin C",
+                "Aloe Vera"
+            ],
+            "how_to_use": "Smooth onto clean face and neck in the morning. Allow it to absorb before applying makeup or sunscreen."
         }
     },
     {
@@ -183,7 +231,13 @@
             ],
             "skin_types": [
                 5
-            ]
+            ],
+            "key_ingredients": [
+                "Chamomile",
+                "Calendula",
+                "Ceramides"
+            ],
+            "how_to_use": "Apply a thin layer to clean skin as the last step in your nighttime routine. Massage gently until fully absorbed."
         }
     },
     {
@@ -202,7 +256,13 @@
             ],
             "skin_types": [
                 1
-            ]
+            ],
+            "key_ingredients": [
+                "Beeswax",
+                "Coconut Oil",
+                "Glycerin"
+            ],
+            "how_to_use": "Warm a small amount between fingers and press gently onto areas needing intense hydration."
         }
     },
     {
@@ -222,7 +282,13 @@
             "skin_types": [
                 2,
                 4
-            ]
+            ],
+            "key_ingredients": [
+                "Zinc Oxide",
+                "Green Tea Extract",
+                "Vitamin C"
+            ],
+            "how_to_use": "Apply generously to face and neck in the morning. Reapply every 2 hours when exposed to sunlight."
         }
     },
     {
@@ -241,7 +307,13 @@
             "skin_types": [
                 1,
                 4
-            ]
+            ],
+            "key_ingredients": [
+                "Shea Butter",
+                "Cocoa Butter",
+                "Avocado Oil"
+            ],
+            "how_to_use": "Apply liberally to clean, dry skin morning and night. Focus on areas prone to dryness."
         }
     },
     {
@@ -260,7 +332,13 @@
             ],
             "skin_types": [
                 2
-            ]
+            ],
+            "key_ingredients": [
+                "Kaolin Clay",
+                "Salicylic Acid",
+                "Green Tea Extract"
+            ],
+            "how_to_use": "Apply a thin, even layer to clean skin. Leave on for 10-15 minutes, then rinse with lukewarm water. Use 1-2 times a week."
         }
     },
     {
@@ -280,7 +358,13 @@
             "skin_types": [
                 2,
                 4
-            ]
+            ],
+            "key_ingredients": [
+                "Vitamin C",
+                "Niacinamide",
+                "Licorice Extract"
+            ],
+            "how_to_use": "Unfold the mask and place it over clean skin. Leave on for 15-20 minutes. Remove and gently pat excess serum into the skin."
         }
     },
     {
@@ -300,7 +384,13 @@
             "skin_types": [
                 1,
                 5
-            ]
+            ],
+            "key_ingredients": [
+                "Aloe Vera",
+                "Hyaluronic Acid",
+                "Cucumber Extract"
+            ],
+            "how_to_use": "Apply generously to clean skin. Leave on for 10-15 minutes, then rinse or tissue off. Can be used daily."
         }
     },
     {
@@ -319,7 +409,13 @@
             "skin_types": [
                 2,
                 3
-            ]
+            ],
+            "key_ingredients": [
+                "Activated Charcoal",
+                "Bentonite Clay",
+                "Tea Tree Oil"
+            ],
+            "how_to_use": "Spread evenly on clean skin, avoiding the eye area. Leave on for 10-15 minutes and rinse thoroughly. Use weekly."
         }
     },
     {
@@ -340,7 +436,13 @@
                 1,
                 4,
                 5
-            ]
+            ],
+            "key_ingredients": [
+                "Shea Butter",
+                "Avocado Oil",
+                "Vitamin E"
+            ],
+            "how_to_use": "Apply a generous layer to clean skin. Leave on for 10-15 minutes. Wipe off excess or rinse. Use 2-3 times a week."
         }
     },
     {
@@ -360,7 +462,13 @@
             "skin_types": [
                 4,
                 5
-            ]
+            ],
+            "key_ingredients": [
+                "Vitamin C",
+                "Vitamin B5",
+                "Jojoba Oil"
+            ],
+            "how_to_use": "Apply a thick layer to clean, dry skin. Leave on for 10 minutes, then rinse with warm water. Can be used 2-3 times a week."
         }
     },
     {
@@ -379,7 +487,13 @@
             "skin_types": [
                 1,
                 5
-            ]
+            ],
+            "key_ingredients": [
+                "Hyaluronic Acid",
+                "Glycerin",
+                "Vitamin B5"
+            ],
+            "how_to_use": "Apply 1-2 drops to clean skin in the morning and evening. Follow with a moisturizer."
         }
     },
     {
@@ -399,7 +513,13 @@
             "skin_types": [
                 2,
                 4
-            ]
+            ],
+            "key_ingredients": [
+                "Vitamin C",
+                "Ferulic Acid",
+                "Niacinamide"
+            ],
+            "how_to_use": "Apply 3-4 drops to clean, dry skin in the morning. Follow with sunscreen."
         }
     },
     {
@@ -419,7 +539,13 @@
             "skin_types": [
                 3,
                 5
-            ]
+            ],
+            "key_ingredients": [
+                "Peptides",
+                "Hyaluronic Acid",
+                "Collagen"
+            ],
+            "how_to_use": "Apply a thin layer to clean skin at night. Follow with a moisturizer."
         }
     },
     {
@@ -438,7 +564,13 @@
             "skin_types": [
                 2,
                 3
-            ]
+            ],
+            "key_ingredients": [
+                "Salicylic Acid",
+                "Zinc PCA",
+                "Witch Hazel"
+            ],
+            "how_to_use": "Use 2-3 drops on clean, dry skin in the evening. Avoid using with other exfoliants."
         }
     },
     {
@@ -458,7 +590,13 @@
             "skin_types": [
                 1,
                 5
-            ]
+            ],
+            "key_ingredients": [
+                "Collagen",
+                "Peptides",
+                "Vitamin E"
+            ],
+            "how_to_use": "Apply a few drops to clean skin morning and night. Follow with moisturizer."
         }
     },
     {
@@ -478,7 +616,13 @@
             "skin_types": [
                 4,
                 5
-            ]
+            ],
+            "key_ingredients": [
+                "Vitamin C",
+                "Alpha Arbutin",
+                "Hyaluronic Acid"
+            ],
+            "how_to_use": "Apply 2-3 drops to clean, dry skin in the morning and evening. Follow with SPF."
         }
     },
     {
@@ -497,7 +641,13 @@
             "skin_types": [
                 1,
                 5
-            ]
+            ],
+            "key_ingredients": [
+                "Shea Butter",
+                "Hyaluronic Acid",
+                "Vitamin E"
+            ],
+            "how_to_use": "Massage a generous amount into clean skin morning and night."
         }
     },
     {
@@ -517,7 +667,13 @@
             "skin_types": [
                 2,
                 3
-            ]
+            ],
+            "key_ingredients": [
+                "Retinol",
+                "Vitamin E",
+                "Squalane"
+            ],
+            "how_to_use": "Apply at night to clean, dry skin. Use sunscreen during the day."
         }
     },
     {
@@ -536,7 +692,13 @@
             ],
             "skin_types": [
                 4
-            ]
+            ],
+            "key_ingredients": [
+                "Kaolin Clay",
+                "Hyaluronic Acid",
+                "Vitamin C"
+            ],
+            "how_to_use": "Follow instructions for each mask included in the bundle."
         }
     },
     {
@@ -556,7 +718,13 @@
             "skin_types": [
                 1,
                 3
-            ]
+            ],
+            "key_ingredients": [
+                "Vitamin C",
+                "Peptides",
+                "Hyaluronic Acid"
+            ],
+            "how_to_use": "Apply a few drops to clean skin morning and night. Follow with a moisturizer."
         }
     },
     {
@@ -576,7 +744,13 @@
             "skin_types": [
                 2,
                 5
-            ]
+            ],
+            "key_ingredients": [
+                "Chamomile",
+                "Aloe Vera",
+                "Glycerin"
+            ],
+            "how_to_use": "Massage onto wet skin, then rinse thoroughly with lukewarm water. Use morning and evening."
         }
     },
     {
@@ -596,7 +770,13 @@
             "skin_types": [
                 1,
                 4
-            ]
+            ],
+            "key_ingredients": [
+                "Rose Water",
+                "Niacinamide",
+                "Aloe Vera"
+            ],
+            "how_to_use": "Apply to clean skin using a cotton pad or hands. Use morning and night."
         }
     }
 ]
