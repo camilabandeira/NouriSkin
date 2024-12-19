@@ -213,7 +213,6 @@
     margin-top: -1rem;
 }
 
-
 .reviews-section {
     display: flex;
     padding: 20px;
@@ -252,6 +251,11 @@
     margin-bottom: 1rem;
 }
 
+.filter-review-container a {
+    color: var(--black);
+    font-weight: 700;
+}
+
 .filter-review,
 .write-review {
     flex: 1;
@@ -269,7 +273,6 @@
     text-align: center;
     text-align-last: center;
     -webkit-text-align-last: center;
-
 }
 
 .write-review {
@@ -281,14 +284,32 @@
 .write-review a {
     padding: 0.6rem 1rem;
     background-color: hsl(0deg 0% 93.89%);
-    color: var(--gray-dark);
     border-radius: 0.1rem;
     position: relative;
     text-transform: uppercase;
     font-size: 0.9rem;
-    color: var(--black);
+    color: var(--gray-dark);
+    font-weight: 400;
 }
 
+.no-reviews {
+    text-align: center;
+}
+
+.no-reviews p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.no-reviews a {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.no-reviews a:hover {
+    color: var(--gray-dark);
+}
 
 .review-card {
     display: flex;
@@ -323,12 +344,32 @@
 
 .costumer-title {
     display: flex;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.costumer-title h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--gray-dark);
 }
 
 .costumer-title h6 {
     font-size: 0.9rem;
+    font-weight: 700;
     margin-top: -0.5rem;
+}
+
+.review-details {
+    display: flex;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.review-details span {
+    padding: 0.1rem 0.3rem;
+    text-align: left;
 }
 
 .customer-rating {
@@ -340,7 +381,7 @@
 }
 
 .customer-review-text {
-    font-size: 0.9rem;
+    font-size: 1.0625rem;
     color: var(--gray-dark);
 }
 
@@ -357,7 +398,6 @@
     gap: 0.5rem;
     align-items: center;
 }
-
 
 @media (max-width: 1024px) {
     .product-detail-section {
@@ -405,7 +445,6 @@
         gap: 0.1rem;
     }
 }
-
 
 @media (max-width:480px) {
     .reviews-section h2 {

@@ -1,17 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}
-{{ product.name }}
-{% endblock %}
-
 {% block content %}
 
 <link rel="stylesheet" href="{% static 'css/product_detail.css' %}" />
 
 <section class="product-detail-section" aria-labelledby="product-title">
   <div class="breadcrumb-navigation" aria-label="Breadcrumb">
-    <a href="{% url 'homepage' %}">Home</a> &gt; <a href="{% url 'products' %}">Products</a> &gt;
+    <a href="{% url 'homepage' %}">Home</a> &gt; 
+    <a href="{% url 'products' %}">Products</a> &gt; 
     <span aria-current="page">{{ product.name }}</span>
   </div>
 
@@ -26,15 +23,17 @@
 
         <div class="content-header-feedback">
           <div class="content-header-rating" aria-label="Product rating">
-            <i class="fas fa-star" aria-hidden="true"></i>
-            <i class="fas fa-star" aria-hidden="true"></i>
-            <i class="fas fa-star" aria-hidden="true"></i>
-            <i class="fas fa-star" aria-hidden="true"></i>
-            <i class="far fa-star" aria-hidden="true"></i>
+            {% for i in stars_range %}
+              {% if i <= average_rating %}
+                <i class="fas fa-star"></i>
+              {% else %}
+                <i class="far fa-star"></i>
+              {% endif %}
+            {% endfor %}
           </div>
-          <div class="content-header-reviews">
-            <span>(30) comments</span>
-          </div>
+          <span class="content-header-reviews">
+            ({{ total_reviews }}) {{ total_reviews|pluralize:"comment,comments" }}
+          </span>
         </div>
 
         <div class="content-header-price">
@@ -52,14 +51,7 @@
             <button class="quantity-btn decrement" aria-label="Decrease quantity">
               <i class="fa-solid fa-minus" aria-hidden="true"></i>
             </button>
-            <input
-              type="number"
-              class="quantity-input"
-              value="1"
-              min="1"
-              max="99"
-              aria-label="Product quantity"
-            />
+            <input type="number" class="quantity-input" value="1" min="1" max="99" aria-label="Product quantity"/>
             <button class="quantity-btn increment" aria-label="Increase quantity">
               <i class="fa-solid fa-plus" aria-hidden="true"></i>
             </button>
@@ -88,7 +80,7 @@
             <div id="key-ingredients-content" class="content-toggle" style="display: none">
               <ul>
                 {% for ingredient in product.key_ingredients %}
-                <li>{{ ingredient }}</li>
+                  <li>{{ ingredient }}</li>
                 {% endfor %}
               </ul>
             </div>
@@ -109,38 +101,65 @@
 
 <section class="reviews-section">
   <div class="reviews-container">
-    <h2>Customer Reviews</h2>
     <div class="filter-review-container">
       <div class="filter-review">
-        <select id="filter-review">
-          <option value="filter" disabled selected>Filter</option>
-          <option value="most-recent">Most Recent</option>
-          <option value="highest-rating">Highest Rating</option>
-          <option value="lowest-rating">Lowest Rating</option>
-        </select>
-      </div>
+        <form method="get" id="filter-form">
+            <select name="filter" id="filter-review" onchange="document.getElementById('filter-form').submit()">
+                <option value="most-recent" {% if filter_option == 'most-recent' %}selected{% endif %}>Most Recent</option>
+                <option value="lowest-rating" {% if filter_option == 'lowest-rating' %}selected{% endif %}>Lowest Rating</option>
+                <option value="highest-rating" {% if filter_option == 'highest-rating' %}selected{% endif %}>Highest Rating</option>
+            </select>
+        </form>
+    </div>
 
       <div class="write-review">
-          <a href="{% url 'write_review' product.id %}" class="btn">Write a Review</a>
+        <a href="{% url 'write_review' product.id %}" class="btn">Write a Review</a>
       </div>
     </div>
 
-    <div class="review-card">
-      <div class="review-header">
-        <div class="customer-name" aria-label="Customer name">
-          <h5>Camila</h5>
+    <h2>Customer Reviews</h2>
+    {% if reviews %}
+      {% for review in reviews %}
+        <div class="review-card">
+          <div class="review-header">
+            <div class="customer-name">
+              <div class="costumer-title">
+                <h5>{{ review.name }}</h5>
+                <div class="customer-rating">
+                  <div class="rating">
+                    {% for i in stars_range %}
+                    {% if i <= review.filled_stars %}
+                      <i class="fas fa-star"></i>
+                    {% else %}
+                      <i class="far fa-star"></i> 
+                    {% endif %}
+                  {% endfor %}
+                  </div>
+                </div>
+                <h4>{{ review.title }}</h4>
+              </div>
+            </div>
+
+            <div class="customer-date">
+              <time>{{ review.submitted_at|date:"F d, Y" }}</time>
+            </div>
+          </div>
+
+          <div class="customer-review-text">
+            <p>{{ review.review_text }}</p>
+          </div>
+
+          <div class="review-details">
+            <span>Skin Type: {{ review.skin_type }}</span> 
+            <span>Age:{{ review.age_group }}</span>
+          </div>
         </div>
-        <div class="customer-date" aria-label="Customer date">
-          <time>March 15, 2024</time>
-        </div>
+      {% endfor %}
+    {% else %}
+      <div class="no-reviews">
+        <p>No reviews yet. Be the first to <a href="{% url 'write_review' product.id %}">write a review</a>!</p>
       </div>
-      <div class="customer-review-text" aria-label="Customer review">
-        <p>
-          Absolutely love NouriSkin’s Botanical Hydrating Serum! It’s lightweight, absorbs quickly, and leaves
-          my skin hydrated and glowing. Perfect under makeup and a must-have in my routine!
-        </p>
-      </div>
-    </div>
+    {% endif %}
   </div>
 </section>
 
