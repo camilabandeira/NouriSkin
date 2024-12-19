@@ -13,12 +13,20 @@
     <aside>
         <div class="products-sidebar">
             <div class="sort-container">
-                <select id="sort" name="sort">
-                    <option value="sort-by" disabled selected>Sort By</option>
-                    <option value="best-selling">Best Selling</option>
-                    <option value="price-low-to-high">Price: Low to High</option>
-                    <option value="price-high-to-low">Price: High to Low</option>
-                </select>
+                <form method="get">
+                    <input type="hidden" name="category" value="{{ selected_category }}">
+                    <input type="hidden" name="concern" value="{{ selected_concern }}">
+                    <input type="hidden" name="skin_type" value="{{ selected_skin_type }}">
+                    <select id="sort" name="sort" onchange="this.form.submit()">
+                        <option value="sort-by" disabled {% if not sort_option %}selected{% endif %}>Sort By</option>
+                        <option value="price-low-to-high" {% if sort_option == "price-low-to-high" %}selected{% endif %}>
+                            Price: Low to High
+                        </option>
+                        <option value="price-high-to-low" {% if sort_option == "price-high-to-low" %}selected{% endif %}>
+                            Price: High to Low
+                        </option>
+                    </select>
+                </form>
             </div>
             <div class="filter-group">
                 <h3>Skin Type</h3>
@@ -64,12 +72,20 @@
     </aside>
     <div class="mobile-filter">
         <div class="sort-container">
-            <select id="sort" name="sort">
-                <option value="sort-by" disabled selected>Sort By</option>
-                <option value="best-selling">Best Selling</option>
-                <option value="price-low-to-high">Price: Low to High</option>
-                <option value="price-high-to-low">Price: High to Low</option>
-            </select>
+            <form method="get">
+                <input type="hidden" name="category" value="{{ selected_category }}">
+                <input type="hidden" name="concern" value="{{ selected_concern }}">
+                <input type="hidden" name="skin_type" value="{{ selected_skin_type }}">
+                <select id="sort" name="sort" onchange="this.form.submit()">
+                    <option value="sort-by" disabled {% if not sort_option %}selected{% endif %}>Sort By</option>
+                    <option value="price-low-to-high" {% if sort_option == "price-low-to-high" %}selected{% endif %}>
+                        Price: Low to High
+                    </option>
+                    <option value="price-high-to-low" {% if sort_option == "price-high-to-low" %}selected{% endif %}>
+                        Price: High to Low
+                    </option>
+                </select>
+            </form>
         </div>
         <button class="filter-toggle" id="filter-toggle">
             <span>Filter</span>
@@ -98,11 +114,13 @@
                     </h4>
                     <p class="product-description">{{ product.description }}</p>
                     <div class="product-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
+  {% for star in range %}
+        {% if star <= product.average_rating %}
+            <i class="fas fa-star"></i> 
+        {% else %}
+            <i class="far fa-star"></i> 
+        {% endif %}
+    {% endfor %}
                     </div>
                     <p class="product-price">€{{ product.price }}</p>
                     <button class="add-to-cart">Add to Cart</button>
@@ -113,6 +131,7 @@
                 <p>No products found in this category.</p>
             {% endif %}
         </div>
+        
     </section>
     
 </div>

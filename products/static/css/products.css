@@ -101,7 +101,6 @@ h5 {
     display: none;
 }
 
-
 #filter-popup .filter-group {
     display: flex;
     flex-direction: column;
@@ -123,9 +122,10 @@ h5 {
 .close-popup-btn {
     position: absolute;
     top: 0.625rem;
-    right: 0.9375rem;
-    font-size: 2rem;
-    z-index: 1002;
+    right: 1.4rem;
+    font-size: 2.1rem;
+    z-index: 1001;
+    color: var(--black);
 }
 
 .products-content {

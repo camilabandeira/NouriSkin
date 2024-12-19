@@ -22,14 +22,28 @@ def all_products(request):
     selected_category = request.GET.get('category')
     selected_concern = request.GET.get('concern')
     selected_skin_type = request.GET.get('skin_type')
+    sort_option = request.GET.get('sort')
+
 
     products = Product.objects.all()
-    if selected_category:
+
+    if selected_category and selected_category != "None":
         products = products.filter(category__name=selected_category)
-    if selected_concern:
+    if selected_concern and selected_concern != "None":
         products = products.filter(concern__name=selected_concern)
-    if selected_skin_type:
+    if selected_skin_type and selected_skin_type != "None":
         products = products.filter(skin_types__id=selected_skin_type) 
+    
+    for product in products:
+        average_rating = ProductReview.objects.filter(product=product).aggregate(Avg('rating'))['rating__avg'] or 0
+        average_rating = round(average_rating)
+        product.average_rating = average_rating  
+
+    if sort_option == "price-low-to-high":
+        products = products.order_by('price')
+    elif sort_option == "price-high-to-low":
+        products = products.order_by('-price') 
+
 
     product_count = products.count()
 
@@ -42,6 +56,8 @@ def all_products(request):
         'selected_concern': selected_concern,
         'selected_skin_type': selected_skin_type,
         'product_count': product_count,
+        'range': range(1, 6),
+        'sort_option': sort_option,
     }
 
     return render(request, 'products/products.html', context)
