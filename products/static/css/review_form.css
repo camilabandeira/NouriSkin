@@ -4,8 +4,7 @@
     align-items: center;
     flex-wrap: wrap;
     max-width: 75rem;
-    margin: 0 auto;
-    margin-top: 2.4rem;
+    margin: 2.4rem auto 0 auto;
 }
 
 .review-card {
@@ -67,7 +66,7 @@
 }
 
 .form-group label {
-    margin-bottom: 0.3125rem;
+    margin: 0 0 0.3125rem 0;
 }
 
 .form-group input {
@@ -108,7 +107,6 @@
     margin: 0;
 }
 
-
 .skin-type-options,
 .age-options {
     display: flex;
@@ -117,12 +115,10 @@
     justify-content: center;
 }
 
-
 .skin-type-options input[type="radio"],
 .age-options input[type="radio"] {
     display: none;
 }
-
 
 .skin-type-options label span,
 .age-options label span {
@@ -156,7 +152,7 @@
     justify-content: center;
     align-items: center;
     gap: 0.7rem;
-    margin-bottom: 2rem;
+    margin: 0 0 2rem 0;
 }
 
 .card-text_area textarea {
@@ -180,6 +176,7 @@
 
 .card-submit {
     width: 100%;
+    margin: 0 0 3rem 0;
 }
 
 .card-submit button {
@@ -196,6 +193,17 @@
     background: var(--gray-dark);
 }
 
+.error-message {
+    color: hsl(354, 61%, 28%);
+    background-color: hsl(355, 70%, 91%);
+    border: 1px solid hsl(354, 70%, 87%);
+    padding: 1rem;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+}
 
 @media (max-width: 1024px) {
     .review-card {
@@ -209,8 +217,6 @@
         width: 90%;
         padding: 1rem;
     }
-
-
 }
 
 @media (max-width: 480px) {
@@ -249,8 +255,6 @@
 }
 
 @media (max-width: 390px) {
-
-
     .review-card-header {
         flex-direction: column;
         gap: 0.5rem;

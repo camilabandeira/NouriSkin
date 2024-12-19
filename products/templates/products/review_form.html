@@ -1,111 +1,101 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Write Review{% endblock %}
-
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'css/write_review.css' %}">
+<link rel="stylesheet" href="{% static 'css/review_form.css' %}">
 
 <section class="review-page-section">
 
     <div class="review-card">
+        {% if form.rating.errors %}
+        <div class="error-message">
+            {{ form.rating.errors|join:" " }}
+        </div>
+        {% endif %}
         <div class="review-card-header">
-
             <div class="card-header-image">
-                <img src="{{product.image.url}}" alt="Image of {{ product.name }}" width="150" height="150" loading="lazy"/>
-
+                <img src="{{ product.image.url }}" alt="Image of {{ product.name }}" width="150" height="150" loading="lazy" />
             </div>
-
             <div class="card-header">
-
                 <div class="card-header-title">
-                    <h2>{{product.name}}</h2>
-
-                    <p>{{product.description}} </p>
-
-                        <div class="rating"> 
-                            <span class="fa fa-star-o"></span>
-                            <span class="fa fa-star-o"></span>
-                            <span class="fa fa-star-o"></span>
-                            <span class="fa fa-star-o"></span>
-                            <span class="fa fa-star-o"></span>
-                            <span class="fa fa-star-o"></span>                            
-                            </div>
+                    <h2>{{ product.name }}</h2>
+                    <p>{{ product.description }}</p>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="rating">
+                            <input type="hidden" id="rating" name="rating" value="0">
+                            <span class="fa fa-star-o" data-value="1"></span>
+                            <span class="fa fa-star-o" data-value="2"></span>
+                            <span class="fa fa-star-o" data-value="3"></span>
+                            <span class="fa fa-star-o" data-value="4"></span>
+                            <span class="fa fa-star-o" data-value="5"></span>
+                        </div>
+                        <p>Selected Rating: <span id="selected-rating">0</span></p>
+                </div>
             </div>
-    
-    </div>
-</div>
-
+        </div>
 
         <div class="card-form">
             <div class="review-form">
                 <div class="form-group">
-                    <label for="review-title">Review Title</label>
-                    <input type="text" id="review-title" name="review-title">
+                    <label for="title">Review Title</label>
+                    <input type="text" id="title" name="title" value="{{ form.title.value|default:'' }}" required>
                 </div>
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" value="{{ form.name.value|default:'' }}" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" value="{{ form.email.value|default:'' }}" required>
                 </div>
-            </div>     
-</div>
-
-<div class="card-filters">
-    <div class="skin-type">
-        <h3>Skin Type</h3>
-        <div class="skin-type-options">
-            <label>
-                <input type="radio" name="skin_type" value="Normal" required>
-                <span>Normal</span>
-            </label>
-            <label>
-                <input type="radio" name="skin_type" value="Combination">
-                <span>Combination</span>
-            </label>
-            <label>
-                <input type="radio" name="skin_type" value="Oily">
-                <span>Oily</span>
-            </label>
-            <label>
-                <input type="radio" name="skin_type" value="Dry">
-                <span>Dry</span>
-            </label>
+            </div>
         </div>
-    </div>
 
-    <div class="age-wrapper">
-        <h3 class="age-title">Age</h3>
-        <div class="age-options">
-            <label>
-                <input type="radio" name="age_group" value="25-34" required>
-                <span>25-34</span>
-            </label>
-            <label>
-                <input type="radio" name="age_group" value="35-44">
-                <span>35-44</span>
-            </label>
-            <label>
-                <input type="radio" name="age_group" value="45-54">
-                <span>45-54</span>
-            </label>
-            <label>
-                <input type="radio" name="age_group" value="55+">
-                <span>55+</span>
-            </label>
+        <div class="card-filters">
+            <div class="skin-type">
+                <h3>Skin Type</h3>
+                <div class="skin-type-options">
+                    {% for value, label in form.skin_type.field.choices %}
+                        {% if value %}
+                            <label>
+                                <input type="radio" name="skin_type" value="{{ value }}"
+                                {% if form.skin_type.value == value %}checked{% endif %}>
+                                <span>{{ label }}</span>
+                            </label>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="age-wrapper">
+                <h3 class="age-title">Age</h3>
+                <div class="age-options">
+                    {% for value, label in form.age_group.field.choices %}
+                        {% if value %}
+                            <label>
+                                <input type="radio" name="age_group" value="{{ value }}"
+                                {% if form.age_group.value == value %}checked{% endif %}>
+                                <span>{{ label }}</span>
+                            </label>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-    <div class="card-text_area">
-        <textarea name="review" id="review" cols="30" rows="10" placeholder="Write your review here..."></textarea>
+        <div class="card-text_area">
+            <textarea name="review_text" id="review" cols="30" rows="10" placeholder="Write your review here..." required>
+{{ form.review_text.value|default:'' }}</textarea>
+        </div>
 
         <div class="card-submit">
             <button type="submit">Submit</button>
-</div>
+        </div>
 
-{% endblock%}
+    </form>
+</section>
+
+<script src="{% static 'js/products.js' %}"></script>
+{% endblock %}

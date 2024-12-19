@@ -1,5 +1,7 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Product, Category, Concern, SkinType
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import Product, Category, Concern, SkinType, ProductReview
+from .review_form import ReviewForm
+from django.db.models import Avg
 
 
 def all_products(request):
@@ -49,14 +51,53 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to display the product details """
     product = get_object_or_404(Product, id=product_id)
+    
+    filter_option = request.GET.get('filter', 'most-recent')
+
+    if filter_option == 'highest-rating':
+        reviews = ProductReview.objects.filter(product=product).order_by('-rating')
+    elif filter_option == 'lowest-rating':
+        reviews = ProductReview.objects.filter(product=product).order_by('rating')
+    else: 
+        reviews = ProductReview.objects.filter(product=product).order_by('-submitted_at')
+    
+
+    average_rating = reviews.aggregate(Avg('rating'))['rating__avg'] or 0
+    average_rating = round(average_rating, 1)
+
+    for review in reviews:
+        review.filled_stars = int(review.rating)  
+
+    total_reviews = reviews.count()
 
     context = {
         'product': product,
+        'reviews': reviews,
+        'average_rating': average_rating,
+        'total_reviews': total_reviews,
+        'stars_range': range(1, 6),
     }
     return render(request, 'products/product_detail.html', context)
 
 
 def write_review(request, product_id):
-    """ A view to write a review """
-    product = get_object_or_404(Product, pk=product_id)
-    return render(request, 'products/review_form.html', {'product': product})
+    """ A view to write a review for a product """
+    product = get_object_or_404(Product, id=product_id)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.product = product  
+            review.save()
+            return redirect('product_detail', product_id=product.id)
+        else:
+            print(form.errors)  
+    else:
+        form = ReviewForm()
+
+    context = {
+        'product': product,
+        'form': form
+        }
+    
+    return render(request, 'products/review_form.html', context)
