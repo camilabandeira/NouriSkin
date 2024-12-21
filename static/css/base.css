@@ -131,6 +131,18 @@ body {
     position: relative;
 }
 
+.cart-count {
+    position: absolute;
+    top: -0.5rem;
+    right: -1rem;
+    background-color: hsla(0, 0%, 70%, 0.42);
+    color: var(--black);
+    border-radius: 50%;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
 /* Toggle visibility of icons */
 .hidden {
     display: none !important;
