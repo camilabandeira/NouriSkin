@@ -45,21 +45,29 @@
         <div class="content-body-description">
           <p>{{ product.description }}</p>
         </div>
-
         <div class="product-actions">
-          <div class="quantity-selector" aria-label="Quantity selector">
-            <button class="quantity-btn decrement" aria-label="Decrease quantity">
-              <i class="fa-solid fa-minus" aria-hidden="true"></i>
-            </button>
-            <input type="number" class="quantity-input" value="1" min="1" max="99" aria-label="Product quantity"/>
-            <button class="quantity-btn increment" aria-label="Increase quantity">
-              <i class="fa-solid fa-plus" aria-hidden="true"></i>
-            </button>
-          </div>
-
-          <div class="add-to-cart-container">
-            <button aria-label="Add {{ product.name }} to cart">Add to Cart</button>
-          </div>
+          <form method="POST" action="{% url 'add_to_cart' product.id %}">
+            {% csrf_token %}
+            <div class="actions-container">
+              <div class="quantity-selector-container">
+                <div class="quantity-selector" aria-label="Quantity selector">
+                  <button class="quantity-btn decrement" type="button" aria-label="Decrease quantity">
+                    <i class="fa-solid fa-minus" aria-hidden="true"></i>
+                  </button>
+                  <input type="number" name="quantity" class="quantity-input" value="1" min="1" max="99" aria-label="Product quantity" />
+                  <button class="quantity-btn increment" type="button" aria-label="Increase quantity">
+                    <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="add-to-cart-container">
+                <input type="hidden" name="redirect_url" value="{{ request.path }}" />
+                <button type="submit" class="add-to-cart-btn" aria-label="Add {{ product.name }} to cart">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
 
         <div class="shipping-info">
@@ -104,13 +112,13 @@
     <div class="filter-review-container">
       <div class="filter-review">
         <form method="get" id="filter-form">
-            <select name="filter" id="filter-review" onchange="document.getElementById('filter-form').submit()">
-                <option value="most-recent" {% if filter_option == 'most-recent' %}selected{% endif %}>Most Recent</option>
-                <option value="lowest-rating" {% if filter_option == 'lowest-rating' %}selected{% endif %}>Lowest Rating</option>
-                <option value="highest-rating" {% if filter_option == 'highest-rating' %}selected{% endif %}>Highest Rating</option>
-            </select>
+          <select name="filter" id="filter-review" onchange="document.getElementById('filter-form').submit()">
+            <option value="most-recent" {% if filter_option == 'most-recent' %}selected{% endif %}>Most Recent</option>
+            <option value="lowest-rating" {% if filter_option == 'lowest-rating' %}selected{% endif %}>Lowest Rating</option>
+            <option value="highest-rating" {% if filter_option == 'highest-rating' %}selected{% endif %}>Highest Rating</option>
+          </select>
         </form>
-    </div>
+      </div>
 
       <div class="write-review">
         <a href="{% url 'write_review' product.id %}" class="btn">Write a Review</a>
@@ -128,18 +136,17 @@
                 <div class="customer-rating">
                   <div class="rating">
                     {% for i in stars_range %}
-                    {% if i <= review.filled_stars %}
-                      <i class="fas fa-star"></i>
-                    {% else %}
-                      <i class="far fa-star"></i> 
-                    {% endif %}
-                  {% endfor %}
+                      {% if i <= review.filled_stars %}
+                        <i class="fas fa-star"></i>
+                      {% else %}
+                        <i class="far fa-star"></i>
+                      {% endif %}
+                    {% endfor %}
                   </div>
                 </div>
                 <h4>{{ review.title }}</h4>
               </div>
             </div>
-
             <div class="customer-date">
               <time>{{ review.submitted_at|date:"F d, Y" }}</time>
             </div>
@@ -151,7 +158,7 @@
 
           <div class="review-details">
             <span>Skin Type: {{ review.skin_type }}</span> 
-            <span>Age:{{ review.age_group }}</span>
+            <span>Age: {{ review.age_group }}</span>
           </div>
         </div>
       {% endfor %}
