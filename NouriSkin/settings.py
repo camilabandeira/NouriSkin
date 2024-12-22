@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'home',
     'products',
     'storages',
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +76,15 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.context_processors.cart_contents',
             ],
         },
     },
 ]
+
+FREE_DELIVERY_THRESHOLD = 50  
+FIXED_DELIVERY_FEE = 4.99
+
 
 WSGI_APPLICATION = 'NouriSkin.wsgi.application'
 

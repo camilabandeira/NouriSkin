@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Shopping Cart{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">
+
+<section class="cart-page">
+    <div class="cart-page-container">
+
+        <div class="cart-table-section">
+            <h1>Shopping Cart</h1>
+            {% if cart_items %}
+            <table class="cart-table">
+                <thead class="cart-table-header">
+                    <tr>
+                        <th>Product</th>
+                        <th>Total</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in cart_items %}
+                    <tr class="cart-item">
+                        <td class="product-info">
+                            <img src="{{ item.image }}" alt="{{ item.name }}" class="product-image">
+                            <span>{{ item.name }}</span>
+                        </td>
+                        <td>
+                            <div class="total-wrapper">
+                                €{{ item.total|floatformat:2 }}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="quantity-wrapper">
+                                <form method="POST" action="{% url 'update_cart' item.id %}">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="action" value="decrease">
+                                    <button type="submit" class="quantity-btn">&ndash;</button>
+                                </form>
+                                <span>{{ item.quantity }}</span>
+                                <form method="POST" action="{% url 'update_cart' item.id %}">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="action" value="increase">
+                                    <button type="submit" class="quantity-btn">+</button>
+                                </form>
+                                <form method="POST" action="{% url 'update_cart' item.id %}">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="action" value="remove">
+                                    <button type="submit" class="remove-btn" aria-label="Remove item">Remove</button>
+                                </form>
+                            </div>
+                        </td>
+                        
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p>Your cart is empty. <a href="{% url 'products' %}">Continue shopping</a>.</p>
+            {% endif %}
+        </div>
+
+        {% if cart_items %}
+        <div class="cart-summary-section">
+            <h2>Summary</h2>
+            <div class="summary-details">
+                <p><strong>Subtotal:</strong> €{{ total }}</p>
+                <p><strong>Delivery:</strong> {{ delivery }}</p>
+                <p><strong>Grand Total:</strong> €{{ grand_total }}</p>
+                {% if free_delivery_message %}
+                <p class="delivery-message">{{ free_delivery_message }}</p>
+                {% endif %}
+                <form method="GET" action="#">
+                    <button type="submit" class="checkout-btn">CHECK OUT</button>
+                </form>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+</section>
+{% endblock %}

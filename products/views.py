@@ -55,7 +55,7 @@ def all_products(request):
         'selected_category': selected_category,
         'selected_concern': selected_concern,
         'selected_skin_type': selected_skin_type,
-        'product_count': product_count,
+        'listed_product_count': products.count(),
         'range': range(1, 6),
         'sort_option': sort_option,
     }
