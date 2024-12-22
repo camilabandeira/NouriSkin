@@ -7,7 +7,7 @@
 
 <div class="products-title-page">
     <h1>Shop All</h1>
-<h5>({{product_count}} products)</h5>
+    <h5>({{ listed_product_count }} products)</h5>
 </div>
 <div class="products-container">
     <aside>
@@ -30,14 +30,9 @@
             </div>
             <div class="filter-group">
                 <h3>Skin Type</h3>
-
                 <ul>
                     {% for skin_type in skin_types %}
-                    <li>
-                        <a href="?skin_type={{ skin_type.id }}">
-                            {{ skin_type.friendly_name }} ({{ skin_type.product_count }})
-                        </a>
-                    </li>
+                    <li><a href="?skin_type={{ skin_type.id }}">{{ skin_type.friendly_name }} ({{ skin_type.product_count }})</a></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -45,26 +40,16 @@
                 <h3>Skin Concerns</h3>
                 <ul>
                     {% for concern in concerns %}
-                    <li>
-                        <a href="?concern={{ concern.name }}">
-                            {{ concern.friendly_name }} ({{ concern.product_count }})
-                        </a>
-                    </li>
+                    <li><a href="?concern={{ concern.name }}">{{ concern.friendly_name }} ({{ concern.product_count }})</a></li>
                     {% endfor %}
                 </ul>
             </div>
             <div class="filter-group">
                 <h3>Products</h3>
                 <ul>
-                    <li>
-                        <a href="{% url 'products' %}" class="all-products-link">All Products</a>
-                    </li>
+                    <li><a href="{% url 'products' %}" class="all-products-link">All Products</a></li>
                     {% for category in categories %}
-                    <li>
-                        <a href="?category={{ category.name }}">
-                            {{ category.friendly_name }} ({{ category.product_count }})
-                        </a>
-                    </li>
+                    <li><a href="?category={{ category.name }}">{{ category.friendly_name }} ({{ category.product_count }})</a></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -94,46 +79,44 @@
     <div id="filter-popup" class="popup">
         <div class="popup-content"></div>
     </div>
-
     <section class="products-content">
         <div class="products-grid">
             {% for product in products %}
             <div class="product-card">
                 <div class="product-image">
                     {% if product.image %}
-                        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
                     {% else %}
-                        <img src="{% static 'images/placeholder.png' %}" alt="Placeholder">
+                    <img src="{% static 'images/placeholder.png' %}" alt="Placeholder">
                     {% endif %}
                 </div>
                 <div class="product-info">
-                    <h4 class="product-title">
-                        <a href="{% url 'product_detail' product.id %}">
-                            {{ product.name }}
-                        </a>
-                    </h4>
+                    <h4 class="product-title"><a href="{% url 'product_detail' product.id %}">{{ product.name }}</a></h4>
                     <p class="product-description">{{ product.description }}</p>
                     <div class="product-rating">
-  {% for star in range %}
-        {% if star <= product.average_rating %}
-            <i class="fas fa-star"></i> 
-        {% else %}
-            <i class="far fa-star"></i> 
-        {% endif %}
-    {% endfor %}
+                        {% for star in range %}
+                        {% if star <= product.average_rating %}
+                        <i class="fas fa-star"></i>
+                        {% else %}
+                        <i class="far fa-star"></i>
+                        {% endif %}
+                        {% endfor %}
                     </div>
                     <p class="product-price">€{{ product.price }}</p>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <form method="POST" action="{% url 'add_to_cart' product.id %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="quantity" value="1">
+                        <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
+                        <button type="submit" class="add-to-cart">Add to Cart</button>
+                    </form>
                 </div>
             </div>
             {% endfor %}
             {% if products.count == 0 %}
-                <p>No products found in this category.</p>
+            <p>No products found in this category.</p>
             {% endif %}
         </div>
-        
     </section>
-    
 </div>
 <script src="{% static 'js/products.js' %}"></script>
 {% endblock %}
