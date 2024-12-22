@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Required elements not found: filterToggleBtn, filterPopup, sidebarContent");
     }
 
-    // Plus-Minus button toggle functionality Prodct Details
+    // Plus-Minus info button functionality Prodct Details
     const toggleButtons = document.querySelectorAll('.plus-minus-btn');
 
     if (toggleButtons.length > 0) {
@@ -85,5 +85,30 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault();
             alert("Please select a star rating before submitting!");
         }
+    });
+
+    // Quantity plus-minus button functionality product details
+    const quantityInputs = document.querySelectorAll('.quantity-input');
+    const decrementButtons = document.querySelectorAll('.decrement');
+    const incrementButtons = document.querySelectorAll('.increment');
+
+    decrementButtons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            const input = quantityInputs[index];
+            let value = parseInt(input.value, 10);
+            if (value > parseInt(input.min, 10)) {
+                input.value = value - 1;
+            }
+        });
+    });
+
+    incrementButtons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            const input = quantityInputs[index];
+            let value = parseInt(input.value, 10);
+            if (value < parseInt(input.max, 10)) {
+                input.value = value + 1;
+            }
+        });
     });
 });
