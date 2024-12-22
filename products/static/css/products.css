@@ -203,6 +203,7 @@ h5 {
 }
 
 .add-to-cart {
+    width: 100%;
     background-color: var(--black);
     color: var(--btn-text);
     padding: 0.7rem;
@@ -264,7 +265,7 @@ select {
 
 @media (max-width:523px) {
     .product-card {
-        max-width: 100%;
+        max-width: 90%;
         align-items: center;
     }
 
