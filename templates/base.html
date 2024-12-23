@@ -53,6 +53,9 @@
             </div>            
         </nav>        
     </header>
+    
+    <!-- Toasts -->
+    {% include 'toasts/toasts.html' %}
 
     <main class="main" role="main">
         {% block content %}{% endblock %}
@@ -108,6 +111,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/base.js' %}"></script>
 </body>
 </html>

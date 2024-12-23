@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-
+from django.contrib import messages
 def view_cart(request):
     """ A view that renders the cart contents page """
     return render(request, 'cart/cart.html')
@@ -18,6 +18,9 @@ def add_to_cart(request, item_id):
 
     request.session['cart'] = cart
     request.session.modified = True
+
+    messages.success(request, "Item added to cart!")
+
 
     return redirect(redirect_url)
 
@@ -41,6 +44,7 @@ def update_cart(request, item_id):
     elif action == 'remove':
         if item_id in cart:
             del cart[item_id]
+            messages.success(request, "Item removed from the cart.")
 
     request.session['cart'] = cart
     request.session.modified = True

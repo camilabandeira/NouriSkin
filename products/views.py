@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Product, Category, Concern, SkinType, ProductReview
 from .review_form import ReviewForm
 from django.db.models import Avg
+from django.contrib import messages
 
 
 def all_products(request):
@@ -99,21 +100,26 @@ def product_detail(request, product_id):
 def write_review(request, product_id):
     """ A view to write a review for a product """
     product = get_object_or_404(Product, id=product_id)
+    
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
             review.product = product  
             review.save()
+            messages.success(request, "Thank you for your review!")
             return redirect('product_detail', product_id=product.id)
         else:
-            print(form.errors)  
+            if 'star_rating' in form.errors:
+                messages.error(request, "Please select a star rating before submitting!")
+            else:
+                messages.error(request, "There was an error with your review. Please check the form and try again.")
     else:
         form = ReviewForm()
 
     context = {
         'product': product,
-        'form': form
-        }
+        'form': form,
+    }
     
     return render(request, 'products/review_form.html', context)

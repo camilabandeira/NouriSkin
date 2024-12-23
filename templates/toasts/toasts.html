@@ -1,0 +1,25 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/toasts.css' %}">
+
+{% if messages %}
+<div class="toasts-container">
+    {% for message in messages %}
+    <div class="toast {{ message.tags }}">
+        {% if message.tags == 'success' %}
+        <i class="toast-icon fa-solid fa-circle-check"></i>
+        {% elif message.tags == 'error' %}
+        <i class="toast-icon fa-solid fa-circle-xmark"></i>
+        {% elif message.tags == 'info' %}
+        <i class="toast-icon fa-solid fa-circle-info"></i>
+        {% elif message.tags == 'warning' %}
+        <i class="toast-icon fa-solid fa-triangle-exclamation"></i>
+        {% endif %}
+        <p>{{ message }}</p>
+        <button class="toast-close" aria-label="Close">&times;</button>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<script src="{% static 'js/toasts.js' %}"></script>

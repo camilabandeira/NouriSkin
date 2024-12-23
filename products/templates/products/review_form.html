@@ -8,11 +8,6 @@
 <section class="review-page-section">
 
     <div class="review-card">
-        {% if form.rating.errors %}
-        <div class="error-message">
-            {{ form.rating.errors|join:" " }}
-        </div>
-        {% endif %}
         <div class="review-card-header">
             <div class="card-header-image">
                 <img src="{{ product.image.url }}" alt="Image of {{ product.name }}" width="150" height="150" loading="lazy" />
