@@ -92,7 +92,7 @@
                 </div>
                 <div class="product-info">
                     <h4 class="product-title"><a href="{% url 'product_detail' product.id %}">{{ product.name }}</a></h4>
-                    <p class="product-description">{{ product.description }}</p>
+                    <p class="product-description">{{ product.description|truncatechars:100 }}</p>
                     <div class="product-rating">
                         {% for star in range %}
                         {% if star <= product.average_rating %}
