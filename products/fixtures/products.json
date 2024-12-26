@@ -3,8 +3,8 @@
         "model": "products.product",
         "pk": 1,
         "fields": {
-            "name": "Nouriskin Retinol Renewal 1",
-            "description": "A beginner-friendly retinol serum that helps improve skin texture and reduce fine lines.",
+            "name": "Gentle Retinol Starter Serum",
+            "description": "This beginner-friendly retinol serum is designed to introduce retinol into your skincare routine with minimal irritation. By combining the power of retinol with hydrating ingredients like hyaluronic acid and Vitamin E, this serum works to improve skin texture, reduce the appearance of fine lines, and promote a smoother complexion. Ideal for those with dry or combination skin, it helps restore a healthy glow while protecting against dehydration. Its lightweight, fast-absorbing formula makes it easy to incorporate into your evening regimen. With consistent use, you'll notice a softer, more radiant complexion.",
             "price": "39.99",
             "sku": "SKU001",
             "category": 1,
@@ -23,15 +23,15 @@
                 "Hyaluronic Acid",
                 "Vitamin E"
             ],
-            "how_to_use": "Apply a small amount to the face after cleansing, avoiding the eye area. Use in the evening, followed by a moisturizer. Use sunscreen during the day."
+            "how_to_use": "Apply a small amount to the face after cleansing, avoiding the eye area. Use in the evening, followed by a moisturizer. Always wear sunscreen during the day to protect your skin."
         }
     },
     {
         "model": "products.product",
         "pk": 2,
         "fields": {
-            "name": "Nouriskin Retinol Renewal 2",
-            "description": "An advanced formula retinol serum for smoother, younger-looking skin.",
+            "name": "Advanced Skin Smoothing Serum",
+            "description": "This advanced retinol serum is crafted to target multiple signs of aging while delivering a smoother, younger-looking complexion. Enhanced with Niacinamide and Ceramides, it reduces fine lines, wrinkles, and uneven texture while strengthening the skin barrier. Its potent formula ensures effective results without compromising hydration, making it suitable for normal to combination skin types. Perfect for more experienced retinol users, this serum provides visible improvements in firmness, texture, and radiance with regular use. Ideal for anyone looking to elevate their nighttime skincare routine.",
             "price": "42.50",
             "sku": "SKU002",
             "category": 1,
@@ -50,15 +50,15 @@
                 "Niacinamide",
                 "Ceramides"
             ],
-            "how_to_use": "Apply a thin layer to clean, dry skin in the evening. Follow with a hydrating moisturizer. Wear sunscreen during the day."
+            "how_to_use": "Apply a thin layer to clean, dry skin in the evening. Follow with a hydrating moisturizer. Use sunscreen during the day to maintain results and protect your skin."
         }
     },
     {
         "model": "products.product",
         "pk": 3,
         "fields": {
-            "name": "Nouriskin Retinol Renewal 3",
-            "description": "High-strength retinol serum designed to refine pores and even out skin tone.",
+            "name": "High-Strength Retinol Pore Refiner",
+            "description": "This high-potency retinol serum is formulated to refine the appearance of pores, even out skin tone, and tackle stubborn blemishes. Infused with Salicylic Acid for targeted exfoliation and Green Tea Extract for its soothing properties, this serum is a powerhouse for addressing imperfections. Its active ingredients work synergistically to clear congested pores, reduce fine lines, and improve overall skin texture. Ideal for oily and combination skin types, it provides a refreshed, balanced complexion while minimizing signs of aging. With consistent use, your skin will look clearer, smoother, and more refined.",
             "price": "44.99",
             "sku": "SKU003",
             "category": 1,
@@ -77,15 +77,15 @@
                 "Salicylic Acid",
                 "Green Tea Extract"
             ],
-            "how_to_use": "Use in the evening after cleansing and toning. Start with a small amount and gradually increase as tolerated. Apply moisturizer afterward. Use SPF during the day."
+            "how_to_use": "Use in the evening after cleansing and toning. Start with a small amount and gradually increase as tolerated. Apply a moisturizer afterward. Always use SPF during the day to protect your skin."
         }
     },
     {
         "model": "products.product",
         "pk": 4,
         "fields": {
-            "name": "Nouriskin Retinol Renewal 4",
-            "description": "A gentle retinol blend that targets subtle signs of aging while maintaining moisture.",
+            "name": "Hydrating Retinol Complex",
+            "description": "This gentle retinol blend is formulated for those seeking effective anti-aging benefits without compromising hydration. It targets subtle signs of aging, such as fine lines and uneven texture, while nourishing the skin deeply. Enriched with Shea Butter and Aloe Vera, this formula locks in moisture and soothes irritation, making it ideal for sensitive or dry skin. The lightweight, creamy texture glides on effortlessly, leaving the skin feeling soft and refreshed. Perfect for beginners or anyone looking to maintain a youthful glow with added hydration benefits.",
             "price": "38.00",
             "sku": "SKU004",
             "category": 1,
@@ -104,15 +104,15 @@
                 "Shea Butter",
                 "Aloe Vera"
             ],
-            "how_to_use": "Apply evenly to clean skin at night, avoiding the eye area. Follow with a nourishing moisturizer. Use sunscreen during the day."
+            "how_to_use": "Apply evenly to clean skin at night, avoiding the eye area. Follow with a nourishing moisturizer to seal in hydration. Always wear sunscreen during the day to protect your skin."
         }
     },
     {
         "model": "products.product",
         "pk": 5,
         "fields": {
-            "name": "Nouriskin Retinol Renewal 5",
-            "description": "Potent retinol enhanced with botanicals for a radiant and revitalized complexion.",
+            "name": "Botanical Radiance Retinol Serum",
+            "description": "This potent retinol serum combines advanced anti-aging properties with the natural power of botanical extracts to deliver a radiant and revitalized complexion. Infused with Vitamin C for brightening and antioxidants for skin repair, it reduces fine lines, enhances firmness, and boosts overall radiance. The inclusion of botanical extracts ensures that the serum soothes and hydrates the skin, making it suitable even for those prone to sensitivity. With its silky, fast-absorbing texture, this serum provides long-lasting hydration and transforms dull skin into a luminous, youthful glow.",
             "price": "45.50",
             "sku": "SKU005",
             "category": 1,
@@ -131,15 +131,15 @@
                 "Botanical Extracts",
                 "Vitamin C"
             ],
-            "how_to_use": "Dispense 1-2 pumps and gently smooth onto clean skin in the evening. Follow with a moisturizer and avoid sunlight without SPF."
+            "how_to_use": "Dispense 1-2 pumps and gently smooth onto clean skin in the evening. Follow with a moisturizer to lock in hydration. Avoid direct sunlight without SPF to maintain the serum's effectiveness."
         }
     },
     {
         "model": "products.product",
         "pk": 6,
         "fields": {
-            "name": "Nouriskin Retinol Renewal 6",
-            "description": "High-grade retinol serum for advanced users aiming for significant texture improvement.",
+            "name": "Advanced Retinol Refining Serum",
+            "description": "This high-grade retinol serum is specifically formulated for advanced users seeking significant improvements in skin texture and overall appearance. With a powerful concentration of retinol, it works to diminish the appearance of deep-set wrinkles, uneven texture, and age spots. Infused with peptides to boost collagen production and Licorice Root Extract to calm and brighten the skin, this serum provides visible results without excessive dryness. Perfect for users experienced with retinol, it delivers professional-level results in the comfort of your own home. Ideal for normal to combination skin types.",
             "price": "49.99",
             "sku": "SKU006",
             "category": 1,
@@ -159,15 +159,15 @@
                 "Peptides",
                 "Licorice Root Extract"
             ],
-            "how_to_use": "Apply 1-2 drops to clean, dry skin in the evening. Follow with a moisturizer. Always wear SPF during the day."
+            "how_to_use": "Apply 1-2 drops to clean, dry skin in the evening. Follow with a rich moisturizer to maintain hydration. Always wear SPF during the day to protect your skin."
         }
     },
     {
         "model": "products.product",
         "pk": 7,
         "fields": {
-            "name": "Nouriskin Deep Moisture Cream",
-            "description": "A rich moisturiser that provides long-lasting hydration and leaves skin feeling supple.",
+            "name": "Ultra-Rich Deep Hydration Cream",
+            "description": "This luxurious, ultra-rich moisturizer is designed to provide long-lasting hydration for dry and dehydrated skin. Packed with nourishing ingredients like Shea Butter and Hyaluronic Acid, it replenishes moisture, leaving your skin feeling soft, plump, and rejuvenated. Vitamin E offers antioxidant protection, helping to combat environmental stressors. Its thick yet non-greasy texture ensures maximum hydration without clogging pores. Perfect for both day and night use, this cream is a must-have for anyone seeking a supple and healthy-looking complexion.",
             "price": "29.99",
             "sku": "SKU007",
             "category": 2,
@@ -185,15 +185,15 @@
                 "Hyaluronic Acid",
                 "Vitamin E"
             ],
-            "how_to_use": "Massage a generous amount onto clean skin in the morning and evening. Reapply as needed for extra hydration."
+            "how_to_use": "Massage a generous amount onto clean skin in the morning and evening. Reapply as needed for extra hydration, particularly in areas prone to dryness."
         }
     },
     {
         "model": "products.product",
         "pk": 8,
         "fields": {
-            "name": "Nouriskin Light Day Moisturiser",
-            "description": "A lightweight daily moisturiser infused with vitamins and hyaluronic acid.",
+            "name": "Hydrating Lightweight Day Moisturizer",
+            "description": "This refreshing, lightweight daily moisturizer is infused with powerful hydrating and brightening ingredients to keep your skin nourished and radiant all day. Formulated with Hyaluronic Acid to lock in moisture, Vitamin C to brighten and even out skin tone, and Aloe Vera to soothe and calm irritation, this cream is perfect for those seeking hydration without heaviness. Its fast-absorbing texture makes it an excellent base for makeup and sunscreen, ensuring your skin stays protected and glowing throughout the day.",
             "price": "25.00",
             "sku": "SKU008",
             "category": 2,
@@ -212,15 +212,15 @@
                 "Vitamin C",
                 "Aloe Vera"
             ],
-            "how_to_use": "Smooth onto clean face and neck in the morning. Allow it to absorb before applying makeup or sunscreen."
+            "how_to_use": "Smooth onto clean face and neck in the morning. Allow it to absorb completely before applying makeup or sunscreen."
         }
     },
     {
         "model": "products.product",
         "pk": 9,
         "fields": {
-            "name": "Nouriskin Calming Night Cream",
-            "description": "A soothing nighttime moisturiser that helps calm and repair skin overnight.",
+            "name": "Soothing Overnight Repair Cream",
+            "description": "This calming nighttime moisturizer is designed to work while you sleep, soothing irritation and repairing skin for a refreshed and restored appearance by morning. Formulated with Chamomile and Calendula, it calms redness and inflammation, while Ceramides strengthen the skin barrier, locking in moisture and protecting against dehydration. Its creamy yet lightweight formula absorbs quickly, leaving no residue. Ideal for those with sensitive or reactive skin, this cream provides a deeply comforting experience as it helps your skin recover from daily stressors.",
             "price": "32.99",
             "sku": "SKU009",
             "category": 2,
@@ -237,15 +237,15 @@
                 "Calendula",
                 "Ceramides"
             ],
-            "how_to_use": "Apply a thin layer to clean skin as the last step in your nighttime routine. Massage gently until fully absorbed."
+            "how_to_use": "Apply a thin layer to clean skin as the last step in your nighttime routine. Massage gently until fully absorbed. Wake up to calm, hydrated, and repaired skin."
         }
     },
     {
         "model": "products.product",
         "pk": 10,
         "fields": {
-            "name": "Nouriskin Hydration Boost Balm",
-            "description": "A concentrated balm delivering intense moisture to dry, dehydrated skin.",
+            "name": "Intense Hydration Balm",
+            "description": "A deeply nourishing balm designed to deliver intense moisture to dry and dehydrated skin. Enriched with Beeswax to lock in hydration, Coconut Oil for deep nourishment, and Glycerin for a plumping effect, this balm provides long-lasting relief to even the driest areas. Its rich, concentrated formula is perfect for tackling flaky patches, tightness, or extreme dryness. The balm melts effortlessly into the skin, leaving it soft, smooth, and radiant. Ideal for targeted hydration, it’s a must-have for those looking to restore their skin’s moisture barrier.",
             "price": "34.50",
             "sku": "SKU010",
             "category": 2,
@@ -262,15 +262,15 @@
                 "Coconut Oil",
                 "Glycerin"
             ],
-            "how_to_use": "Warm a small amount between fingers and press gently onto areas needing intense hydration."
+            "how_to_use": "Warm a small amount between fingers and press gently onto areas needing intense hydration. Use as often as needed."
         }
     },
     {
         "model": "products.product",
         "pk": 11,
         "fields": {
-            "name": "Nouriskin Daily Defense Moisturiser",
-            "description": "A protective moisturiser with SPF to shield your skin from environmental stressors.",
+            "name": "Daily Defense Moisturizer with SPF",
+            "description": "This lightweight, protective moisturizer is formulated to shield your skin from harmful UV rays and environmental stressors. With Zinc Oxide for broad-spectrum SPF protection, Green Tea Extract for its antioxidant properties, and Vitamin C for brightening and evening out skin tone, this moisturizer offers all-day defense while keeping your skin hydrated and radiant. Perfect for daily use, its non-greasy formula absorbs quickly and is suitable for layering under makeup.",
             "price": "29.00",
             "sku": "SKU011",
             "category": 2,
@@ -288,15 +288,15 @@
                 "Green Tea Extract",
                 "Vitamin C"
             ],
-            "how_to_use": "Apply generously to face and neck in the morning. Reapply every 2 hours when exposed to sunlight."
+            "how_to_use": "Apply generously to face and neck in the morning. Reapply every 2 hours when exposed to sunlight for continuous protection."
         }
     },
     {
         "model": "products.product",
         "pk": 12,
         "fields": {
-            "name": "Nouriskin Ultra-Rich Cream",
-            "description": "A luxurious, ultra-rich moisturiser for very dry skin types.",
+            "name": "Ultra-Rich Hydration Cream",
+            "description": "This ultra-luxurious cream provides intensive hydration for very dry skin, leaving it feeling soft, smooth, and deeply nourished. Packed with Shea Butter and Cocoa Butter for deep moisturization and Avocado Oil to replenish essential nutrients, this rich formula is perfect for tackling dryness and restoring the skin's natural barrier. Its velvety texture absorbs seamlessly, making it suitable for both day and night use. Ideal for cold weather or whenever your skin needs an extra boost of hydration.",
             "price": "35.99",
             "sku": "SKU012",
             "category": 2,
@@ -313,15 +313,15 @@
                 "Cocoa Butter",
                 "Avocado Oil"
             ],
-            "how_to_use": "Apply liberally to clean, dry skin morning and night. Focus on areas prone to dryness."
+            "how_to_use": "Apply liberally to clean, dry skin morning and night. Focus on areas prone to dryness for best results."
         }
     },
     {
         "model": "products.product",
         "pk": 13,
         "fields": {
-            "name": "Nouriskin Revitalizing Clay Mask",
-            "description": "A purifying clay mask that draws out impurities and refines pores.",
+            "name": "Purifying Clay Mask",
+            "description": "This revitalizing clay mask is formulated to deeply cleanse and detoxify the skin by drawing out impurities and excess oil. Infused with Kaolin Clay for its purifying properties, Salicylic Acid for gentle exfoliation, and Green Tea Extract for soothing benefits, this mask helps refine pores and improve skin texture. Perfect for oily or blemish-prone skin, it leaves your complexion feeling refreshed, balanced, and visibly clearer.",
             "price": "24.99",
             "sku": "SKU013",
             "category": 3,
@@ -345,8 +345,8 @@
         "model": "products.product",
         "pk": 14,
         "fields": {
-            "name": "Nouriskin Brightening Sheet Mask",
-            "description": "A sheet mask infused with brightening agents for a more radiant complexion.",
+            "name": "Brightening Sheet Mask",
+            "description": "This rejuvenating sheet mask is enriched with powerful brightening agents to help restore your skin's natural radiance. Packed with Vitamin C, Niacinamide, and Licorice Extract, it reduces the appearance of dark spots, evens out skin tone, and boosts your complexion's glow. The serum-soaked mask delivers an instant hydration boost, leaving your skin feeling refreshed, smooth, and luminous after every use. Ideal for all skin types, it's perfect for a quick pick-me-up before an event or as part of your weekly skincare routine.",
             "price": "7.99",
             "sku": "SKU014",
             "category": 3,
@@ -364,15 +364,15 @@
                 "Niacinamide",
                 "Licorice Extract"
             ],
-            "how_to_use": "Unfold the mask and place it over clean skin. Leave on for 15-20 minutes. Remove and gently pat excess serum into the skin."
+            "how_to_use": "Unfold the mask and place it over clean skin. Leave on for 15-20 minutes. Remove and gently pat excess serum into the skin. Do not rinse."
         }
     },
     {
         "model": "products.product",
         "pk": 15,
         "fields": {
-            "name": "Nouriskin Hydrating Gel Mask",
-            "description": "A cooling gel mask that restores moisture and soothes stressed skin.",
+            "name": "Cooling Hydration Gel Mask",
+            "description": "A refreshing gel mask designed to deliver instant hydration and soothe stressed or irritated skin. Enriched with Aloe Vera for calming effects, Hyaluronic Acid for deep moisturization, and Cucumber Extract for a cooling sensation, this mask leaves your skin feeling replenished and revitalized. Its lightweight gel texture makes it suitable for daily use, providing a spa-like experience in the comfort of your home.",
             "price": "19.99",
             "sku": "SKU015",
             "category": 3,
@@ -390,15 +390,15 @@
                 "Hyaluronic Acid",
                 "Cucumber Extract"
             ],
-            "how_to_use": "Apply generously to clean skin. Leave on for 10-15 minutes, then rinse or tissue off. Can be used daily."
+            "how_to_use": "Apply generously to clean skin. Leave on for 10-15 minutes, then rinse off or gently tissue off any excess. Use daily for optimal hydration."
         }
     },
     {
         "model": "products.product",
         "pk": 16,
         "fields": {
-            "name": "Nouriskin Detox Charcoal Mask",
-            "description": "A detoxifying charcoal mask that helps clear pores and balance oily skin.",
+            "name": "Charcoal Detox Mask",
+            "description": "This detoxifying charcoal mask is perfect for deep cleansing and balancing oily skin. Formulated with Activated Charcoal to draw out impurities, Bentonite Clay to absorb excess oil, and Tea Tree Oil to soothe and purify, this mask leaves your skin feeling clean, refreshed, and balanced. Ideal for oily and combination skin, it targets clogged pores and helps prevent breakouts while maintaining a healthy complexion.",
             "price": "22.50",
             "sku": "SKU016",
             "category": 3,
@@ -415,15 +415,15 @@
                 "Bentonite Clay",
                 "Tea Tree Oil"
             ],
-            "how_to_use": "Spread evenly on clean skin, avoiding the eye area. Leave on for 10-15 minutes and rinse thoroughly. Use weekly."
+            "how_to_use": "Spread evenly on clean skin, avoiding the eye area. Leave on for 10-15 minutes and rinse thoroughly with warm water. Use once a week for best results."
         }
     },
     {
         "model": "products.product",
         "pk": 17,
         "fields": {
-            "name": "Nouriskin Nourishing Cream Mask",
-            "description": "A creamy, nutrient-rich mask for a soft, supple skin finish.",
+            "name": "Nourishing Cream Mask",
+            "description": "A luxurious, nutrient-rich cream mask designed to restore softness and hydration to your skin. Packed with Shea Butter for deep moisturization, Avocado Oil for nourishment, and Vitamin E for antioxidant protection, this mask delivers a spa-like experience in the comfort of your home. It leaves your skin feeling supple, smooth, and rejuvenated after each use. Perfect for dry and combination skin types, this mask is ideal for a weekly self-care ritual to replenish lost moisture and improve overall skin texture.",
             "price": "27.00",
             "sku": "SKU017",
             "category": 3,
@@ -442,15 +442,15 @@
                 "Avocado Oil",
                 "Vitamin E"
             ],
-            "how_to_use": "Apply a generous layer to clean skin. Leave on for 10-15 minutes. Wipe off excess or rinse. Use 2-3 times a week."
+            "how_to_use": "Apply a generous layer to clean skin. Leave on for 10-15 minutes. Wipe off excess or rinse. Use 2-3 times a week for best results."
         }
     },
     {
         "model": "products.product",
         "pk": 18,
         "fields": {
-            "name": "Nouriskin Vitamin Infusion Mask",
-            "description": "A mask enriched with vitamins to revive dull, tired-looking skin.",
+            "name": "Vitamin Infusion Hydrating Mask",
+            "description": "Revitalize your skin with this vitamin-enriched mask, designed to breathe life into dull, tired-looking skin. Infused with Vitamin C for brightening, Vitamin B5 for deep hydration, and Jojoba Oil for a boost of nourishment, this mask restores radiance and leaves your complexion feeling refreshed and smooth. Ideal for mature or lackluster skin, it is perfect for replenishing lost nutrients and promoting a youthful glow.",
             "price": "29.99",
             "sku": "SKU018",
             "category": 3,
@@ -468,15 +468,15 @@
                 "Vitamin B5",
                 "Jojoba Oil"
             ],
-            "how_to_use": "Apply a thick layer to clean, dry skin. Leave on for 10 minutes, then rinse with warm water. Can be used 2-3 times a week."
+            "how_to_use": "Apply a thick layer to clean, dry skin. Leave on for 10 minutes, then rinse with warm water. Use 2-3 times a week for optimal results."
         }
     },
     {
         "model": "products.product",
         "pk": 19,
         "fields": {
-            "name": "Nouriskin Hydrating Serum",
-            "description": "A lightweight serum infused with hyaluronic acid for deep hydration.",
+            "name": "Deep Hydration Serum",
+            "description": "This lightweight, fast-absorbing serum is powered by Hyaluronic Acid to deliver intense hydration deep into the skin's layers. Infused with Glycerin and Vitamin B5, it helps to plump the skin, smooth fine lines, and lock in moisture for an all-day glow. Perfect for dry and combination skin types, this serum leaves your skin feeling soft, dewy, and revitalized.",
             "price": "29.99",
             "sku": "SKU019",
             "category": 4,
@@ -493,15 +493,15 @@
                 "Glycerin",
                 "Vitamin B5"
             ],
-            "how_to_use": "Apply 1-2 drops to clean skin in the morning and evening. Follow with a moisturizer."
+            "how_to_use": "Apply 1-2 drops to clean skin in the morning and evening. Follow with a moisturizer to seal in hydration."
         }
     },
     {
         "model": "products.product",
         "pk": 20,
         "fields": {
-            "name": "Nouriskin Brightening Serum",
-            "description": "A vitamin C-packed serum that promotes a brighter, more even skin tone.",
+            "name": "Brightening Vitamin C Serum",
+            "description": "Packed with potent Vitamin C, this serum is your go-to for brightening dull skin, reducing dark spots, and promoting an even skin tone. With Ferulic Acid to enhance the antioxidant effects and Niacinamide to calm redness and improve texture, this serum leaves your skin radiant and refreshed. Lightweight and non-greasy, it’s perfect for morning use to prep your skin for the day.",
             "price": "33.50",
             "sku": "SKU020",
             "category": 4,
@@ -519,15 +519,15 @@
                 "Ferulic Acid",
                 "Niacinamide"
             ],
-            "how_to_use": "Apply 3-4 drops to clean, dry skin in the morning. Follow with sunscreen."
+            "how_to_use": "Apply 3-4 drops to clean, dry skin in the morning. Follow with a moisturizer and sunscreen for maximum protection and brightening."
         }
     },
     {
         "model": "products.product",
         "pk": 21,
         "fields": {
-            "name": "Nouriskin Anti-Aging Serum",
-            "description": "A serum with peptides to reduce the appearance of fine lines and wrinkles.",
+            "name": "Advanced Anti-Aging Peptide Serum",
+            "description": "Harness the power of peptides with this advanced anti-aging serum. It helps to reduce the appearance of fine lines and wrinkles, while boosting skin elasticity and hydration. Formulated with Hyaluronic Acid for moisture and Collagen for firmness, this serum supports the skin’s natural renewal process. Ideal for mature or aging skin, it delivers visible results with regular nighttime use.",
             "price": "39.00",
             "sku": "SKU021",
             "category": 4,
@@ -545,15 +545,15 @@
                 "Hyaluronic Acid",
                 "Collagen"
             ],
-            "how_to_use": "Apply a thin layer to clean skin at night. Follow with a moisturizer."
+            "how_to_use": "Apply a thin layer to clean skin at night. Follow with a rich moisturizer to maximize hydration and repair."
         }
     },
     {
         "model": "products.product",
         "pk": 22,
         "fields": {
-            "name": "Nouriskin Clarifying Serum",
-            "description": "A BHA-based serum to help clear pores and prevent breakouts.",
+            "name": "Clarifying Pore Serum",
+            "description": "Target clogged pores and breakouts with this BHA-powered clarifying serum. Formulated with Salicylic Acid to exfoliate deep within the pores, Zinc PCA to balance oil production, and Witch Hazel to soothe irritation, this serum is perfect for oily and acne-prone skin. With regular use, it helps to clear pores, reduce breakouts, and refine skin texture for a smoother complexion.",
             "price": "28.99",
             "sku": "SKU022",
             "category": 4,
@@ -570,15 +570,15 @@
                 "Zinc PCA",
                 "Witch Hazel"
             ],
-            "how_to_use": "Use 2-3 drops on clean, dry skin in the evening. Avoid using with other exfoliants."
+            "how_to_use": "Use 2-3 drops on clean, dry skin in the evening. Avoid using with other exfoliants to prevent irritation. Follow with a lightweight moisturizer."
         }
     },
     {
         "model": "products.product",
         "pk": 23,
         "fields": {
-            "name": "Nouriskin Firming Serum",
-            "description": "A collagen-boosting serum that helps improve skin elasticity.",
+            "name": "Collagen Firming Serum",
+            "description": "A powerful collagen-boosting serum designed to improve skin elasticity and firmness. Infused with Peptides and Vitamin E, this serum works to reduce the appearance of fine lines and wrinkles while deeply hydrating the skin. Perfect for those looking to restore a youthful bounce and smoothness, it delivers noticeable results with daily use.",
             "price": "44.50",
             "sku": "SKU023",
             "category": 4,
@@ -596,15 +596,15 @@
                 "Peptides",
                 "Vitamin E"
             ],
-            "how_to_use": "Apply a few drops to clean skin morning and night. Follow with moisturizer."
+            "how_to_use": "Apply a few drops to clean skin morning and night. Follow with a hydrating moisturizer to lock in the benefits."
         }
     },
     {
         "model": "products.product",
         "pk": 24,
         "fields": {
-            "name": "Nouriskin Glow Serum",
-            "description": "A radiance-enhancing serum that leaves your skin glowing and smooth.",
+            "name": "Radiance Glow Serum",
+            "description": "Achieve a luminous complexion with this radiance-enhancing serum. Featuring Vitamin C for brightening, Alpha Arbutin for fading dark spots, and Hyaluronic Acid for hydration, this serum transforms dull skin into a glowing masterpiece. Lightweight and fast-absorbing, it’s perfect for use under makeup or as part of your day and night skincare routine.",
             "price": "36.99",
             "sku": "SKU024",
             "category": 4,
@@ -622,15 +622,15 @@
                 "Alpha Arbutin",
                 "Hyaluronic Acid"
             ],
-            "how_to_use": "Apply 2-3 drops to clean, dry skin in the morning and evening. Follow with SPF."
+            "how_to_use": "Apply 2-3 drops to clean, dry skin in the morning and evening. Always follow with SPF during the day."
         }
     },
     {
         "model": "products.product",
         "pk": 25,
         "fields": {
-            "name": "Nouriskin Special Sale Moisturiser",
-            "description": "A limited-time offer moisturiser at a discounted price.",
+            "name": "Hydrating Moisturizer - Limited Edition",
+            "description": "This limited-time hydrating moisturizer delivers intense moisture and nourishment for dry and sensitive skin. Enriched with Shea Butter to soften and soothe, Hyaluronic Acid to lock in hydration, and Vitamin E for antioxidant protection, it helps restore your skin's natural glow. Its lightweight yet deeply nourishing formula makes it ideal for everyday use, leaving your skin feeling smooth, refreshed, and comfortable. Grab it at a special price while supplies last!",
             "price": "15.99",
             "sku": "SKU025",
             "category": 5,
@@ -647,15 +647,15 @@
                 "Hyaluronic Acid",
                 "Vitamin E"
             ],
-            "how_to_use": "Massage a generous amount into clean skin morning and night."
+            "how_to_use": "Massage a generous amount into clean skin morning and night. Focus on areas prone to dryness for optimal results."
         }
     },
     {
         "model": "products.product",
         "pk": 26,
         "fields": {
-            "name": "Nouriskin Clearance Retinol",
-            "description": "A retinol serum on clearance, perfect for trying out retinol at a low cost.",
+            "name": "Clearance Retinol Serum",
+            "description": "An affordable, high-quality retinol serum perfect for those looking to incorporate retinol into their skincare routine without a significant investment. Formulated with Retinol to improve skin texture and reduce fine lines, Vitamin E to provide antioxidant protection, and Squalane to deeply hydrate and nourish the skin, this serum offers incredible value. Ideal for normal to combination skin, it delivers visible results with regular use. Take advantage of this clearance offer to elevate your skincare routine.",
             "price": "19.99",
             "sku": "SKU026",
             "category": 5,
@@ -673,15 +673,15 @@
                 "Vitamin E",
                 "Squalane"
             ],
-            "how_to_use": "Apply at night to clean, dry skin. Use sunscreen during the day."
+            "how_to_use": "Apply a small amount to clean, dry skin at night. Follow with a moisturizer and use sunscreen during the day to protect your skin."
         }
     },
     {
         "model": "products.product",
         "pk": 27,
         "fields": {
-            "name": "Nouriskin Discounted Mask Bundle",
-            "description": "A set of three masks offered at a special bundle price.",
+            "name": "Special Mask Bundle",
+            "description": "A curated set of three masks offered at an unbeatable bundle price, designed to cater to different skin concerns and needs. The set includes a purifying Kaolin Clay mask to draw out impurities, a hydrating mask enriched with Hyaluronic Acid, and a brightening Vitamin C mask to enhance radiance. Perfect for a weekly skincare routine or to gift to a skincare enthusiast, this bundle ensures a spa-like experience from the comfort of your home.",
             "price": "22.00",
             "sku": "SKU027",
             "category": 5,
@@ -698,15 +698,15 @@
                 "Hyaluronic Acid",
                 "Vitamin C"
             ],
-            "how_to_use": "Follow instructions for each mask included in the bundle."
+            "how_to_use": "Follow the specific instructions provided for each mask in the bundle for optimal results."
         }
     },
     {
         "model": "products.product",
         "pk": 28,
         "fields": {
-            "name": "Nouriskin Sale Serum",
-            "description": "A bestselling serum now available at a reduced price.",
+            "name": "Discounted Glow Serum",
+            "description": "This bestselling serum is now available at a reduced price, offering premium skincare benefits at an incredible value. Packed with Vitamin C to brighten and even out skin tone, Peptides to enhance skin elasticity, and Hyaluronic Acid to provide deep hydration, this serum is perfect for maintaining a radiant, youthful complexion. Lightweight and fast-absorbing, it works seamlessly in both morning and evening routines.",
             "price": "18.50",
             "sku": "SKU028",
             "category": 5,
@@ -724,15 +724,15 @@
                 "Peptides",
                 "Hyaluronic Acid"
             ],
-            "how_to_use": "Apply a few drops to clean skin morning and night. Follow with a moisturizer."
+            "how_to_use": "Apply a few drops to clean skin morning and night. Follow with a moisturizer to lock in hydration and maximize benefits."
         }
     },
     {
         "model": "products.product",
         "pk": 29,
         "fields": {
-            "name": "Nouriskin Seasonal Offer Cleanser",
-            "description": "A gentle cleanser on seasonal sale, limited stock.",
+            "name": "Seasonal Gentle Cleanser",
+            "description": "This gentle, soothing cleanser is now available at a special seasonal price, perfect for refreshing and revitalizing your skincare routine. Formulated with calming Chamomile to reduce irritation, Aloe Vera to hydrate and soften, and Glycerin to lock in moisture, it effectively removes impurities while maintaining your skin’s natural balance. Its lightweight, non-drying formula is suitable for daily use, leaving your skin feeling clean, smooth, and nourished. Ideal for sensitive or combination skin, this cleanser ensures a fresh start every morning and evening.",
             "price": "14.99",
             "sku": "SKU029",
             "category": 5,
@@ -750,15 +750,15 @@
                 "Aloe Vera",
                 "Glycerin"
             ],
-            "how_to_use": "Massage onto wet skin, then rinse thoroughly with lukewarm water. Use morning and evening."
+            "how_to_use": "Massage onto wet skin in circular motions. Rinse thoroughly with lukewarm water. Use morning and evening for best results."
         }
     },
     {
         "model": "products.product",
         "pk": 30,
         "fields": {
-            "name": "Nouriskin Festive Discount Toner",
-            "description": "A toner offered at a festive discount, while supplies last.",
+            "name": "Festive Rose Toner",
+            "description": "Elevate your skincare routine with this refreshing toner, now offered at a festive discount. Infused with Rose Water to soothe and hydrate, Niacinamide to refine pores and even skin tone, and Aloe Vera to provide a calming effect, this toner leaves your skin feeling balanced and radiant. Perfect for use after cleansing, it preps the skin to absorb serums and moisturizers more effectively. Suitable for normal to dry skin, this toner is an essential step for maintaining a glowing complexion.",
             "price": "12.99",
             "sku": "SKU030",
             "category": 5,
@@ -776,7 +776,7 @@
                 "Niacinamide",
                 "Aloe Vera"
             ],
-            "how_to_use": "Apply to clean skin using a cotton pad or hands. Use morning and night."
+            "how_to_use": "After cleansing, apply the toner to a cotton pad or directly onto your hands. Gently pat onto clean skin. Use morning and night for best results."
         }
     }
 ]
