@@ -1,0 +1,244 @@
+.checkout-page {
+    display: flex;
+    align-items: flex-start;
+    padding: 2rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.checkout-form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.checkout-form-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.checkout-form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 0.25rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--olive-light);
+}
+
+.form-group input::placeholder {
+    font-size: 0.875rem;
+    color: hsl(0, 0%, 60%);
+}
+
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.payment-message {
+    font-size: 0.875rem;
+    margin-bottom: 0.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: hsl(0, 69%, 60%);
+}
+
+.payment-message i {
+    color: hsl(0, 69%, 60%);
+    font-size: 0.875rem;
+}
+
+.payment-message strong {
+    font-weight: 700;
+}
+
+.complete-order-btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: var(--btn-text);
+    background-color: var(--black);
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.complete-order-btn:hover {
+    background-color: var(--gray-dark);
+}
+
+.complete-order-btn i {
+    font-weight: 900;
+    color: var(--btn-text);
+    font-size: 0.9375rem;
+    padding: 0 0.3rem;
+}
+
+.adjust-cart-btn {
+    background-color: hsl(0, 0%, 100%);
+    color: var(--gray-dark);
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 0.0625rem solid var(--line-break);
+    border-radius: 0.25rem;
+}
+
+.adjust-cart-btn:hover {
+    background-color: hsla(0, 0%, 99%, 0.478);
+}
+
+.order-summary-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.order-summary-container h2 {
+    width: 100%;
+    font-size: 1.4rem;
+    margin-bottom: 1.7rem;
+    line-height: 2;
+    font-weight: 500;
+    border-bottom: 1px solid var(--line-break);
+}
+
+.summary-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.summary-card {
+    display: flex;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.summary-image {
+    width: 6rem;
+    margin-bottom: 1rem;
+}
+
+.summary-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.summary-details {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 0.3rem;
+}
+
+.summary-total {
+    margin-top: 1.25rem;
+    width: 100%;
+    border-top: 0.0625rem solid var(--line-break);
+    padding: 1rem 0;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    line-height: 0.9;
+    padding: 0.5rem 4px;
+}
+
+.subtotal-label,
+.subtotal-value {
+    font-size: 1rem;
+}
+
+.divider-line {
+    border-top: 1px solid var(--line-break);
+    margin: 0.9375rem 0;
+}
+
+.total-label,
+.total-value {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+@media (max-width: 528px) {
+    .checkout-page {
+        padding: 1rem;
+        flex-direction: column-reverse;
+    }
+
+    .checkout-form-container {
+        width: 100%;
+    }
+
+    .checkout-form {
+        width: 100%;
+    }
+
+    .summary-card {
+        flex-direction: row;
+        gap: 0.3rem;
+    }
+
+    .summary-image {
+        width: 100%;
+    }
+
+    .summary-image img {
+        width: 92%;
+    }
+
+    .summary-details {
+        width: 100%;
+        right: 1rem;
+    }
+
+    .summary-details h3 {
+        font-size: 1.1rem;
+    }
+
+    .summary-total {
+        padding: 0.5rem 0;
+    }
+
+    .summary-row {
+        padding: 0.5rem 0;
+    }
+
+    .subtotal-label,
+    .subtotal-value {
+        font-size: 0.875rem;
+    }
+
+    .total-label,
+    .total-value {
+        font-size: 1rem;
+    }
+}

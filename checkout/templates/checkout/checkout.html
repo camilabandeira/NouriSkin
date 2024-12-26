@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Checkout{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+
+<section class="checkout-page">
+    <div class="checkout-form-container">
+        <h6 class="checkout-form-title">Details</h6>
+        <form method="post" class="checkout-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" name="full_name" id="full_name" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+
+            <h6 class="checkout-form-title">Delivery</h6>
+
+            <div class="form-group">
+                <input type="text" name="phone_number" id="phone_number" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="country" id="country" placeholder="Country" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="postcode" id="postcode" placeholder="Postcode">
+            </div>
+            <div class="form-group">
+                <input type="text" name="town_or_city" id="town_or_city" placeholder="Town/City" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="street_address1" id="street_address1" placeholder="Street Address 1" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="street_address2" id="street_address2" placeholder="Street Address 2">
+            </div>
+            <div class="form-group">
+                <input type="text" name="county" id="county" placeholder="County">
+            </div>
+            <div class="form-buttons">
+                <h6 class="checkout-form-title">Payment</h6>
+                <button type="button" class="adjust-cart-btn" onclick="location.href='{% url 'view_cart' %}'">Adjust Cart</button>
+                <button type="submit" class="complete-order-btn">Complete Order <i class="fas fa-lock"></i></button>
+                <p class="payment-message">
+                    <i class="fas fa-info-circle" title="Your card will be charged this amount, including delivery charges."></i>
+                    Your card will be charged: <strong>€{{ grand_total }}</strong>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <div class="order-summary-container">
+        <h2>Your Cart</h2>
+        {% for item in cart_items %}
+        <div class="summary-container">
+            <div class="summary-card">
+                <div class="summary-image">
+                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="product-image">
+                </div>
+                <div class="summary-details">
+                    <h3>{{ item.product.name }}</h3>
+                    <p>Quantity: {{ item.quantity }}</p>
+                    <p>Price:  €{{ item.product.price }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+
+        <div class="summary-total">
+            <div class="summary-row">
+                <div class="subtotal-label">Subtotal</div>
+                <div class="subtotal-value">€{{ total }}</div>
+            </div>
+            
+            <div class="summary-row">
+                <div class="delivery-label">Delivery</div>
+                <div class="delivery-value">
+                    {% if delivery == "Free" %}
+                        Free
+                    {% else %}
+                        €{{ delivery }}
+                    {% endif %}
+                </div>
+            </div>
+            
+            <div class="divider-line"></div>
+
+            <div class="summary-row total-row">
+                <div class="total-label">Total</div>
+                <div class="total-value">€{{ grand_total }}</div>
+            </div>
+        </div>
+        
+    </div>
+
+
+</section>
+{% endblock %}

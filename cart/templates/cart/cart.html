@@ -73,7 +73,7 @@
                 <p class="delivery-message">{{ free_delivery_message }}</p>
                 {% endif %}
                 <form method="GET" action="#">
-                    <button type="submit" class="checkout-btn">CHECK OUT</button>
+                    <a href="{% url 'checkout' %}" class="checkout-btn">CHECKOUT</a>
                 </form>
             </div>
         </div>
