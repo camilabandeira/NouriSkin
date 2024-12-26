@@ -72,9 +72,15 @@
                 {% if free_delivery_message %}
                 <p class="delivery-message">{{ free_delivery_message }}</p>
                 {% endif %}
-                <form method="GET" action="#">
-                    <a href="{% url 'checkout' %}" class="checkout-btn">CHECKOUT</a>
-                </form>
+                <div class="cart-actions">
+                    <a href="{% url 'products' %}" class="continue-shopping-btn">
+                        <i class="fas fa-arrow-left"></i> CONTINUE SHOPPING
+                    </a>
+                    <a href="{% url 'checkout' %}" class="checkout-btn">
+                        CHECKOUT <i class="fas fa-lock"></i>
+                    </a>
+                </div>
+                
             </div>
         </div>
         {% endif %}
