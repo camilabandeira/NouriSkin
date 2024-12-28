@@ -1,32 +1,125 @@
+import os
+
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
-from products.models import Product
+from django.conf import settings
+
+import stripe
+
 from .forms import OrderForm
+from .models import OrderLineItem, Order
+from cart.context_processors import cart_contents
+from products.models import Product
+
 
 def checkout(request):
-    cart = request.session.get('cart', {})
-    if not cart:
-        messages.error(request, "There's nothing in your bag at the moment")
-        return redirect(reverse('products'))
-    
+    stripe_public_key = os.getenv('STRIPE_PUBLIC_KEY', '')
+    stripe_secret_key = os.getenv('STRIPE_SECRET_KEY', '')
 
-    cart_items = []
-    for item_id, quantity in cart.items():
-        try:
-            product = Product.objects.get(id=item_id)
-            cart_items.append({
-                'product': product,
-                'quantity': quantity,
-            })
-        except Product.DoesNotExist:
-            messages.error(request, "One of the products in your cart was not found.")
+    if request.method == 'POST':
+        cart = request.session.get('cart', {})
+        if not cart:
+            messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
-    
-    order_form = OrderForm()
 
+        form_data = {
+            'full_name': request.POST['full_name'],
+            'email': request.POST['email'],
+            'phone_number': request.POST['phone_number'],
+            'country': request.POST['country'],
+            'postcode': request.POST['postcode'],
+            'town_or_city': request.POST['town_or_city'],
+            'street_address1': request.POST['street_address1'],
+            'street_address2': request.POST['street_address2'],
+            'county': request.POST['county'],
+        }
+
+        order_form = OrderForm(form_data)
+        if order_form.is_valid():
+            order = order_form.save(commit=False)
+            order.save()
+            for item_id, quantity in cart.items():
+                try:
+                    product = Product.objects.get(id=item_id)
+                    if isinstance(quantity, int):
+                        OrderLineItem.objects.create(
+                            order=order,
+                            product=product,
+                            quantity=quantity,
+                        )
+                    else:
+                        for size, qty in quantity.items():
+                            OrderLineItem.objects.create(
+                                order=order,
+                                product=product,
+                                quantity=qty,
+                                product_size=size,
+                            )
+                except Product.DoesNotExist:
+                    messages.error(request, "One of the products in your cart was not found.")
+                    order.delete()
+                    return redirect(reverse('view_cart'))
+
+            order.update_total()
+            request.session['save_info'] = 'save-info' in request.POST
+            return redirect(reverse('checkout_success', args=[order.order_number]))
+        else:
+            messages.error(request, 'There was an error with your form. Please double-check your information.')
+
+    else:
+        cart = request.session.get('cart', {})
+        if not cart:
+            messages.error(request, "There's nothing in your bag at the moment")
+            return redirect(reverse('products'))
+
+        cart_items = []
+        for item_id, quantity in cart.items():
+            try:
+                product = Product.objects.get(id=item_id)
+                cart_items.append({
+                    'product': product,
+                    'quantity': quantity,
+                })
+            except Product.DoesNotExist:
+                messages.error(request, "One of the products in your cart was not found.")
+                return redirect(reverse('products'))
+
+        current_cart = cart_contents(request)
+        total = current_cart['grand_total']
+        stripe_total = round(total * 100)
+        stripe.api_key = stripe_secret_key
+        intent = stripe.PaymentIntent.create(
+            amount=stripe_total,
+            currency=settings.STRIPE_CURRENCY,
+        )
+
+        order_form = OrderForm()
+
+        if not stripe_public_key:
+            messages.warning(request, 'Stripe public key is missing. Did you forget to set it in your environment?')
+
+        context = {
+            'order_form': order_form,
+            'cart_items': cart_items,
+            'stripe_public_key': stripe_public_key,
+            'client_secret': intent.client_secret,
+        }
+
+        return render(request, 'checkout/checkout.html', context)
+
+
+def checkout_success(request, order_number):
+    save_info = request.session.get('save_info')
+    order = Order.objects.get(order_number=order_number)
+
+    messages.success(request, f'Order successfully processed! Your order number is {order_number}. A confirmation email will be sent to {order.email}.')
+
+    if 'cart' in request.session:
+        del request.session['cart']
+
+    template = 'checkout/checkout_success.html'
     context = {
-        'order_form': order_form,
-        'cart_items': cart_items, 
+        'order': order,
     }
 
-    return render(request, 'checkout/checkout.html', context)
+    return render(request, 'checkout/checkout_success.html', context)

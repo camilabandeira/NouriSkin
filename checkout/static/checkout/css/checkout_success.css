@@ -1,0 +1,125 @@
+.checkout-success-page {
+    max-width: 70rem;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.success-container {
+    margin-bottom: 2rem;
+}
+
+.success-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.success-message {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.success-message p {
+    font-size: 1rem;
+    color: var(--gray-light);
+    margin: 0;
+}
+
+.success-message .break {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.success-message strong {
+    text-decoration: underline;
+}
+
+.success-details {
+    font-size: 1rem;
+    color: var(--gray-dark);
+}
+
+.success-details a {
+    color: var(--black);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.continue-shopping-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--black);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+}
+
+.continue-shopping-btn:hover {
+    background-color: var(--gray-dark);
+}
+
+.order-summary-container {
+    margin-top: 2rem;
+}
+
+.summary-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    border: 1px solid var(--line-break);
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.summary-card {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.summary-image {
+    flex-shrink: 0;
+    margin-right: 1rem;
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.summary-details h3 {
+    font-size: 1rem;
+    color: var(--gray-dark);
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.summary-details p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.summary-total {
+    margin-top: 2rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.divider-line {
+    border-top: 1px solid var(--line-break);
+    margin: 1rem 0;
+}
+
+.total-row {
+    font-weight: 700;
+    font-size: 1.2rem;
+}

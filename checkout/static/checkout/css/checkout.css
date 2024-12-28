@@ -60,12 +60,13 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    color: hsl(0, 69%, 60%);
+    color: red;
 }
 
 .payment-message i {
-    color: hsl(0, 69%, 60%);
-    font-size: 0.875rem;
+    color: red;
+    font-size: 0.75rem;
+    margin-right: 0.3rem;
 }
 
 .payment-message strong {
@@ -186,6 +187,59 @@
 .total-value {
     font-size: 1.125rem;
     font-weight: bold;
+}
+
+.StripeElement,
+.stripe-style-input {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid hsl(210, 14%, 83%);
+    border-radius: 4px;
+    background-color: hsl(0, 0%, 100%);
+    font-size: 16px;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+    box-shadow: 0 1px 3px 0 hsl(210, 20%, 84%);
+}
+
+.StripeElement--webkit-autofill {
+    background-color: hsl(0, 0%, 100%) !important;
+}
+
+.stripe-style-input::placeholder {
+    color: hsl(0, 0%, 60%);
+}
+
+.StripeElement--invalid {
+    border-color: hsl(10, 94%, 67%);
+}
+
+#card-element {
+    display: block;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid hsl(210, 14%, 83%);
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#card-errors {
+    color: red;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.875rem;
+}
+
+#card-errors i {
+    font-size: 0.875rem;
+    color: red;
 }
 
 @media (max-width: 528px) {

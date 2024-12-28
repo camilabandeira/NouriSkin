@@ -1,0 +1,64 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Order Success{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout_success.css' %}">
+
+<section class="checkout-success-page">
+    <div class="success-container">
+        <h1 class="success-title">Thank You for Your Order!</h1>
+        <p class="success-message">
+            Your order number is <strong>{{ order.order_number }}</strong>.
+            <span class="break">A confirmation email has been sent to {{ order.email }}.</span>
+        </p>
+        <p class="success-details">
+            We value your trust in us. For any inquiries regarding your order, please <a href="#">contact us</a>.
+        </p>
+        <a href="{% url 'products' %}" class="continue-shopping-btn">Continue Shopping</a>
+    </div>
+
+    <div class="order-summary-container">
+        <h2>Your Order Summary</h2>
+        {% for item in order.lineitems.all %}
+        <div class="summary-container">
+            <div class="summary-card">
+                <div class="summary-image">
+                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="product-image">
+                </div>
+                <div class="summary-details">
+                    <h3>{{ item.product.name }}</h3>
+                    <p>Quantity: {{ item.quantity }}</p>
+                    <p>Price: €{{ item.product.price }}</p>
+                    <p>Total: €{{ item.lineitem_total }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="summary-total">
+            <div class="summary-row">
+                <div class="subtotal-label">Subtotal</div>
+                <div class="subtotal-value">€{{ order.order_total }}</div>
+            </div>
+            <div class="summary-row">
+                <div class="delivery-label">Delivery</div>
+                <div class="delivery-value">
+                    {% if order.delivery_cost == 0 %}
+                        Free
+                    {% else %}
+                        €{{ order.delivery_cost }}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="divider-line"></div>
+            <div class="summary-row total-row">
+                <div class="total-label">Grand Total</div>
+                <div class="total-value">€{{ order.grand_total }}</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

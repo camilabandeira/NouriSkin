@@ -24,9 +24,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$=dxp^qntm+=9&8sv!dfr$o*4m+=umix77dx5asmmumiro&l%v'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -51,7 +48,6 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
 ]
-
 MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware', # Allauth middleware
     'django.middleware.security.SecurityMiddleware',
@@ -174,6 +170,12 @@ LOGOUT_REDIRECT_URL = '/'
 # Email settings for development - simulate email sending
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+
+
+# Stripe settings
+STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY")
+STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
+STRIPE_CURRENCY = 'eur'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

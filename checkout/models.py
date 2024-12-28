@@ -2,7 +2,9 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
+from decimal import Decimal
 from products.models import Product
+
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
@@ -25,10 +27,15 @@ class Order(models.Model):
 
     def update_total(self):
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
-        if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
-            self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
+
+        free_delivery_threshold = Decimal(settings.FREE_DELIVERY_THRESHOLD)
+        fixed_delivery_fee = Decimal(settings.FIXED_DELIVERY_FEE)
+
+        if self.order_total < free_delivery_threshold:
+            self.delivery_cost = fixed_delivery_fee
         else:
-            self.delivery_cost = 0
+            self.delivery_cost = Decimal('0.00')  
+
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
 
