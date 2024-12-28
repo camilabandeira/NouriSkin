@@ -44,6 +44,10 @@
     text-decoration: underline;
 }
 
+.order-info-container {
+    margin: 1rem 0;
+}
+
 .continue-shopping-btn {
     display: inline-block;
     margin-top: 1.5rem;
