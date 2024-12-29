@@ -50,7 +50,7 @@
                 <button type="button" class="adjust-cart-btn" onclick="location.href='{% url 'view_cart' %}'">Adjust Cart</button>
                 <button type="submit"  id="submit-button"  class="complete-order-btn">Complete Order <i class="fas fa-lock"></i></button>
             </div>
-
+            <input type="hidden" value="{{ client_secret }}" name="client_secret">
             <p class="payment-message">
                 <i class="fas fa-info-circle" title="Your card will be charged this amount, including delivery charges."></i>
                 Your card will be charged: <strong>€{{ grand_total }}</strong>
