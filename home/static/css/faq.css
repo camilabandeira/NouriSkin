@@ -1,21 +1,24 @@
 .faq-page {
     margin: 2rem auto;
     max-width: 50rem;
+    color: var(--gray-dark, hsl(0, 0%, 28%));
 }
 
 .faq-title {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1.5rem;
+    color: var(--black, hsl(0, 0%, 8%));
 }
 
 .accordion {
-    border: 0.0625rem solid var(--line-break);
-    border-radius: 0.3125rem;
+    border: 1px solid var(--line-break, hsl(0, 0%, 85%));
+    border-radius: 0.25rem;
+    color: var(--gray-dark, hsl(0, 0%, 28%));
 }
 
 .accordion-item {
-    border-bottom: 0.0625rem solid var(--line-break);
+    border-bottom: 1px solid var(--line-break, hsl(0, 0%, 85%));
 }
 
 .accordion-item:last-child {
@@ -28,34 +31,55 @@
     padding: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
-    background-color: hsl(0, 0%, 98%);
-    border: none;
-    outline: none;
+    background-color: var(--white, hsl(0, 0%, 98%));
+    border-radius: 0.25rem;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: var(--gray-dark, hsl(0, 0%, 28%));
 }
 
 .accordion-header:hover {
-    background-color: hsl(0, 0%, 95%);
+    background-color: hsla(0, 0%, 87%, 0.228);
 }
 
 .arrow-icon {
     transition: transform 0.3s ease;
+    color: var(--gray-dark, hsl(0, 0%, 28%));
 }
 
 .accordion-content {
     display: none;
     padding: 1rem;
     font-size: 1rem;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--white, hsl(0, 0%, 98%));
+    color: var(--gray-dark, hsl(0, 0%, 28%));
 }
 
 .accordion-content p {
     margin-bottom: 0.5rem;
+    color: var(--gray-dark, hsl(0, 0%, 28%));
 }
 
 .accordion-item.open .arrow-icon {
     transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    .faq-page {
+        padding: 0 1rem;
+    }
+
+    .faq-title {
+        font-size: 1.5rem;
+    }
+
+    .accordion-header {
+        font-size: 1rem;
+    }
+
+    .accordion-content {
+        font-size: 0.9rem;
+    }
 }
