@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'storages',
     'cart',
     'checkout',
+    'profiles',
 ]
 MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware', # Allauth middleware
