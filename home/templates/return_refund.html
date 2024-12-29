@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Return & Refund{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/return_refund.css' %}" />
+
+<section class="return-refund-section" role="main" aria-labelledby="return-refund-title">
+    <h1 id="return-refund-title" class="return-refund-heading">Return & Refund Policy</h1>
+    <p class="return-refund-intro">
+        We are committed to ensuring your satisfaction. If you're not happy with your purchase, here’s our policy:
+    </p>
+
+    <h2 class="return-refund-subheading">Eligibility for Returns</h2>
+    <ul class="return-refund-list">
+        <li>Items must be returned within 30 days of purchase.</li>
+        <li>Products must be in their original packaging and unused condition.</li>
+        <li>Proof of purchase (e.g., receipt or invoice) is required.</li>
+    </ul>
+
+    <h2 class="return-refund-subheading">How to Request a Refund</h2>
+    <ol class="return-refund-list">
+        <li>Contact our support team via <strong><a href="mailto:support@example.com">support@example.com</a></strong>.</li>
+        <li>Provide your order number and details about the item.</li>
+        <li>Ship the product back to our return center.</li>
+    </ol>
+
+    <h2 class="return-refund-subheading">Exceptions</h2>
+    <p class="return-refund-paragraph">Some items are non-returnable or have specific conditions:</p>
+    <ul class="return-refund-list">
+        <li>Sale items cannot be refunded.</li>
+        <li>Gift cards are non-refundable.</li>
+        <li>Customized products are not eligible for returns.</li>
+    </ul>
+
+    <h2 class="return-refund-subheading">Contact Us</h2>
+    <p class="return-refund-paragraph">
+        If you have any questions about our Return & Refund Policy, feel free to contact us:
+    </p>
+    <p class="return-refund-paragraph">
+        <strong><a href="mailto:support@nouriskin.ie" aria-label="Email support@nouriskin.ie">
+            Email: support@nouriskin.ie
+        </a></strong>
+    </p>
+    <p class="return-refund-paragraph">
+        <strong><a href="tel:+11234567890" aria-label="Call us at +1 123-456-7890">
+            Phone: +353 (1) 234-5678
+        </a></strong>
+    </p>
+</section>
+
+{% endblock %}
