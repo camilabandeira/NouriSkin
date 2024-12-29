@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}FAQ{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/faq.css' %}">
+<section class="faq-page container">
+    <h1 class="faq-title">Frequently Asked Questions</h1>
+
+    <div class="accordion">
+
+        <!-- General Questions -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+                General Questions
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </button>
+            <div class="accordion-content">
+                <p><strong>What is Nouriskin?</strong><br>Nouriskin offers high-quality skincare products tailored to your unique needs.</p>
+                <p><strong>Do you test your products on animals?</strong><br>No, we are a cruelty-free brand and do not test on animals.</p>
+            </div>
+        </div>
+
+        <!-- Product Questions -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+                Product Questions
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </button>
+            <div class="accordion-content">
+                <p><strong>What ingredients do you use?</strong><br>We use natural, organic ingredients like aloe vera, shea butter, and essential oils.</p>
+                <p><strong>Are your products safe for sensitive skin?</strong><br>Yes, our products are formulated to be gentle and safe for sensitive skin.</p>
+            </div>
+        </div>
+
+        <!-- Shipping Questions -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+                Shipping Questions
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </button>
+            <div class="accordion-content">
+                <p><strong>What are your shipping options?</strong><br>We offer standard and express shipping options worldwide.</p>
+                <p><strong>How long does shipping take?</strong><br>Shipping typically takes 5-7 business days for standard delivery.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script src="{% static 'js/faq.js' %}"></script>
+{% endblock %}
