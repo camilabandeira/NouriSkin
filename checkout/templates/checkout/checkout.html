@@ -12,33 +12,33 @@
         <form method="post" id="payment-form" class="checkout-form">
             {% csrf_token %}
             <div class="form-group">
-                <input type="text" name="full_name" id="full_name" placeholder="Full Name" required>
+                {{ form.full_name }}
             </div>
             <div class="form-group">
-                <input type="email" name="email" id="email" placeholder="Email" required>
+                {{ form.email }}
             </div>
-
+        
             <h6 class="checkout-form-title">Delivery</h6>
             <div class="form-group">
-                <input type="text" name="phone_number" id="phone_number" placeholder="Phone Number" required>
+                {{ form.phone_number }}
             </div>
             <div class="form-group">
-                <input type="text" name="country" id="country" placeholder="Country" required>
+                <span class="country-field">{{ form.country }}</span>
             </div>
             <div class="form-group">
-                <input type="text" name="postcode" id="postcode" placeholder="Postcode">
+                {{ form.postcode }}
             </div>
             <div class="form-group">
-                <input type="text" name="town_or_city" id="town_or_city" placeholder="Town/City" required>
+                {{ form.town_or_city }}
             </div>
             <div class="form-group">
-                <input type="text" name="street_address1" id="street_address1" placeholder="Street Address 1" required>
+                {{ form.street_address1 }}
             </div>
             <div class="form-group">
-                <input type="text" name="street_address2" id="street_address2" placeholder="Street Address 2">
+                {{ form.street_address2 }}
             </div>
             <div class="form-group">
-                <input type="text" name="county" id="county" placeholder="County">
+                {{ form.county }}
             </div>
 
             <h6 class="checkout-form-title">Payment</h6>

@@ -121,7 +121,7 @@ def checkout(request):
             messages.warning(request, 'Stripe public key is missing. Did you forget to set it in your environment?')
 
         context = {
-            'order_form': order_form,
+            'form': order_form,
             'cart_items': cart_items,
             'stripe_public_key': stripe_public_key,
             'client_secret': intent.client_secret,
