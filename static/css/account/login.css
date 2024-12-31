@@ -1,0 +1,96 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 30rem;
+}
+
+.login-page h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 0.7rem;
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--line-break);
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.login-form input:focus {
+    border: 1px solid hsl(210, 14%, 83%);
+    box-shadow: 0 1px 3px 0 hsl(210, 20%, 84%);
+}
+
+.login-form input::placeholder {
+    color: var(--gray-light);
+}
+
+.login-form-btn {
+    width: 100%;
+    background-color: var(--black);
+    color: var(--btn-text);
+    font-weight: 500;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.password-field {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 0.625rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.toggle-password i {
+    color: hsl(0, 0%, 90%);
+    font-size: 1.125rem;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 1.25rem;
+    font-size: 1.1rem;
+    color: var(--gray-dark);
+}
+
+.signup-link a {
+    color: var(--black);
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.general-error {
+    color: red;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 500px) {
+    .login-page {
+        padding: 1.5rem;
+    }
+}

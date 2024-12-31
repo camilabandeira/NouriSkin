@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Logout{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/account/logout.css' %}">
+
+<section class="logout-page">
+    <h2>Logout</h2>
+    <p class="logout-message">Are you sure you want to log out?</p>
+
+    <form method="post" action="{% url 'account_logout' %}">
+        {% csrf_token %}
+        <button type="submit" class="logout-form-btn">Logout</button>
+    </form>
+
+    <div class="login-link">
+        <a href="{% url 'account_login' %}">Return to Login</a>
+    </div>
+</section>
+{% endblock %}

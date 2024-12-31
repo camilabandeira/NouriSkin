@@ -26,6 +26,7 @@
 
     <header class="navbar-header" role="banner">
         <nav class="navbar" role="navigation" aria-label="Main navigation">
+
             <button class="navbar-toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Toggle navigation menu" onclick="toggleMenu()">
                 <i id="menu-icon" class="fa-solid fa-bars" aria-hidden="true"></i>
                 <i id="close-icon" class="fa-solid fa-xmark hidden" aria-hidden="true"></i>
@@ -38,7 +39,7 @@
                 <li role="none"><a href="#" role="menuitem">Contact Us</a></li>
             </ul>
             <div class="navbar-icons">
-                <a href="#" aria-label="User Account"><i class="fas fa-user" aria-hidden="true"></i></a>
+                
                 <div class="search-container">
                     <button id="search-icon" aria-label="Open search" aria-expanded="false" onclick="toggleSearch()"><i class="fas fa-search" aria-hidden="true"></i></button>
                     <form class="search-form" action="/search" method="GET">
@@ -46,13 +47,29 @@
                         <input id="search-input" class="search-input" type="text" name="q" placeholder="Search..." />
                     </form>
                 </div>
+
+                {% if user.is_authenticated %}
+                <div class="profile-dropdown">
+                    <a href="#" aria-label="User Profile" class="dropdown-toggle" onclick="toggleDropdown()">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <a href="#">My Profile</a>
+                        <a href="{% url 'account_logout' %}">Log Out</a>
+                    </div>
+                </div>
+                
+                {% else %}
+                    <a href="{% url 'account_login' %}" aria-label="Login"><i class="fas fa-user-plus"></i></a>
+                {% endif %}
                 <a href="{% url 'view_cart' %}" class="cart-link">
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span class="cart-count">
-                        {{ product_count }}
+                        {{ product_count|default:"0" }}
                     </span>
                 </a>
-            </div>            
+            </div>       
+            
         </nav>        
     </header>
     

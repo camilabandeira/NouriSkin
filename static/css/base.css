@@ -127,13 +127,13 @@ body {
 .navbar-icons {
     display: flex;
     gap: 1rem;
-    top: 0.5rem;
     position: relative;
+    align-items: center;
 }
 
 .cart-count {
     position: absolute;
-    top: -0.5rem;
+    top: -0.1rem;
     right: -1rem;
     background-color: hsla(0, 0%, 70%, 0.42);
     color: var(--black);
@@ -154,12 +154,51 @@ body {
     color: var(--black);
 }
 
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--gray-dark);
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--line-break);
+    border-radius: 0.25rem;
+    z-index: 1000;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--gray-dark);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.dropdown-menu a:hover {
+    background-color: hsl(210, 17%, 98%);
+    color: var(--black);
+}
+
+
 .search-container {
     position: relative;
     display: flex;
     align-items: center;
-    bottom: 0.5rem;
     z-index: 10;
+    top: 0.1rem;
 }
 
 .search-form {
@@ -331,7 +370,7 @@ footer a {
         gap: 0.7rem;
         order: 3;
         margin: 0 auto;
-        top: 0.6rem;
+
     }
 
     #menu-icon {
@@ -350,5 +389,15 @@ footer a {
 
     .footer-column {
         width: 100%;
+    }
+}
+
+@media (max-width:400px) {
+    .search-form.active {
+        width: 12rem;
+    }
+
+    .dropdown-menu {
+        top: 2.4rem;
     }
 }

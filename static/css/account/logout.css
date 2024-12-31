@@ -1,0 +1,49 @@
+.logout-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 30rem;
+    text-align: center;
+}
+
+.logout-page h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.logout-message {
+    font-size: 1.1rem;
+    color: var(--gray-dark);
+    margin-bottom: 1.5rem;
+}
+
+.logout-form-btn {
+    width: 100%;
+    max-width: 12rem;
+    background-color: var(--black);
+    color: var(--btn-text);
+    font-weight: 500;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.logout-form-btn:hover {
+    background-color: hsl(0, 0%, 30%);
+}
+
+.login-link a {
+    color: var(--black);
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.login-link a:hover {
+    text-decoration: none;
+}
