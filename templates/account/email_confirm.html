@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Email Confirmed{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/account/email_confirm.css' %}" />
+<div class="confirmation-container" role="main" aria-labelledby="confirmation-title">
+    <h1 id="confirmation-title" class="confirmation-heading">Your Email Has Been Confirmed</h1>
+    <p class="confirmation-message">
+        Thank you for confirming your email address. Your account is now active, and you can log in to start using our services.
+    </p>
+    <a href="{% url 'account_login' %}" class="confirmation-link">Go to Login</a>
+</div>
+{% endblock %}
