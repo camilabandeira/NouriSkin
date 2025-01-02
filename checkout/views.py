@@ -9,7 +9,7 @@ from django.conf import settings
 import stripe
 
 from .forms import OrderForm
-from .models import OrderLineItem, Order
+from .models import OrderLineItem, Order, Profile
 from cart.context_processors import cart_contents
 from products.models import Product
 
@@ -55,6 +55,15 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
+
+            if request.user.is_authenticated:
+                try:
+                    profile = Profile.objects.get(user=request.user)
+                    order.profile = profile
+                except Profile.DoesNotExist:
+                    messages.error(request, "Profile not found. Please complete your profile.")
+                    return redirect('profile')
+            
             order.save()
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
