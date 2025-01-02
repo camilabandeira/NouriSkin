@@ -1,0 +1,22 @@
+Hi {{ order.full_name }},
+
+Thank you for your order!
+
+Here are the details of your purchase:
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+Total: {{ order.order_total }}
+Delivery Costs: {{ order.delivery_cost }}
+Grand Total: {{ order.grand_total }}
+
+Your order will be delivered to:
+{{ order.street_address1 }}
+{{ order.street_address2 }}
+{{ order.city }}
+{{ order.postcode }}
+{{ order.country }}
+
+If you have any questions, please feel free to contact us at {{ contact_email }}.
+
+Thank you for shopping with us!
+The NouriSkin Team
