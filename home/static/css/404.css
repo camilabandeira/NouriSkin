@@ -1,0 +1,44 @@
+/* 404 Page Styles */
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.error-content {
+    max-width: 37.5rem;
+    padding: 1.25rem;
+}
+
+.error-title {
+    font-size: 6.5rem;
+}
+
+.error-message {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.return-btn {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--black);
+    color: var(--btn-text);
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.return-btn:hover {
+    background-color: var(--gray-dark);
+}
+
+@media (max-width:500px) {
+    .error-title {
+        font-size: 4.5rem;
+    }
+}
