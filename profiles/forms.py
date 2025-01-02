@@ -1,4 +1,37 @@
 from django import forms
+from .models import Profile
+
+
+class ProfileForm(forms.ModelForm):
+    first_name = forms.CharField(
+        max_length=150,
+        required=True,
+        label="First Name",
+        widget=forms.TextInput(attrs={'placeholder': 'First Name'})
+    )
+    last_name = forms.CharField(
+        max_length=150,
+        required=True,
+        label="Last Name",
+        widget=forms.TextInput(attrs={'placeholder': 'Last Name'})
+    )
+
+    class Meta:
+        model = Profile
+        fields = [
+            'default_phone_number', 'default_country', 'default_postcode',
+            'default_town_or_city', 'default_street_address1',
+            'default_street_address2', 'default_county'
+        ]
+        widgets = {
+            'default_phone_number': forms.TextInput(attrs={'placeholder': 'Phone Number'}),
+            'default_country': forms.Select(attrs={'placeholder': 'Country'}),
+            'default_postcode': forms.TextInput(attrs={'placeholder': 'Postcode'}),
+            'default_town_or_city': forms.TextInput(attrs={'placeholder': 'Town or City'}),
+            'default_street_address1': forms.TextInput(attrs={'placeholder': 'Street Address 1'}),
+            'default_street_address2': forms.TextInput(attrs={'placeholder': 'Street Address 2'}),
+            'default_county': forms.TextInput(attrs={'placeholder': 'County'}),
+        }
 
 class CustomSignupForm(forms.Form):
     username = forms.CharField(max_length=150, required=True, label="Username")

@@ -4,6 +4,113 @@
 {% block title %}Profile{% endblock %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/profile.css' %}" />
+<link rel="stylesheet" href="{% static 'css/profiles/profile.css' %}" />
+
+<div class="profile-page">
+    <div class="form-section">
+        <h2 class="section-title">Delivery</h2>
+        <form method="post" class="delivery-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_first_name" class="sr-only">First Name *</label>
+                {{ form.first_name }}
+            </div>
+            <div class="form-group">
+                <label for="id_last_name" class="sr-only">Last Name *</label>
+                {{ form.last_name }}
+            </div>
+            <div class="form-group">
+                <label for="id_default_street_address1" class="sr-only">Street Address 1 *</label>
+                {{ form.default_street_address1 }}
+            </div>
+            <div class="form-group">
+                <label for="id_default_street_address2" class="sr-only">Street Address 2</label>
+                {{ form.default_street_address2 }}
+            </div>
+            <div class="form-group">
+                <label for="id_default_town_or_city" class="sr-only">Town or City *</label>
+                {{ form.default_town_or_city }}
+            </div>
+            <div class="form-group">
+                <label for="id_default_county" class="sr-only">County, State or Locality</label>
+                {{ form.default_county }}
+            </div>
+            <div class="form-group">
+                <label for="id_default_postcode" class="sr-only">Postal Code</label>
+                {{ form.default_postcode }}
+            </div>
+            <div class="form-group">
+                <label for="id_default_country" class="sr-only">Country *</label>
+                {{ form.default_country }}
+            </div>
+            <div class="form-group">
+                <label for="id_default_phone_number" class="sr-only">Phone (Optional)</label>
+                {{ form.default_phone_number }}
+            </div>
+            <button type="submit" class="submit-button">Update Information</button>
+        </form>
+    </div>
+
+    <div class="order-history">
+        <h2>Order History</h2>
+        {% if page_obj %}
+            <ul class="order-list">
+                {% for order in page_obj %}
+                    <li class="order-item">
+                        <h3><strong>Order</strong> #{{ order.order_number }}</h3>
+                        <p>Date: {{ order.date }}</p>
+                        <p>Total: ${{ order.grand_total }}</p>
+                        
+                        <h4>Products:</h4>
+                        <ul class="product-list">
+                            {% for item in order.lineitems.all %}
+                                <li class="product-item">
+                                    <div class="product-details">
+                                        {% if item.product.image %}
+                                            <div class="product-image">
+                                                <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" />
+                                            </div>
+                                        {% else %}
+                                            <p>No image available</p>
+                                        {% endif %}
+                                        <p>{{ item.product.name }}</p>
+                                        <p>Quantity: {{ item.quantity }}</p>
+                                        <p>Price: ${{ item.lineitem_total }}</p>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+    
+            <div class="pagination">
+                <ul class="pagination-list">
+                    {% if page_obj.has_previous %}
+                        <li><a href="?page={{ page_obj.previous_page_number }}" class="pagination-button">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </a></li>
+                    {% endif %}
+                    {% for num in page_obj.paginator.page_range %}
+                        {% if num == page_obj.number %}
+                            <li class="list-active"><span>{{ num }}</span></li>
+                        {% else %}
+                            <li><a href="?page={{ num }}">{{ num }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if page_obj.has_next %}
+                        <li><a href="?page={{ page_obj.next_page_number }}" class="pagination-button">
+                            <i class="fas fa-angle-right"></i>
+                        </a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            
+        {% else %}
+            <p>No orders found.</p>
+        {% endif %}
+    </div>
+    
+</div>
 
 {% endblock %}
