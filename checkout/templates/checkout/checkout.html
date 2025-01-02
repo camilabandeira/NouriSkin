@@ -41,6 +41,11 @@
                 {{ form.county }}
             </div>
 
+            <div class="form-group save-info">
+                <input type="checkbox" id="save-info" name="save_info">
+                <label for="save-info">Save this information for next time</label>
+            </div>    
+
             <h6 class="checkout-form-title">Payment</h6>
             <div id="card-element" class="form-group">
             </div>
@@ -49,7 +54,8 @@
             <div class="form-buttons">
                 <button type="button" class="adjust-cart-btn" onclick="location.href='{% url 'view_cart' %}'">Adjust Cart</button>
                 <button type="submit"  id="submit-button"  class="complete-order-btn">Complete Order <i class="fas fa-lock"></i></button>
-            </div>
+            </div>  
+
             <input type="hidden" value="{{ client_secret }}" name="client_secret">
             <p class="payment-message">
                 <i class="fas fa-info-circle" title="Your card will be charged this amount, including delivery charges."></i>

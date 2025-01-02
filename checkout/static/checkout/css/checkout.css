@@ -48,6 +48,26 @@
     color: hsl(0, 0%, 60%);
 }
 
+.save-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.save-info input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.save-info label {
+    font-size: 1rem;
+    color: var(--gray-dark);
+    cursor: pointer;
+}
+
+
 .form-buttons {
     display: flex;
     flex-direction: column;

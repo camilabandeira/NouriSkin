@@ -57,35 +57,33 @@ def checkout(request):
             order = order_form.save(commit=False)
 
             if request.user.is_authenticated:
-                try:
-                    profile = Profile.objects.get(user=request.user)
-                    order.profile = profile
-                except Profile.DoesNotExist:
-                    messages.error(request, "Profile not found. Please complete your profile.")
-                    return redirect('profile')
-            
+                profile = Profile.objects.get(user=request.user)
+                order.profile = profile
+
+                if 'save_info' in request.POST:
+                    profile.default_phone_number = form_data['phone_number']
+                    profile.default_country = form_data['country']
+                    profile.default_postcode = form_data['postcode']
+                    profile.default_town_or_city = form_data['town_or_city']
+                    profile.default_street_address1 = form_data['street_address1']
+                    profile.default_street_address2 = form_data['street_address2']
+                    profile.default_county = form_data['county']
+                    profile.save()
+
             order.save()
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
             order.save()
+
             for item_id, quantity in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    if isinstance(quantity, int):
-                        OrderLineItem.objects.create(
-                            order=order,
-                            product=product,
-                            quantity=quantity,
-                        )
-                    else:
-                        for size, qty in quantity.items():
-                            OrderLineItem.objects.create(
-                                order=order,
-                                product=product,
-                                quantity=qty,
-                                product_size=size,
-                            )
+                    OrderLineItem.objects.create(
+                        order=order,
+                        product=product,
+                        quantity=quantity,
+                    )
                 except Product.DoesNotExist:
                     messages.error(request, "One of the products in your cart was not found.")
                     order.delete()
@@ -115,6 +113,26 @@ def checkout(request):
                 messages.error(request, "One of the products in your cart was not found.")
                 return redirect(reverse('products'))
 
+        if request.user.is_authenticated:
+            try:
+                profile = Profile.objects.get(user=request.user)
+                initial_data = {
+                    'full_name': f"{request.user.first_name} {request.user.last_name}",
+                    'email': request.user.email,
+                    'phone_number': profile.default_phone_number,
+                    'country': profile.default_country,
+                    'postcode': profile.default_postcode,
+                    'town_or_city': profile.default_town_or_city,
+                    'street_address1': profile.default_street_address1,
+                    'street_address2': profile.default_street_address2,
+                    'county': profile.default_county,
+                }
+                order_form = OrderForm(initial=initial_data)
+            except Profile.DoesNotExist:
+                order_form = OrderForm()
+        else:
+            order_form = OrderForm()
+
         current_cart = cart_contents(request)
         total = current_cart['grand_total']
         stripe_total = round(total * 100)
@@ -124,19 +142,15 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        order_form = OrderForm()
-
-        if not stripe_public_key:
-            messages.warning(request, 'Stripe public key is missing. Did you forget to set it in your environment?')
-
         context = {
             'form': order_form,
-            'cart_items': cart_items,
+            'cart_items': cart_items,  
             'stripe_public_key': stripe_public_key,
             'client_secret': intent.client_secret,
         }
 
         return render(request, 'checkout/checkout.html', context)
+
 
 
 def checkout_success(request, order_number):
