@@ -3,73 +3,77 @@
     top: 4rem;
     right: 1rem;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .toast {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0;
-    padding: 0.75rem 1rem;
-    box-shadow: 0 0.25rem 0.4375rem hsla(0, 0%, 0%, 0.1);
-    transition: opacity 0.5s ease-in-out;
-    gap: 0.75rem;
-    position: relative;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .toast .toast-icon {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+}
+
+.toast-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.toast-content strong {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.toast-content p {
+    font-size: 0.875rem;
+    margin: 0;
 }
 
 .toast-close {
-    font-size: 1.39rem;
-    color: hsl(0, 0%, 28%);
+    background: none;
+    border: none;
     cursor: pointer;
-    padding: 0;
+    font-size: 1.25rem;
+    color: #555;
 }
 
 .toast-close:hover {
-    color: hsl(210, 10%, 25%);
-}
-
-.toast.success {
-    background-color: hsl(135, 23%, 95%);
-    color: hsl(145, 61%, 26%);
-    border-top: 0.125rem solid hsl(145, 52%, 41%);
-}
-
-.toast.success .toast-icon {
-    color: hsl(145, 52%, 41%);
-}
-
-.toast.error {
-    background-color: hsl(355, 71%, 91%);
-    color: hsl(350, 61%, 28%);
-}
-
-.toast.error .toast-icon {
-    color: hsl(350, 72%, 47%);
+    color: #333;
 }
 
 .toast.info {
-    background-color: hsl(190, 56%, 90%);
-    color: hsl(192, 77%, 19%);
+    background-color: #e7f4fa;
+    border-left: 5px solid #2196f3;
 }
 
-.toast.info .toast-icon {
-    color: hsl(192, 74%, 41%);
+.toast.error {
+    background-color: #fbeaea;
+    border-left: 5px solid #f44336;
+}
+
+.toast.success {
+    background-color: #edf7ed;
+    border-left: 5px solid #4caf50;
 }
 
 .toast.warning {
-    background-color: hsl(48, 100%, 87%);
-    color: hsl(43, 63%, 26%);
-}
-
-.toast.warning .toast-icon {
-    color: hsl(45, 100%, 50%);
+    background-color: #fff8e1;
+    border-left: 5px solid #ffc107;
 }
 
 .toast.fade-out {
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
 }

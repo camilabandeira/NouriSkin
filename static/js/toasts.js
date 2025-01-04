@@ -1,16 +1,30 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const toasts = document.querySelectorAll('.toast');
+function showToast(type, title, message) {
+    const container = document.getElementById('toasts-container');
 
-    toasts.forEach((toast) => {
-        setTimeout(() => {
-            toast.classList.add('fade-out');
-            setTimeout(() => toast.remove(), 500);
-        }, 6000);
+    const iconClass = {
+        info: 'fa-info-circle',
+        error: 'fa-times-circle',
+        success: 'fa-check-circle',
+        warning: 'fa-exclamation-circle',
+    };
 
-        const closeButton = toast.querySelector('.toast-close');
-        closeButton.addEventListener('click', () => {
-            toast.classList.add('fade-out');
-            setTimeout(() => toast.remove(), 500);
-        });
-    });
-});
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.innerHTML = `
+        <i class="toast-icon fas ${iconClass[type]}"></i>
+        <div class="toast-content">
+            <strong>${title}</strong>
+            <p>${message}</p>
+        </div>
+        <button class="toast-close" aria-label="Close toast">
+            <i class="fas fa-times"></i>
+        </button>
+    `;
+
+    container.appendChild(toast);
+
+    setTimeout(() => {
+        toast.classList.add('fade-out');
+        setTimeout(() => toast.remove(), 500);
+    }, 6000);
+}
