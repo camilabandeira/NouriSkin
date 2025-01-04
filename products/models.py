@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 
@@ -7,6 +8,7 @@ class ProductReview(models.Model):
         verbose_name_plural = "Product Reviews" 
         
     product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='reviews')
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='reviews')
     title = models.CharField(max_length=200)
     name = models.CharField(max_length=100)
     email = models.EmailField()
@@ -22,9 +24,25 @@ class ProductReview(models.Model):
         choices=[('25-34', '25-34'), ('35-44', '35-44'), ('45-54', '45-54'), ('55+', '55+')]
     )
 
-    def __str__(self):
-        return f"{self.title} by {self.name}"
+    product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='reviews')
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='reviews')
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    rating = models.DecimalField(max_digits=2, decimal_places=1)
+    review_text = models.TextField()
+    submitted_at = models.DateTimeField(auto_now_add=True)
+    skin_type = models.CharField(
+        max_length=50,
+        choices=[('Normal', 'Normal'), ('Combination', 'Combination'), ('Oily', 'Oily'), ('Dry', 'Dry')]
+    )
+    age_group = models.CharField(
+        max_length=50,
+        choices=[('25-34', '25-34'), ('35-44', '35-44'), ('45-54', '45-54'), ('55+', '55+')]
+    )
 
+    def __str__(self):
+        return f"{self.title} by {self.name or self.user.username}"
+    
 class SkinType(models.Model):
     name = models.CharField(max_length=100, unique=True) 
     friendly_name = models.CharField(max_length=100, null=True, blank=True)  

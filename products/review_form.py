@@ -20,6 +20,13 @@ class ReviewForm(forms.ModelForm):
             ]),
         }
 
+    def __init__(self, *args, **kwargs):
+        user = kwargs.pop('user', None)  
+        super().__init__(*args, **kwargs)
+        if user and user.is_authenticated:
+            self.fields.pop('name')
+            self.fields.pop('email')
+
     def clean_rating(self):
         rating = self.cleaned_data.get('rating')
         if not rating or rating == 0:

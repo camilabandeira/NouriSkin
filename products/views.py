@@ -98,24 +98,26 @@ def product_detail(request, product_id):
 
 
 def write_review(request, product_id):
-    """ A view to write a review for a product """
     product = get_object_or_404(Product, id=product_id)
-    
+
     if request.method == 'POST':
-        form = ReviewForm(request.POST)
+        form = ReviewForm(request.POST, user=request.user)
         if form.is_valid():
             review = form.save(commit=False)
-            review.product = product  
+            review.product = product
+            if request.user.is_authenticated:
+                review.user = request.user  
+                review.name = request.user.get_full_name() or request.user.username  
+            else:
+                review.email = form.cleaned_data.get('email')
+                review.name = form.cleaned_data.get('name')
             review.save()
             messages.success(request, "Thank you for your review!")
             return redirect('product_detail', product_id=product.id)
         else:
-            if 'star_rating' in form.errors:
-                messages.error(request, "Please select a star rating before submitting!")
-            else:
-                messages.error(request, "There was an error with your review. Please check the form and try again.")
+            messages.error(request, "There was an error with your review. Please check the form and try again.")
     else:
-        form = ReviewForm()
+        form = ReviewForm(user=request.user)
 
     context = {
         'product': product,
@@ -123,3 +125,4 @@ def write_review(request, product_id):
     }
     
     return render(request, 'products/review_form.html', context)
+
