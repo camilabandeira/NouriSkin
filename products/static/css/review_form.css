@@ -20,15 +20,18 @@
 }
 
 .card-header-image {
-    width: 22rem;
-    height: auto;
-    overflow: hidden;
+    width: 100%;
+    max-width: 6rem;
 }
 
 .card-header-image img {
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: auto;
+}
+
+.card-header {
+    flex: 1;
 }
 
 .card-header-title {
@@ -38,7 +41,7 @@
 }
 
 .card-header-title h2 {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     text-align: left;
 }
 
