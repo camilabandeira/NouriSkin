@@ -6,22 +6,56 @@
     <h2 id="best-sellers-heading">Best Sellers</h2>
     <div class="product-grid" role="list">
         
-        <div class="product-card" role="listitem" aria-labelledby="retinol-title" aria-describedby="retinol-description retinol-price retinol-rating">
+        {% for product in best_sellers %}
+        <div class="product-card" role="listitem" aria-labelledby="{{ product.sku }}-title" aria-describedby="{{ product.sku }}-description {{ product.sku }}-price {{ product.sku }}-rating">
             <div class="product-image">
-                <img src="#" alt="Retinol 0.1% Night Mask - packaging of the product">
+                {% if product.image %}
+                    <img src="{{ product.image.url }}" alt="{{ product.name }} - packaging of the product">
+                {% elif product.image_url %}
+                    <img src="{{ product.image_url }}" alt="{{ product.name }} - packaging of the product">
+                {% else %}
+                    <img src="{% static 'images/default-product.jpg' %}" alt="Default product image">
+                {% endif %}
             </div>
-            <h3 id="retinol-title" class="product-title">Retinol 0.1% Night Mask</h3>
-            <p id="retinol-description" class="product-description">With 0.1% Retinol and Hydrating Botanicals, this mask renews and nourishes overnight.</p>
-            <div id="retinol-rating" class="product-rating" aria-label="4.5 out of 5 stars">
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+            <h3 id="{{ product.sku }}-title" class="product-title">{{ product.name }}</h3>
+            <p class="product-description">{{ product.description|truncatechars:100 }}</p>
+            <div id="{{ product.sku }}-rating" class="product-rating" aria-label="{{ product.rating }} out of 5 stars">
+                <div id="{{ product.sku }}-rating" class="product-rating" aria-label="{{ product.rating }} out of 6 stars">
+                    {% for _ in product.full_stars %}
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    {% endfor %}
+                    {% for _ in product.empty_stars %}
+                    <i class="far fa-star" aria-hidden="true"></i>
+                    {% endfor %}
+                </div>
             </div>
-            <p id="retinol-price" class="product-price" aria-label="Price: 95 euros">€95,00</p>
-            <button class="add-to-cart-btn" aria-label="Add Retinol 0.1% Night Mask to your cart">Add to Cart</button>
+            <p id="{{ product.sku }}-price" class="product-price" aria-label="Price: {{ product.price|floatformat:2 }} euros">€{{ product.price|floatformat:2 }}</p>
+            <button class="add-to-cart-btn" aria-label="Add {{ product.name }} to your cart">Add to Cart</button>
         </div>
+        {% endfor %}
 
     </div>
+
+    <div class="pagination">
+        <div class="pagination-list">
+            {% if best_sellers.has_previous %}
+            <a href="?page={{ best_sellers.previous_page_number }}" class="pagination-button" aria-label="Previous Page">
+                <i class="fas fa-angle-left"></i>
+            </a>
+            {% endif %}
+    
+            <span class="list-active">
+                Page {{ best_sellers.number }} of {{ best_sellers.paginator.num_pages }}
+            </span>
+    
+            {% if best_sellers.has_next %}
+            <a href="?page={{ best_sellers.next_page_number }}" class="pagination-button" aria-label="Next Page">
+                <i class="fas fa-angle-right"></i>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+    
+    
 </section>
+

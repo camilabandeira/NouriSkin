@@ -14,14 +14,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 75rem;
+    margin: 0 auto;
 }
 
 .best-sellers-container h2 {
     text-transform: uppercase;
     font-size: 4.8rem;
+    padding: 2rem 0;
     width: 100%;
-    padding: 2rem;
-    padding-left: 5rem;
 }
 
 .product-grid {
@@ -101,12 +102,44 @@
     background: var(--gray-light);
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+}
+
+.pagination-list {
+    display: flex;
+    align-items: center;
+}
+
+.pagination-list a,
+.list-active {
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.25rem;
+}
+
+.pagination-list i {
+    font-size: 1.25rem;
+    margin-top: 0.2rem;
+}
+
+.list-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
 
 @media (max-width: 1024px) {
-    .best-sellers-container h2 {
-        font-size: 3.8rem;
-        padding: 1.5rem;
-        padding-left: 3rem;
+    .best-sellers-container {
+        padding: 2rem;
     }
 
     .product-grid {
@@ -129,11 +162,6 @@
         padding: 2rem;
     }
 
-    .best-sellers-container h2 {
-        font-size: 3.2rem;
-        padding-left: 0;
-    }
-
     .product-image {
         height: 11rem;
     }
@@ -146,12 +174,6 @@
 @media (max-width: 768px) {
     .best-sellers-container {
         padding: 1rem;
-    }
-
-    .best-sellers-container h2 {
-        font-size: 2.8rem;
-        padding: 1rem;
-        padding-left: 0;
     }
 
     .product-grid {
@@ -169,11 +191,6 @@
 }
 
 @media (max-width: 640px) {
-    .best-sellers-container h2 {
-        font-size: 2.4rem;
-        text-align: center;
-    }
-
     .product-grid {
         grid-template-columns: 1fr;
     }
