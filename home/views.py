@@ -15,3 +15,7 @@ def return_refund(request):
 def custom_404_view(request, exception):
     """Render the 404 page"""
     return render(request, '404.html', status=404)
+
+def about(request):
+    """Render the About page"""
+    return render(request, 'about.html')

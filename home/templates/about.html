@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About - NouriSkin{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+<section class="about-page">
+    <div class="about-header">
+        <h1>Our Journey to Radiant Skin</h1>
+    </div>
+
+    <div class="about-content">
+    <div class="about-content">
+        <div class="about-intro">
+            <h2><span class="highlight">Who</span> We Are</h2>
+            <p>
+                NouriSkin is more than just a skincare brand—it’s a commitment to enhancing natural beauty through thoughtfully crafted, effective, and safe products. Founded on the principles of purity, transparency, and sustainability, NouriSkin aims to bridge the gap between nature and science. Every formula we create is designed to work in harmony with your skin, helping you achieve a radiant and confident complexion.
+            </p>
+            <p>
+                Our team of skincare experts believes that everyone deserves access to products that nourish and protect without compromising on quality or environmental impact. This is why we prioritize natural, high-quality ingredients that have been ethically sourced and rigorously tested. From antioxidant-rich botanicals to gentle, skin-replenishing actives, each ingredient in our lineup is chosen for its ability to support skin health, vitality, and resilience.
+            </p>
+        </div>
+        <div class="about-details">
+            <div class="about-image">
+                <img src="{% static 'images/about-image.webp' %}" alt="NouriSkin Product">
+            </div>
+            <div class="about-values">
+                <h3>Purity and Quality</h3>
+                <p>
+                    We’re committed to using pure, plant-based ingredients that are free from harsh chemicals, parabens, artificial fragrances, and other potentially harmful additives.
+                </p>
+                <h3>Science-Driven Formulations</h3>
+                <p>
+                    While rooted in nature, we embrace scientific research to enhance product effectiveness. Our formulas are backed by scientific and dermatological studies.
+                </p>
+                <h3>Sustainability and Responsibility</h3>
+                <p>
+                    NouriSkin is committed to protecting the planet with eco-friendly packaging and recyclable materials. We work with suppliers who share our dedication to sustainability.
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+ 
+{% endblock %}
