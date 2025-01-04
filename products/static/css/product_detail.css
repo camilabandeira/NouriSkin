@@ -335,6 +335,13 @@
     color: var(--gray-dark);
 }
 
+.review-details {
+    display: flex;
+    gap: 0.2rem;
+    flex-direction: column;
+}
+
+
 .review-feedback-icons {
     display: flex;
     justify-content: flex-end;
