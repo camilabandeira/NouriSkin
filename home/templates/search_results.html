@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/search_results.css' %}">
+
+<section class="search-page">
+<h1 class="search-results-title">Search Results for "{{ query }}"</h1>
+{% if products %}
+    <ul class="search-results-list">
+        {% for product in products %}
+        <li class="search-item">
+            <div class="search-item-image">
+                {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                {% else %}
+                <img src="{% static 'images/placeholder.png' %}" alt="Placeholder">
+                {% endif %}
+            </div>
+            <div class="search-item-details">
+                <div class="search-item-link">
+                    <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a>
+                </div>
+                <div class="search-item-description">
+                    <p>{{ product.description|truncatechars:100 }}</p>
+                </div>
+                <div class="search-item-price">
+                    <p>€{{ product.price }}</p>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No results found for "{{ query }}".</p>
+{% endif %}
+</section>
+
+{% endblock %}

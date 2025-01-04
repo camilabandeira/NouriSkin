@@ -3,9 +3,6 @@ from django.core.paginator import Paginator
 from products.models import Product, ProductReview
 from django.db.models import Avg
 
-
-
-
 def homepage(request):
     """Render the homepage"""
     best_sellers_list = Product.objects.filter(rating__gte=4.0).order_by('-rating')
@@ -58,3 +55,12 @@ def contact(request):
         return HttpResponseRedirect(reverse("contact") + "?success=1")
 
     return render(request, "contact.html")
+
+def search_results(request):
+    query = request.GET.get('q')
+    products = Product.objects.filter(name__icontains=query) if query else []
+    context = {
+        'query': query,
+        'products': products,
+    }
+    return render(request, 'search_results.html', context)
