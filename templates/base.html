@@ -90,12 +90,12 @@
             <div class="footer-column">
                 <h3>Shop</h3>
                 <ul>
-                    <li><a href="#">Bestsellers</a></li>
-                    <li><a href="#">Retinols</a></li>
-                    <li><a href="#">Moisturisers</a></li>
-                    <li><a href="#">Masks</a></li>
-                    <li><a href="#">Serums</a></li>
-                    <li><a href="#">Sales</a></li>
+                    <li><a href="{% url 'products' %}?category=retinols">Retinols</a></li>
+                    <li><a href="{% url 'products' %}?category=moisturiser">Moisturisers</a></li>
+                    <li><a href="{% url 'products' %}?category=masks">Masks</a></li>
+                    <li><a href="{% url 'products' %}?category=serum">Serums</a></li>
+                    <li><a href="{% url 'products' %}?category=sales">Sales</a></li>
+                    
                 </ul>
             </div>
             <!-- Quick Links -->
