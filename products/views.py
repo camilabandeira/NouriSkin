@@ -4,6 +4,7 @@ from django.contrib import messages
 from .models import Product, Category, Concern, SkinType, ProductReview
 from .forms import ProductForm
 from .review_form import ReviewForm
+from django.contrib.auth.decorators import login_required
 
 
 def all_products(request):
@@ -130,7 +131,7 @@ def write_review(request, product_id):
 
     return render(request, 'products/review_form.html', context)
 
-
+@login_required
 def add_product(request):
     """ A view to add a new product """
     if request.method == 'POST':
@@ -146,6 +147,7 @@ def add_product(request):
 
     return render(request, 'products/add_product.html', {'form': form})
 
+@login_required
 def product_update(request, pk):
     """ A view to handle updating a product """
     product = get_object_or_404(Product, pk=pk)
@@ -167,6 +169,7 @@ def product_update(request, pk):
     }
     return render(request, 'products/product_update.html', context)
 
+@login_required
 def delete_product(request, product_id):
     """
     A view to delete a product.
