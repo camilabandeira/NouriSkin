@@ -68,12 +68,12 @@
             </div>
           </form>
 
-          {% if user.is_superuser %}
+            {% if user.is_superuser %}
           <div class="admin-actions">
           <a href="{% url 'product_update' product.id %}" class="edit-product-btn">Edit Product</a>
           <a href="{% url 'delete_product' product.id %}" class="delete-btn">Delete Product</a>
           </div>
-          {% endif %}
+             {% endif %}
         </div>
 
         <div class="shipping-info">
