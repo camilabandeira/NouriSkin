@@ -175,7 +175,7 @@ body {
     border: 1px solid var(--line-break);
     border-radius: 0.25rem;
     z-index: 1000;
-    min-width: 10rem;
+    min-width: 13rem;
     padding: 0.5rem 0;
 }
 

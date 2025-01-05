@@ -1,0 +1,50 @@
+.delete-product-page {
+    display: flex;
+    flex-direction: column;
+    max-width: 70rem;
+    padding: 3rem 1rem;
+    margin: 0 auto;
+}
+
+.delete-product-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.delete-content p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.delete-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.delete-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: hsl(0, 100%, 50%);
+    border-radius: 0.25rem;
+    color: var(--white);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.0313rem;
+    text-transform: uppercase;
+}
+
+.cancel-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--black);
+    border-radius: 0.25rem;
+    color: var(--white);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.0313rem;
+    text-transform: uppercase;
+}

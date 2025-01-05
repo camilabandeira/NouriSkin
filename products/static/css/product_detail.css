@@ -58,16 +58,17 @@
     margin-bottom: 1.4rem;
 }
 
-.content-header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
 .content-header h1 {
     font-size: 1.8rem;
     font-weight: 500;
+}
+
+.admin-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    gap: 0.5rem;
+    width: 100%;
 }
 
 .edit-product-btn {
@@ -80,10 +81,28 @@
     text-align: center;
     letter-spacing: 0.0313rem;
     text-transform: uppercase;
+    width: 50%;
 }
 
 .edit-product-btn:hover {
     background-color: hsl(36, 100%, 50%);
+}
+
+.delete-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: hsl(0, 100%, 50%);
+    border-radius: 0.25rem;
+    color: var(--white);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.0313rem;
+    text-transform: uppercase;
+    width: 50%;
+}
+
+.delete-btn:hover {
+    background-color: hsl(0, 100%, 60%);
 }
 
 .content-header-feedback {

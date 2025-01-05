@@ -19,12 +19,7 @@
 
     <div class="product-detail-content">
       <div class="content-header">
-        <div class="content-header-wrapper">
         <h1 id="product-title">{{ product.name }}</h1>
-        {% if user.is_superuser %}
-        <a href="{% url 'product_update' product.id %}" class="edit-product-btn">Edit Product</a>
-        {% endif %}
-        </div>
         <div class="content-header-feedback">
           <div class="content-header-rating" aria-label="Product rating">
             {% for i in stars_range %}
@@ -72,6 +67,13 @@
               </div>
             </div>
           </form>
+
+          {% if user.is_superuser %}
+          <div class="admin-actions">
+          <a href="{% url 'product_update' product.id %}" class="edit-product-btn">Edit Product</a>
+          <a href="{% url 'delete_product' product.id %}" class="delete-btn">Delete Product</a>
+          </div>
+          {% endif %}
         </div>
 
         <div class="shipping-info">
