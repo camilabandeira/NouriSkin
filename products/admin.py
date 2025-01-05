@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product, Concern, ProductReview
+from .models import Category, Product, Concern, ProductReview, KeyIngredient, SkinType
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -26,13 +26,30 @@ class ConcerAdmin(admin.ModelAdmin):
         'name',
         )
     
+class SkinTypeAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+    ordering = ('name',)
+    
 class ProductReviewAdmin(admin.ModelAdmin):
     list_display = ('product', 'name', 'rating', 'submitted_at')  
     list_filter = ('product', 'rating', 'skin_type', 'age_group')  
     search_fields = ('name', 'review_text')  
+
+class KeyIngredientAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+    )
+
+    ordering = ('name',)
  
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Concern, ConcerAdmin)
+admin.site.register(SkinType)
+admin.site.register(KeyIngredient, KeyIngredientAdmin)
 admin.site.register(ProductReview, ProductReviewAdmin) 
