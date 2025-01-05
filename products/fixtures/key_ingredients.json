@@ -1,0 +1,275 @@
+[
+    {
+        "model": "products.keyingredient",
+        "pk": 1,
+        "fields": {
+            "name": "Retinol"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 2,
+        "fields": {
+            "name": "Hyaluronic Acid"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 3,
+        "fields": {
+            "name": "Vitamin E"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 4,
+        "fields": {
+            "name": "Niacinamide"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 5,
+        "fields": {
+            "name": "Ceramides"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 6,
+        "fields": {
+            "name": "Salicylic Acid"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 7,
+        "fields": {
+            "name": "Green Tea Extract"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 8,
+        "fields": {
+            "name": "Shea Butter"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 9,
+        "fields": {
+            "name": "Aloe Vera"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 10,
+        "fields": {
+            "name": "Vitamin C"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 11,
+        "fields": {
+            "name": "Antioxidants"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 12,
+        "fields": {
+            "name": "Peptides"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 13,
+        "fields": {
+            "name": "Licorice Root Extract"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 14,
+        "fields": {
+            "name": "Chamomile"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 15,
+        "fields": {
+            "name": "Calendula"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 16,
+        "fields": {
+            "name": "Snow Mushroom Extract"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 17,
+        "fields": {
+            "name": "Beeswax"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 18,
+        "fields": {
+            "name": "Coconut Oil"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 19,
+        "fields": {
+            "name": "Zinc Oxide"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 20,
+        "fields": {
+            "name": "Cocoa Butter"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 21,
+        "fields": {
+            "name": "Avocado Oil"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 22,
+        "fields": {
+            "name": "Kaolin Clay"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 23,
+        "fields": {
+            "name": "Cucumber Extract"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 24,
+        "fields": {
+            "name": "Activated Charcoal"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 25,
+        "fields": {
+            "name": "Bentonite Clay"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 26,
+        "fields": {
+            "name": "Tea Tree Oil"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 27,
+        "fields": {
+            "name": "Vitamin B5"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 28,
+        "fields": {
+            "name": "Jojoba Oil"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 29,
+        "fields": {
+            "name": "Glycerin"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 30,
+        "fields": {
+            "name": "Ferulic Acid"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 31,
+        "fields": {
+            "name": "Collagen"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 32,
+        "fields": {
+            "name": "Alpha Arbutin"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 33,
+        "fields": {
+            "name": "Zinc PCA"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 34,
+        "fields": {
+            "name": "Witch Hazel"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 35,
+        "fields": {
+            "name": "Rose Water"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 36,
+        "fields": {
+            "name": "Squalane"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 37,
+        "fields": {
+            "name": "Chamomile Extract"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 38,
+        "fields": {
+            "name": "Licorice Extract"
+        }
+    },
+    {
+        "model": "products.keyingredient",
+        "pk": 39,
+        "fields": {
+            "name": "Bakuchiol"
+        }
+    }
+]
