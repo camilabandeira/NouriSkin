@@ -5,6 +5,7 @@ from .models import Product, Category, Concern, SkinType, ProductReview
 from .forms import ProductForm
 from .review_form import ReviewForm
 
+
 def all_products(request):
     """ A view to show all products """
     categories = Category.objects.all()
@@ -99,8 +100,8 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
-
 def write_review(request, product_id):
+    """ A view to write a review """
     product = get_object_or_404(Product, id=product_id)
 
     if request.method == 'POST':
@@ -144,3 +145,24 @@ def add_product(request):
         form = ProductForm()
 
     return render(request, 'products/add_product.html', {'form': form})
+
+def product_update(request, pk):
+    """ A view to handle updating a product """
+    product = get_object_or_404(Product, pk=pk)
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product updated successfully!')
+            return redirect('product_detail', product_id=product.id)
+        else:
+            messages.error(request, 'Please correct the errors below.')
+    else:
+        form = ProductForm(instance=product)
+
+    context = {
+        'form': form,
+        'product': product,
+    }
+    return render(request, 'products/product_update.html', context)

@@ -19,8 +19,12 @@
 
     <div class="product-detail-content">
       <div class="content-header">
+        <div class="content-header-wrapper">
         <h1 id="product-title">{{ product.name }}</h1>
-
+        {% if user.is_superuser %}
+        <a href="{% url 'product_update' product.id %}" class="edit-product-btn">Edit Product</a>
+        {% endif %}
+        </div>
         <div class="content-header-feedback">
           <div class="content-header-rating" aria-label="Product rating">
             {% for i in stars_range %}
@@ -93,25 +97,6 @@
               </ul>
             </div>
           </div>
-
-          <div class="concerns">
-            <h3>Concerns</h3>
-            <ul>
-              {% for concern in product.concern.all %}
-                <li>{{ concern.friendly_name }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-
-          <div class="skin-types">
-            <h3>Suitable for Skin Types</h3>
-            <ul>
-              {% for skin_type in product.skin_types.all %}
-                <li>{{ skin_type.friendly_name }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-
           <div class="how-to-use">
             <h3>How To Use</h3>
             <button class="plus-minus-btn" aria-expanded="false" aria-controls="how-to-use-content">+</button>

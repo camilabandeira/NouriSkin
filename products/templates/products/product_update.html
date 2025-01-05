@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/product_update.css' %}" />
+
+<nav class="breadcrumb-navigation" aria-label="Breadcrumb">
+    <a href="{% url 'homepage' %}">Home</a> &gt; 
+    <a href="{% url 'products' %}">Products</a> &gt; 
+    <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a> &gt; 
+    <span aria-current="page">Product Update</span>
+</nav>
+
+<div class="add-product-page">
+
+    <h1>Add Product</h1>
+    <form method="post" enctype="multipart/form-data" class="product-form">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_name">Product Name:</label>
+            {{ form.name }}
+        </div>
+        <div class="form-group">
+            <label for="id_description">Description:</label>
+            {{ form.description }}
+        </div>
+        <div class="form-group">
+            <label for="id_price">Price (€):</label>
+            {{ form.price }}
+        </div>
+        <div class="form-group">
+            <label for="id_sku">SKU:</label>
+            {{ form.sku }}
+        </div>
+        <div class="form-group">
+            <label for="id_category">Category:</label>
+            {{ form.category }}
+        </div>
+        <div class="form-group">
+            <label for="id_image">Image:</label>
+            {{ form.image }}
+        </div>
+        <div class="form-group">
+            <label for="id_concern">Concerns:</label>
+            <div class="scrollable-checkbox">
+                {{ form.concern.as_widget }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="id_skin_types">Skin Types:</label>
+            <div class="scrollable-checkbox">
+                {{ form.skin_types.as_widget }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="id_key_ingredients">Key Ingredients:</label>
+            <div class="scrollable-checkbox">
+                {{ form.key_ingredients.as_widget }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="id_how_to_use">How to Use:</label>
+            {{ form.how_to_use }}
+        </div>
+        <button type="submit" class="add-btn">Add Product</button>
+    </form>
+</div>
+{% endblock %}
