@@ -63,6 +63,16 @@ class Concern(models.Model):
 
     def __str__(self):
         return self.name
+    
+class KeyIngredient(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    class Meta:
+        verbose_name_plural = "Key Ingredients"
+
+    def __str__(self):
+        return self.name
+
 
 class Category(models.Model):
     class Meta:
@@ -78,7 +88,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     concern = models.ManyToManyField(Concern, blank=True)
     skin_types = models.ManyToManyField('SkinType', related_name='products', blank=True)
-    key_ingredients = models.JSONField(blank=True, null=True)
+    key_ingredients = models.ManyToManyField('KeyIngredient', related_name='products', blank=True)
     how_to_use = models.TextField(blank=True, null=True) 
     sku = models.CharField(max_length=100, unique=True, null=True, blank=True)
     name = models.CharField(max_length=255)
