@@ -1,19 +1,35 @@
 {% load static %}
 
-<link rel="stylesheet" href="{% static '/css/newsletter.css' %}">
-<section class="newsletter" role="region" aria-labelledby="newsletter-heading">
+<link rel="stylesheet" href="{% static 'css/newsletter.css' %}">
+<section class="newsletter">
     <div class="newsletter-container">
-        <h1 id="newsletter-heading">Get Glowing With Exclusive Updates</h1>
-        <p id="newsletter-description">
-            Stay in the know with personalized skincare insights, limited-time offers, 
-            and the latest NouriSkin news.
-        </p>
-        <form class="newsletter-form" aria-describedby="newsletter-description">
-            <label for="email" class="visually-hidden"></label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required aria-required="true" aria-label="Enter your email address" />
-            <button type="submit" aria-label="Submit your email to subscribe to the newsletter">
-                Submit
-            </button>
+        <h1>Get Glowing With Exclusive Updates</h1>
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with the latest news and exclusive offers.</p>
+
+        <form 
+            id="newsletter-form" 
+            action="https://herokuapp.us7.list-manage.com/subscribe/post-json?u=1894627d3b1a7dc53b67657c8&amp;id=da5bbae68c&amp;c=?" 
+            method="GET" 
+            class="newsletter-form validate" 
+            novalidate>
+            
+            <input 
+                type="email" 
+                name="EMAIL" 
+                class="required email" 
+                id="mce-EMAIL" 
+                placeholder="Enter your email" 
+                required>
+            
+            <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                <input type="text" name="b_1894627d3b1a7dc53b67657c8_da5bbae68c" tabindex="-1" value="">
+            </div>
+
+            <button type="submit" id="mc-embedded-subscribe">Subscribe</button>
         </form>
+
+        <div id="newsletter-message" style="display: none; margin-top: 1rem;"></div>
     </div>
 </section>
+<script src="{% static 'js/newsletter.js' %}"></script>

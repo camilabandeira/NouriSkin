@@ -16,8 +16,28 @@
 
 .newsletter h1 {
     font-size: 2rem;
-    font-weight: bold;
-    color: var(--black);
+    font-weight: 400;
+    margin-bottom: -1.3rem;
+}
+
+.newsletter h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: -1.3rem;
+}
+
+#newsletter-message {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#newsletter-message.success {
+    color: hsl(101, 57%, 44%);
+}
+
+#newsletter-message.error {
+    color: hsl(14, 100%, 53%);
 }
 
 .newsletter p {
