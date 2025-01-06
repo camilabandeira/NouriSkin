@@ -1,17 +1,18 @@
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'css/newsletter.css' %}">
+<link rel="stylesheet" href="{% static '/css/newsletter.css' %}">
 <section class="newsletter">
     <div class="newsletter-container">
         <h1>Get Glowing With Exclusive Updates</h1>
-        <h2>Subscribe to Our Newsletter</h2>
+        <h2>Subscribe to Our Newsletter</h4>
         <p>Stay updated with the latest news and exclusive offers.</p>
-
         <form 
-            id="newsletter-form" 
-            action="https://herokuapp.us7.list-manage.com/subscribe/post-json?u=1894627d3b1a7dc53b67657c8&amp;id=da5bbae68c&amp;c=?" 
-            method="GET" 
+            action="https://herokuapp.us7.list-manage.com/subscribe/post?u=1894627d3b1a7dc53b67657c8&amp;id=da5bbae68c&amp;f_id=00a4dde3f0" 
+            method="post" 
+            id="mc-embedded-subscribe-form" 
+            name="mc-embedded-subscribe-form" 
             class="newsletter-form validate" 
+            target="_self" 
             novalidate>
             
             <input 
@@ -25,11 +26,9 @@
             <div aria-hidden="true" style="position: absolute; left: -5000px;">
                 <input type="text" name="b_1894627d3b1a7dc53b67657c8_da5bbae68c" tabindex="-1" value="">
             </div>
-
-            <button type="submit" id="mc-embedded-subscribe">Subscribe</button>
+            
+            <button type="submit" name="subscribe" id="mc-embedded-subscribe">Subscribe</button>
         </form>
-
-        <div id="newsletter-message" style="display: none; margin-top: 1rem;"></div>
     </div>
 </section>
-<script src="{% static 'js/newsletter.js' %}"></script>
+
