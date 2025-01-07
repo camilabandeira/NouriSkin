@@ -44,7 +44,7 @@
 
 .product-image {
     background-color: hsla(0, 0%, 93%, 0.831);
-    height: 18rem;
+    height: 23rem;
     margin-bottom: 1rem;
 }
 
@@ -55,26 +55,27 @@
 }
 
 .product-title {
-    font-size: 1rem;
-    font-weight: 400;
+    font-weight: 700;
     color: var(--black);
     text-align: left;
+}
+
+.product-title a {
+    color: var(--gray-dark);
 }
 
 .product-description {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: hsl(0deg 0% 24.03%);
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
     text-align: left;
+
 }
 
-.product-rating {
-    margin-bottom: 0.75rem;
-}
 
 .product-rating i {
     color: var(--black);
-    margin: 0 0.125rem;
+    font-size: 1rem;
 }
 
 .product-rating i.filled {
