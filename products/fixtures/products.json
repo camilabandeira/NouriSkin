@@ -629,154 +629,164 @@
         "model": "products.product",
         "pk": 25,
         "fields": {
-            "name": "Hydrating Moisturizer - Limited Edition",
-            "description": "This limited-time hydrating moisturizer delivers intense moisture and nourishment for dry and sensitive skin. Enriched with Shea Butter to soften and soothe, Hyaluronic Acid to lock in hydration, and Vitamin E for antioxidant protection, it helps restore your skin's natural glow. Its lightweight yet deeply nourishing formula makes it ideal for everyday use, leaving your skin feeling smooth, refreshed, and comfortable. Grab it at a special price while supplies last!",
-            "price": "15.99",
+            "name": "Revitalizing Bakuchiol Night Serum",
+            "description": "This gentle yet effective night serum harnesses the power of Bakuchiol, a natural alternative to retinol, to improve skin texture and reduce fine lines without irritation. Enriched with Hyaluronic Acid and Vitamin E, it deeply hydrates and restores skin overnight for a smoother, more radiant complexion.",
+            "price": "38.50",
             "sku": "SKU025",
-            "category": 5,
+            "category": 4,
             "image": "products/placeholder.jpg",
             "concern": [
-                3
+                1,
+                4
             ],
             "skin_types": [
                 1,
                 5
             ],
             "key_ingredients": [
-                8,
-                3,
-                21
+                39,
+                2,
+                3
             ],
-            "how_to_use": "Massage a generous amount into clean skin morning and night. Focus on areas prone to dryness for optimal results."
+            "how_to_use": "Apply a small amount to clean, dry skin in the evening. Follow with a moisturizer. Always use sunscreen during the day."
         }
     },
     {
         "model": "products.product",
         "pk": 26,
         "fields": {
-            "name": "Clearance Retinol Serum",
-            "description": "An affordable, high-quality retinol serum perfect for those looking to incorporate retinol into their skincare routine without a significant investment. Formulated with Retinol to improve skin texture and reduce fine lines, Vitamin E to provide antioxidant protection, and Squalane to deeply hydrate and nourish the skin, this serum offers incredible value. Ideal for normal to combination skin, it delivers visible results with regular use. Take advantage of this clearance offer to elevate your skincare routine.",
-            "price": "19.99",
+            "name": "Hydro-Lift Day Cream",
+            "description": "A lightweight moisturizer that delivers intense hydration and visibly lifts the skin. Infused with Peptides and Hyaluronic Acid, it firms and plumps while reducing signs of aging. Perfect for daily use under makeup, it keeps skin smooth and radiant all day.",
+            "price": "44.99",
             "sku": "SKU026",
-            "category": 5,
+            "category": 2,
             "image": "products/placeholder.jpg",
             "concern": [
                 1,
-                2
+                3,
+                4
             ],
             "skin_types": [
-                2,
-                3
+                3,
+                4
             ],
             "key_ingredients": [
-                1,
-                3,
-                36
+                12,
+                2,
+                31
             ],
-            "how_to_use": "Apply a small amount to clean, dry skin at night. Follow with a moisturizer and use sunscreen during the day to protect your skin."
+            "how_to_use": "Smooth onto clean face and neck each morning. Allow it to absorb before applying makeup."
         }
     },
     {
         "model": "products.product",
         "pk": 27,
         "fields": {
-            "name": "Special Mask Bundle",
-            "description": "A curated set of three masks offered at an unbeatable bundle price, designed to cater to different skin concerns and needs. The set includes a purifying Kaolin Clay mask to draw out impurities, a hydrating mask enriched with Hyaluronic Acid, and a brightening Vitamin C mask to enhance radiance. Perfect for a weekly skincare routine or to gift to a skincare enthusiast, this bundle ensures a spa-like experience from the comfort of your home.",
-            "price": "22.00",
+            "name": "Brightening Eye Repair Cream",
+            "description": "This targeted eye cream combines Vitamin C and Peptides to brighten dark circles, reduce puffiness, and smooth fine lines around the eyes. Its lightweight, non-greasy formula absorbs quickly, leaving the eye area refreshed and hydrated.",
+            "price": "29.99",
             "sku": "SKU027",
-            "category": 5,
+            "category": 2,
             "image": "products/placeholder.jpg",
             "concern": [
+                1,
+                2,
+                6
+            ],
+            "skin_types": [
+                1,
                 3,
                 5
             ],
-            "skin_types": [
-                4
-            ],
             "key_ingredients": [
-                25,
-                3,
-                10
+                10,
+                12,
+                3
             ],
-            "how_to_use": "Follow the specific instructions provided for each mask in the bundle for optimal results."
+            "how_to_use": "Gently pat a small amount around the eyes morning and night. Avoid direct contact with eyes."
         }
     },
     {
         "model": "products.product",
         "pk": 28,
         "fields": {
-            "name": "Discounted Glow Serum",
-            "description": "This bestselling serum is now available at a reduced price, offering premium skincare benefits at an incredible value. Packed with Vitamin C to brighten and even out skin tone, Peptides to enhance skin elasticity, and Hyaluronic Acid to provide deep hydration, this serum is perfect for maintaining a radiant, youthful complexion. Lightweight and fast-absorbing, it works seamlessly in both morning and evening routines.",
-            "price": "18.50",
+            "name": "Replenishing Ceramide Barrier Serum",
+            "description": "A fortifying serum designed to strengthen the skin's natural barrier and lock in hydration. Packed with Ceramides, Niacinamide, and Aloe Vera, it soothes dryness and irritation, leaving skin supple and resilient. Ideal for restoring balance to stressed or dehydrated skin.",
+            "price": "40.00",
             "sku": "SKU028",
-            "category": 5,
+            "category": 4,
             "image": "products/placeholder.jpg",
             "concern": [
-                1,
-                2
+                3,
+                7
             ],
             "skin_types": [
                 1,
-                3
+                4,
+                5
             ],
             "key_ingredients": [
-                10,
-                31,
-                3
+                5,
+                4,
+                9
             ],
-            "how_to_use": "Apply a few drops to clean skin morning and night. Follow with a moisturizer to lock in hydration and maximize benefits."
+            "how_to_use": "Apply 2-3 drops to clean skin morning and night. Follow with moisturizer to seal in hydration."
         }
     },
     {
         "model": "products.product",
         "pk": 29,
         "fields": {
-            "name": "Seasonal Gentle Cleanser",
-            "description": "This gentle, soothing cleanser is now available at a special seasonal price, perfect for refreshing and revitalizing your skincare routine. Formulated with calming Chamomile to reduce irritation, Aloe Vera to hydrate and soften, and Glycerin to lock in moisture, it effectively removes impurities while maintaining your skin’s natural balance. Its lightweight, non-drying formula is suitable for daily use, leaving your skin feeling clean, smooth, and nourished. Ideal for sensitive or combination skin, this cleanser ensures a fresh start every morning and evening.",
-            "price": "14.99",
+            "name": "Clarifying Detox Mask",
+            "description": "A weekly treatment mask formulated with Activated Charcoal and Kaolin Clay to detoxify and balance the skin. This mask draws out impurities, absorbs excess oil, and minimizes the appearance of pores. Aloe Vera and Green Tea Extract provide soothing hydration, making it suitable even for sensitive skin types.",
+            "price": "25.99",
             "sku": "SKU029",
-            "category": 5,
+            "category": 3,
             "image": "products/placeholder.jpg",
             "concern": [
                 5,
-                7
+                6
             ],
             "skin_types": [
                 2,
+                3,
                 5
             ],
             "key_ingredients": [
-                37,
-                8,
-                38
+                24,
+                22,
+                9,
+                7
             ],
-            "how_to_use": "Massage onto wet skin in circular motions. Rinse thoroughly with lukewarm water. Use morning and evening for best results."
+            "how_to_use": "Apply a thin layer to clean, dry skin. Leave on for 10-15 minutes, then rinse thoroughly with lukewarm water. Use 1-2 times a week."
         }
     },
     {
         "model": "products.product",
         "pk": 30,
         "fields": {
-            "name": "Festive Rose Toner",
-            "description": "Elevate your skincare routine with this refreshing toner, now offered at a festive discount. Infused with Rose Water to soothe and hydrate, Niacinamide to refine pores and even skin tone, and Aloe Vera to provide a calming effect, this toner leaves your skin feeling balanced and radiant. Perfect for use after cleansing, it preps the skin to absorb serums and moisturizers more effectively. Suitable for normal to dry skin, this toner is an essential step for maintaining a glowing complexion.",
-            "price": "12.99",
+            "name": "Radiance Repair Night Oil",
+            "description": "A luxurious night oil designed to repair and rejuvenate the skin while you sleep. Infused with Squalane and Jojoba Oil, it provides deep nourishment and hydration, while Vitamin C brightens and evens skin tone. Perfect for restoring a radiant glow and combating early signs of aging.",
+            "price": "45.00",
             "sku": "SKU030",
-            "category": 5,
+            "category": 4,
             "image": "products/placeholder.jpg",
             "concern": [
-                6,
-                7
+                1,
+                2,
+                6
             ],
             "skin_types": [
                 1,
+                3,
                 4
             ],
             "key_ingredients": [
-                39,
-                35,
-                8
+                36,
+                28,
+                10
             ],
-            "how_to_use": "After cleansing, apply the toner to a cotton pad or directly onto your hands. Gently pat onto clean skin. Use morning and night for best results."
+            "how_to_use": "Warm 2-3 drops between your hands and press gently onto clean, dry skin as the final step in your evening routine."
         }
     }
 ]
