@@ -30,6 +30,13 @@
         <div class="form-group">
             <label for="id_sku">SKU:</label>
             {{ form.sku }}
+            {% if form.sku.errors %}
+                <div class="error-message">
+                    {% for error in form.sku.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
         </div>
         <div class="form-group">
             <label for="id_category">Category:</label>
