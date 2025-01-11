@@ -15,23 +15,26 @@ import os
 import dj_database_url
 from decouple import config
 if os.path.isfile('env.py'):
-    import env
+    import env  
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS =  ['localhost', '127.0.0.1', '.herokuapp.com', '192.168.0.66', '192.168.1.8']
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '.herokuapp.com',
+    '192.168.0.66',
+    '192.168.1.8',
+]
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,18 +42,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites', 
-    'allauth',
-    'allauth.account',
-    'home',
-    'products',
-    'storages',
-    'cart',
-    'checkout',
-    'profiles',
+    'django.contrib.sites',  
+    'allauth',  
+    'allauth.account',  
+    'home', 
+    'products',  
+    'storages', 
+    'cart', 
+    'checkout', 
+    'profiles',  
 ]
+
 MIDDLEWARE = [
-    'allauth.account.middleware.AccountMiddleware', # Allauth middleware
+    'allauth.account.middleware.AccountMiddleware',  
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -59,22 +63,22 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-]
+    ]
 
 ROOT_URLCONF = 'NouriSkin.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS':[BASE_DIR / "templates"],
+        'DIRS': [BASE_DIR / "templates"],  
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',
+                'django.template.context_processors.request',  
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'cart.context_processors.cart_contents',
+                'cart.context_processors.cart_contents',  
             ],
         },
     },
@@ -87,18 +91,18 @@ FIXED_DELIVERY_FEE = 4.99
 WSGI_APPLICATION = 'NouriSkin.wsgi.application'
 
 
-# Database
+# Database configuration
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
+# Secret key
 SECRET_KEY = os.environ.get("SECRET_KEY")
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -117,48 +121,47 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
-
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Media files
+# Media files (for local storage; overridden for AWS S3 in production)
 MEDIA_URL = '/media/'  
 MEDIA_ROOT = BASE_DIR / 'media' 
 
 
-# AWS S3 settings
-AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
-AWS_S3_REGION_NAME = config('AWS_S3_REGION_NAME', default='us-east-1')
-AWS_QUERYSTRING_AUTH = config('AWS_QUERYSTRING_AUTH', default='False').lower() == 'true'
+# AWS S3 settings for media storage
+if 'USE_AWS' in os.environ:
+    # AWS credentials and bucket configuration
+    AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
+    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+    AWS_S3_REGION_NAME = config('AWS_S3_REGION_NAME', default='us-east-1')
+    AWS_QUERYSTRING_AUTH = config('AWS_QUERYSTRING_AUTH', default='False').lower() == 'true'
 
-MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+    MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/'
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 
 # Allauth settings
 SITE_ID = 1
-
 AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend', 
-    'allauth.account.auth_backends.AuthenticationBackend',  
+    'django.contrib.auth.backends.ModelBackend',  # Default Django auth backend
+    'allauth.account.auth_backends.AuthenticationBackend',  # Allauth backend
 ]
 
+# Allauth configuration
 ACCOUNT_SIGNUP_FORM_CLASS = 'profiles.forms.CustomSignupForm'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = False
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
@@ -170,22 +173,25 @@ ACCOUNT_CONFIRM_EMAIL_ON_GET = True
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 3
 DEFAULT_FROM_EMAIL = 'support@NouriSkin.com'
 
-
+# Login/logout settings
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 
-# Stripe settings
+# Stripe payment settings
 STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY")
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
 STRIPE_CURRENCY = 'eur'
 
 
+# Email backend settings
 if 'DEVELOPMENT' in os.environ:
+    # Local development email backend
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'support@NouriSkin.com'
 else:
+    # Production email backend
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_HOST = 'smtp.gmail.com'
     EMAIL_PORT = 587
@@ -197,5 +203,11 @@ else:
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Workaround: Force default_storage to use S3 backend
+# This ensures that default_storage is correctly initialized as S3Boto3Storage,
+# even if prematurely initialized by third-party code or Django during startup.
+from storages.backends.s3boto3 import S3Boto3Storage
+from django.core.files.storage import default_storage
+default_storage._wrapped = S3Boto3Storage()
