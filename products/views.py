@@ -149,7 +149,7 @@ def add_product(request):
 
 @login_required
 def product_update(request, pk):
-    """ A view to handle updating a product """
+    """ A view to update a product """
     product = get_object_or_404(Product, pk=pk)
 
     if request.method == 'POST':
@@ -160,6 +160,7 @@ def product_update(request, pk):
             return redirect('product_detail', product_id=product.id)
         else:
             messages.error(request, 'Please correct the errors below.')
+            print("Form Errors:", form.errors)  # Debugging line
     else:
         form = ProductForm(instance=product)
 
@@ -168,6 +169,7 @@ def product_update(request, pk):
         'product': product,
     }
     return render(request, 'products/product_update.html', context)
+
 
 @login_required
 def delete_product(request, product_id):

@@ -19,5 +19,21 @@ class ProductForm(forms.ModelForm):
             'price': forms.NumberInput(attrs={'class': 'form-control'}),
             'sku': forms.TextInput(attrs={'class': 'form-control'}),
             'image': forms.ClearableFileInput(attrs={'class': 'form-control'}),
-            
         }
+
+    def clean(self):
+        cleaned_data = super().clean()
+        error_message = "This field is required."
+
+        for field_name in ['name', 'description', 'price', 'sku', 'category', 'image', 'how_to_use']:
+            value = cleaned_data.get(field_name)
+            if value in [None, '']: 
+                self.add_error(field_name, error_message)
+
+        for field_name in ['concern', 'skin_types', 'key_ingredients']:
+            value = cleaned_data.get(field_name)
+            if not value: 
+                self.add_error(field_name, error_message)
+                
+
+        return cleaned_data
