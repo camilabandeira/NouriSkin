@@ -3,7 +3,7 @@
 
 **NouriSkin** is a full-stack e-commerce platform built to showcase web development practices in the context of a fictional skincare brand. The project focuses on creating a scalable, user-friendly application with features like dynamic product catalogs, personalized user experiences, secure payment integration, and responsive design. Designed with clean, maintainable code and best practices, NouriSkin demonstrate how technology can enhance the shopping experience for targeted skincare solutions.
 
-## User Experience (UX) Overview
+## User Experience (UX)
 
 **NouriSkin**  platform is designed to provide a seamless and intuitive user experience for skincare enthusiasts. By prioritizing usability, accessibility, and responsive design, the platform ensures users can easily navigate and interact with the site across all devices. Here’s how the UX is crafted:
 
@@ -37,3 +37,22 @@ User Goals
 - As a user, I want to get back to the homepage quickly from any page to keep exploring other parts of the site.
 - As a user, I want to check a FAQ section for quick answers to common questions about products and policies.
 - As a user, I want to connect with the brand on social media through links on the site to stay updated and in touch.
+
+## Color Scheme
+![Color Scheme](https://github.com/user-attachments/assets/2fde5c0f-71ef-402b-9b78-5c13ef62404f)
+The NouriSkin project uses a carefully picked set of colors to create a clean and modern look. White (**#FCFCFC**) gives a fresh and open feel, while black (**#131313**) adds strong contrast to make text easy to read. Dark gray (**#474747**) brings depth and style, and light gray (**#9F9F9F**) adds soft details to balance the design. Light Olive (**#DBD769**) adds warmth and draws attention to key parts. Together, these colors make the platform look simple and inviting.
+
+## Typography
+The NouriSkin project uses a clean and flexible typography system with the **Afacad** font from Google Fonts. This font was picked for its modern and stylish look, combining readability with elegance.
+
+**Afacad** comes in different weights (**400 to 700**) and supports regular and italic styles, making it useful for headings, body text, and highlights. Using this font throughout the project creates a consistent and professional look that matches the clean and modern design.
+
+## Wireframe
+For designing the wireframes of this project, I chose Figma because of its strong visual features. Its easy drag-and-drop interface makes it simple to create clear and accurate wireframes. Since it’s cloud-based, Figma lets you access wireframes from anywhere without needing to install software.
+
+ You can check out the wireframes for this project directly in [Figma](https://www.figma.com/design/KcPq8keW5OTh8diq5qYaUp/NouriSkin?node-id=0-1&m=dev&t=yM3FoMfwX7MMv0PY-1)
+
+
+## Entity-Relationship Diagram (ERD)
+![Entity-Relationship Diagram](https://github.com/user-attachments/assets/a6451003-0551-4da7-921a-9d324a1bd60e)
+For creating and visualizing the Entity-Relationship Diagram (ERD) for this project, I decided to use drawSQL because it’s easy to use and has great features. Its simple interface makes designing ERDs straightforward, while its tools help create clear and detailed diagrams efficiently.
