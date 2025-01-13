@@ -30,13 +30,5 @@
             "name": "serum",
             "friendly_name": "Serum Concentrates"
         }
-    },
-    {
-        "model": "products.category",
-        "pk": 5,
-        "fields": {
-            "name": "sales",
-            "friendly_name": "Special Offers"
-        }
     }
 ]
