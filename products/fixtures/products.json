@@ -8,7 +8,7 @@
             "price": "39.99",
             "sku": "SKU001",
             "category": 1,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU01.jpg",
             "concern": [
                 1,
                 2,
@@ -35,7 +35,7 @@
             "price": "42.50",
             "sku": "SKU002",
             "category": 1,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU002.jpg",
             "concern": [
                 1,
                 2,
@@ -62,7 +62,7 @@
             "price": "44.99",
             "sku": "SKU003",
             "category": 1,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU003.jpg",
             "concern": [
                 1,
                 2,
@@ -89,7 +89,7 @@
             "price": "38.00",
             "sku": "SKU004",
             "category": 1,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU004.jpg",
             "concern": [
                 1,
                 3,
@@ -116,7 +116,7 @@
             "price": "45.50",
             "sku": "SKU005",
             "category": 1,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU005.jpg",
             "concern": [
                 1,
                 2,
@@ -143,7 +143,7 @@
             "price": "49.99",
             "sku": "SKU006",
             "category": 1,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU006.jpg",
             "concern": [
                 1,
                 2,
@@ -171,7 +171,7 @@
             "price": "29.99",
             "sku": "SKU007",
             "category": 2,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU007.jpg",
             "concern": [
                 3,
                 7
@@ -197,7 +197,7 @@
             "price": "25.00",
             "sku": "SKU008",
             "category": 2,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU008.jpg",
             "concern": [
                 3,
                 7
@@ -224,7 +224,7 @@
             "price": "32.99",
             "sku": "SKU009",
             "category": 2,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU009.jpg",
             "concern": [
                 3,
                 7
@@ -249,7 +249,7 @@
             "price": "34.50",
             "sku": "SKU010",
             "category": 2,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU010.jpg",
             "concern": [
                 3,
                 7
@@ -274,7 +274,7 @@
             "price": "29.00",
             "sku": "SKU011",
             "category": 2,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU011.jpg",
             "concern": [
                 3,
                 7
@@ -300,7 +300,7 @@
             "price": "35.99",
             "sku": "SKU012",
             "category": 2,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU012.jpg",
             "concern": [
                 3
             ],
@@ -325,7 +325,7 @@
             "price": "24.99",
             "sku": "SKU013",
             "category": 3,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU013.jpg",
             "concern": [
                 5,
                 6
@@ -350,7 +350,7 @@
             "price": "7.99",
             "sku": "SKU014",
             "category": 3,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU014.jpg",
             "concern": [
                 2,
                 6
@@ -376,7 +376,7 @@
             "price": "19.99",
             "sku": "SKU015",
             "category": 3,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU015.jpg",
             "concern": [
                 3,
                 7
@@ -402,7 +402,7 @@
             "price": "22.50",
             "sku": "SKU016",
             "category": 3,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU016.jpg",
             "concern": [
                 5
             ],
@@ -427,7 +427,7 @@
             "price": "27.00",
             "sku": "SKU017",
             "category": 3,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU017.jpg",
             "concern": [
                 3,
                 7
@@ -454,7 +454,7 @@
             "price": "29.99",
             "sku": "SKU018",
             "category": 3,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU018.jpg",
             "concern": [
                 6,
                 7
@@ -480,7 +480,7 @@
             "price": "29.99",
             "sku": "SKU019",
             "category": 4,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU019.jpg",
             "concern": [
                 3
             ],
@@ -505,7 +505,7 @@
             "price": "33.50",
             "sku": "SKU020",
             "category": 4,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU020.jpg",
             "concern": [
                 2,
                 6
@@ -531,7 +531,7 @@
             "price": "39.00",
             "sku": "SKU021",
             "category": 4,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU021.jpg",
             "concern": [
                 1,
                 2
@@ -557,7 +557,7 @@
             "price": "28.99",
             "sku": "SKU022",
             "category": 4,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU022.jpg",
             "concern": [
                 5
             ],
@@ -582,7 +582,7 @@
             "price": "44.50",
             "sku": "SKU023",
             "category": 4,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU023.jpg",
             "concern": [
                 1,
                 2
@@ -608,7 +608,7 @@
             "price": "36.99",
             "sku": "SKU024",
             "category": 4,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU024.jpg",
             "concern": [
                 2,
                 6
@@ -634,7 +634,7 @@
             "price": "38.50",
             "sku": "SKU025",
             "category": 4,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU025.jpg",
             "concern": [
                 1,
                 4
@@ -660,7 +660,7 @@
             "price": "44.99",
             "sku": "SKU026",
             "category": 2,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU026.jpg",
             "concern": [
                 1,
                 3,
@@ -687,7 +687,7 @@
             "price": "29.99",
             "sku": "SKU027",
             "category": 2,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU027.jpg",
             "concern": [
                 1,
                 2,
@@ -715,7 +715,7 @@
             "price": "40.00",
             "sku": "SKU028",
             "category": 4,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU028.jpg",
             "concern": [
                 3,
                 7
@@ -742,7 +742,7 @@
             "price": "25.99",
             "sku": "SKU029",
             "category": 3,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU029.jpg",
             "concern": [
                 5,
                 6
@@ -770,7 +770,7 @@
             "price": "45.00",
             "sku": "SKU030",
             "category": 4,
-            "image": "products/placeholder.jpg",
+            "image": "products/SKU030.jpg",
             "concern": [
                 1,
                 2,
