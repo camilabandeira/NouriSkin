@@ -442,3 +442,149 @@ The **Profile Page** allows users to manage their delivery information and view 
    - Ensures the page layout is user-friendly on both desktop and mobile devices.
 
 This page offers an organized and efficient way for users to manage their profile and review their purchase history.
+
+## Tools and Technologies
+
+This project was built using the following tools and technologies:
+
+- **Backend Framework**: [Django (5.1.4)](https://www.djangoproject.com/) – For managing server-side logic and functionality.  
+- **Frontend**:  
+  - [**HTML**](https://developer.mozilla.org/en-US/docs/Web/HTML) – To structure the user interface.  
+  - [**CSS**](https://developer.mozilla.org/en-US/docs/Web/CSS) – For styling and layout of the interface.  
+  - [**JavaScript (JS)**](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – For adding interactive features and dynamic behavior to the website.  
+- **Design Tool**: [**Figma**](https://www.figma.com/) – For creating wireframes and UI/UX design prototypes.  
+- **Database**: [PostgreSQL](https://www.postgresql.org/) – For efficient data storage and management.  
+- **Cloud Services**:  
+  - [**AWS S3**](https://aws.amazon.com/s3/) – For media storage and delivery, integrated with `django-storages`.   
+- **Payment Integration**: [Stripe](https://stripe.com/) – For secure payment processing.  
+- **Package Management**: [Pip](https://pip.pypa.io/en/stable/) – For managing Python dependencies in the virtual environment (`venv`).  
+- **Deployment Tools**:  
+  - [**Heroku**](https://www.heroku.com/) – For deploying and hosting the live application.  
+  - [**Gunicorn**](https://gunicorn.org/) – As the WSGI HTTP server.  
+  - [**WhiteNoise**](http://whitenoise.evans.io/) – To serve static files efficiently.  
+- **Environment Management**:  
+  - [**dj-database-url**](https://github.com/jazzband/dj-database-url) – For managing database configurations.  
+  - [**python-decouple**](https://github.com/henriquebastos/python-decouple) – For handling environment variables securely.  
+- **Other Libraries**:  
+  - [**Pillow**](https://pillow.readthedocs.io/en/stable/) – For image handling.  
+  - [**django-allauth**](https://django-allauth.readthedocs.io/en/stable/) – For user authentication.  
+  - [**django-countries**](https://pypi.org/project/django-countries/) – To support country-specific functionality.  
+
+
+
+### Deployment & Local Development  
+
+#### Local Development  
+
+To set up and run the project locally, follow these steps:  
+
+1. **Clone the Repository**  
+   ```bash
+   git clone <repository_url>
+   cd <project_folder>
+   ```
+
+2. **Set Up a Virtual Environment**  
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+3. **Install Dependencies**  
+   Install all required packages using `pip`:  
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Environment Variables**  
+   - Create a `.env` file in the project root and add the following variables:  
+     ```plaintext
+     SECRET_KEY=your_secret_key
+     DEBUG=True
+     DATABASE_URL=sqlite:///db.sqlite3
+     STRIPE_PUBLIC_KEY=your_stripe_public_key
+     STRIPE_SECRET_KEY=your_stripe_secret_key
+     CLOUDINARY_URL=your_cloudinary_url
+     ```
+   - Replace the placeholder values with your actual credentials.
+
+5. **Apply Database Migrations**  
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
+
+6. **Run the Server**  
+   Start the development server to access the project locally:  
+   ```bash
+   python manage.py runserver
+   ```
+---
+
+#### Environment Variables  
+
+Environment variables are used to manage sensitive data securely. Here's an overview of the essential variables:  
+
+- **SECRET_KEY**: A unique key for Django’s cryptographic features.  
+- **DEBUG**: Set to `True` for development and `False` for production.  
+- **DATABASE_URL**: Connection string for the database (e.g., SQLite for local, PostgreSQL for production).  
+- **STRIPE_PUBLIC_KEY** and **STRIPE_SECRET_KEY**: For Stripe payment integration.  
+- **CLOUDINARY_URL**: URL for managing media files via Cloudinary.  
+
+Store these variables in a `.env` file and never hardcode them in the codebase. Use `python-decouple` or similar libraries to access them securely.
+
+---
+
+#### Heroku Deployment  
+
+1. **Prepare the Application**  
+   - Install `gunicorn`, `dj-database-url`, and `whitenoise`:  
+     ```bash
+     pip install gunicorn dj-database-url whitenoise
+     ```
+
+2. **Create a `Procfile`**  
+   - Add a `Procfile` in the project root with the following content:  
+     ```plaintext
+     web: gunicorn <project_name>.wsgi
+     ```
+
+3. **Push to Heroku**  
+   - Initialize a Heroku app:  
+     ```bash
+     heroku create
+     ```
+   - Push the repository to Heroku:  
+     ```bash
+     git push heroku main
+     ```
+
+4. **Environment Variables on Heroku**  
+   - Set up the required environment variables using Heroku's dashboard or CLI:  
+     ```bash
+     heroku config:set SECRET_KEY=your_secret_key
+     heroku config:set DATABASE_URL=your_database_url
+     heroku config:set STRIPE_PUBLIC_KEY=your_stripe_public_key
+     heroku config:set STRIPE_SECRET_KEY=your_stripe_secret_key
+     heroku config:set CLOUDINARY_URL=your_cloudinary_url
+     ```
+
+5. **Database Migration**  
+   - Run migrations on Heroku:  
+     ```bash
+     heroku run python manage.py migrate
+     ```
+
+6. **Static Files**  
+   - Collect static files:  
+     ```bash
+     heroku run python manage.py collectstatic
+     ```
+
+7. **Verify Deployment**  
+   - Open the deployed app:  
+     ```bash
+     heroku open
+     ```
+
+This ensures a smooth deployment process to Heroku and a functional local development setup.
