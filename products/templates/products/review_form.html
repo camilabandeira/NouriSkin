@@ -26,6 +26,9 @@
                             <span class="fa fa-star-o" data-value="5"></span>
                         </div>
                         <p>Selected Rating: <span id="selected-rating">0</span></p>
+                        {% if form.errors.rating %}
+                        <p class="error-message" style="color: red;">{{ form.errors.rating|first }}</p>
+                        {% endif %}                        
                 </div>
             </div>
         </div>

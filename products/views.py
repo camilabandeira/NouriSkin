@@ -107,7 +107,11 @@ def write_review(request, product_id):
 
     if request.method == 'POST':
         form = ReviewForm(request.POST, user=request.user)
-        if form.is_valid():
+        rating = request.POST.get('rating') 
+
+        if not rating or int(rating) == 0:
+            form.add_error('rating', "Please select a star rating!")
+        elif form.is_valid():
             review = form.save(commit=False)
             review.product = product
             if request.user.is_authenticated:
@@ -160,7 +164,6 @@ def product_update(request, pk):
             return redirect('product_detail', product_id=product.id)
         else:
             messages.error(request, 'Please correct the errors below.')
-            print("Form Errors:", form.errors)  # Debugging line
     else:
         form = ProductForm(instance=product)
 
