@@ -3,7 +3,7 @@
         "model": "products.product",
         "pk": 1,
         "fields": {
-            "name": "Gentle Retinol Starter Serum",
+            "name": "Gentle Retinol Starter Serum 100ml",
             "description": "This beginner-friendly retinol serum is designed to introduce retinol into your skincare routine with minimal irritation. By combining the power of retinol with hydrating ingredients like hyaluronic acid and Vitamin E, this serum works to improve skin texture, reduce the appearance of fine lines, and promote a smoother complexion. Ideal for those with dry or combination skin, it helps restore a healthy glow while protecting against dehydration. Its lightweight, fast-absorbing formula makes it easy to incorporate into your evening regimen. With consistent use, you'll notice a softer, more radiant complexion.",
             "price": "39.99",
             "sku": "SKU001",
@@ -30,7 +30,7 @@
         "model": "products.product",
         "pk": 2,
         "fields": {
-            "name": "Advanced Skin Smoothing Serum",
+            "name": "Advanced Skin Smoothing Serum 50ml",
             "description": "This advanced retinol serum is crafted to target multiple signs of aging while delivering a smoother, younger-looking complexion. Enhanced with Niacinamide and Ceramides, it reduces fine lines, wrinkles, and uneven texture while strengthening the skin barrier. Its potent formula ensures effective results without compromising hydration, making it suitable for normal to combination skin types. Perfect for more experienced retinol users, this serum provides visible improvements in firmness, texture, and radiance with regular use. Ideal for anyone looking to elevate their nighttime skincare routine.",
             "price": "42.50",
             "sku": "SKU002",
@@ -57,7 +57,7 @@
         "model": "products.product",
         "pk": 3,
         "fields": {
-            "name": "High-Strength Retinol Pore Refiner",
+            "name": "High-Strength Retinol Pore Refiner 100ml",
             "description": "This high-potency retinol serum is formulated to refine the appearance of pores, even out skin tone, and tackle stubborn blemishes. Infused with Salicylic Acid for targeted exfoliation and Green Tea Extract for its soothing properties, this serum is a powerhouse for addressing imperfections. Its active ingredients work synergistically to clear congested pores, reduce fine lines, and improve overall skin texture. Ideal for oily and combination skin types, it provides a refreshed, balanced complexion while minimizing signs of aging. With consistent use, your skin will look clearer, smoother, and more refined.",
             "price": "44.99",
             "sku": "SKU003",
@@ -84,7 +84,7 @@
         "model": "products.product",
         "pk": 4,
         "fields": {
-            "name": "Hydrating Retinol Complex",
+            "name": "Hydrating Retinol Complex 50ml",
             "description": "This gentle retinol blend is formulated for those seeking effective anti-aging benefits without compromising hydration. It targets subtle signs of aging, such as fine lines and uneven texture, while nourishing the skin deeply. Enriched with Shea Butter and Aloe Vera, this formula locks in moisture and soothes irritation, making it ideal for sensitive or dry skin. The lightweight, creamy texture glides on effortlessly, leaving the skin feeling soft and refreshed. Perfect for beginners or anyone looking to maintain a youthful glow with added hydration benefits.",
             "price": "38.00",
             "sku": "SKU004",
@@ -111,7 +111,7 @@
         "model": "products.product",
         "pk": 5,
         "fields": {
-            "name": "Botanical Radiance Retinol Serum",
+            "name": "Botanical Radiance Retinol Serum 100ml",
             "description": "This potent retinol serum combines advanced anti-aging properties with the natural power of botanical extracts to deliver a radiant and revitalized complexion. Infused with Vitamin C for brightening and antioxidants for skin repair, it reduces fine lines, enhances firmness, and boosts overall radiance. The inclusion of botanical extracts ensures that the serum soothes and hydrates the skin, making it suitable even for those prone to sensitivity. With its silky, fast-absorbing texture, this serum provides long-lasting hydration and transforms dull skin into a luminous, youthful glow.",
             "price": "45.50",
             "sku": "SKU005",
@@ -138,7 +138,7 @@
         "model": "products.product",
         "pk": 6,
         "fields": {
-            "name": "Advanced Retinol Refining Serum",
+            "name": "Advanced Retinol Refining Serum 50ml",
             "description": "This high-grade retinol serum is specifically formulated for advanced users seeking significant improvements in skin texture and overall appearance. With a powerful concentration of retinol, it works to diminish the appearance of deep-set wrinkles, uneven texture, and age spots. Infused with peptides to boost collagen production and Licorice Root Extract to calm and brighten the skin, this serum provides visible results without excessive dryness. Perfect for users experienced with retinol, it delivers professional-level results in the comfort of your own home. Ideal for normal to combination skin types.",
             "price": "49.99",
             "sku": "SKU006",
@@ -166,7 +166,7 @@
         "model": "products.product",
         "pk": 7,
         "fields": {
-            "name": "Ultra-Rich Deep Hydration Cream",
+            "name": "Ultra-Rich Deep Hydration Cream 100ml",
             "description": "This luxurious, ultra-rich moisturizer is designed to provide long-lasting hydration for dry and dehydrated skin. Packed with nourishing ingredients like Shea Butter and Hyaluronic Acid, it replenishes moisture, leaving your skin feeling soft, plump, and rejuvenated. Vitamin E offers antioxidant protection, helping to combat environmental stressors. Its thick yet non-greasy texture ensures maximum hydration without clogging pores. Perfect for both day and night use, this cream is a must-have for anyone seeking a supple and healthy-looking complexion.",
             "price": "29.99",
             "sku": "SKU007",
@@ -192,7 +192,7 @@
         "model": "products.product",
         "pk": 8,
         "fields": {
-            "name": "Hydrating Lightweight Day Moisturizer",
+            "name": "Hydrating Lightweight Day Moisturizer 50ml",
             "description": "This refreshing, lightweight daily moisturizer is infused with powerful hydrating and brightening ingredients to keep your skin nourished and radiant all day. Formulated with Hyaluronic Acid to lock in moisture, Vitamin C to brighten and even out skin tone, and Aloe Vera to soothe and calm irritation, this cream is perfect for those seeking hydration without heaviness. Its fast-absorbing texture makes it an excellent base for makeup and sunscreen, ensuring your skin stays protected and glowing throughout the day.",
             "price": "25.00",
             "sku": "SKU008",
@@ -219,7 +219,7 @@
         "model": "products.product",
         "pk": 9,
         "fields": {
-            "name": "Soothing Overnight Repair Cream",
+            "name": "Soothing Overnight Repair Cream 100ml",
             "description": "This calming nighttime moisturizer is designed to work while you sleep, soothing irritation and repairing skin for a refreshed and restored appearance by morning. Formulated with Chamomile and Calendula, it calms redness and inflammation, while Ceramides strengthen the skin barrier, locking in moisture and protecting against dehydration. Its creamy yet lightweight formula absorbs quickly, leaving no residue. Ideal for those with sensitive or reactive skin, this cream provides a deeply comforting experience as it helps your skin recover from daily stressors.",
             "price": "32.99",
             "sku": "SKU009",
@@ -244,7 +244,7 @@
         "model": "products.product",
         "pk": 10,
         "fields": {
-            "name": "Intense Hydration Balm",
+            "name": "Intense Hydration Balm 50ml",
             "description": "A deeply nourishing balm designed to deliver intense moisture to dry and dehydrated skin. Enriched with Beeswax to lock in hydration, Coconut Oil for deep nourishment, and Glycerin for a plumping effect, this balm provides long-lasting relief to even the driest areas. Its rich, concentrated formula is perfect for tackling flaky patches, tightness, or extreme dryness. The balm melts effortlessly into the skin, leaving it soft, smooth, and radiant. Ideal for targeted hydration, it’s a must-have for those looking to restore their skin’s moisture barrier.",
             "price": "34.50",
             "sku": "SKU010",

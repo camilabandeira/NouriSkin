@@ -19,15 +19,13 @@
             </div>
             <a id="{{ product.sku }}-title" class="product-title" href="/products/{{ product.id }}">{{ product.name }}</a>
             <p class="product-description">{{ product.description|truncatechars:100 }}</p>
-            <div id="{{ product.sku }}-rating" class="product-rating" aria-label="{{ product.rating }} out of 5 stars">
-                <div id="{{ product.sku }}-rating" class="product-rating" aria-label="{{ product.rating }} out of 6 stars">
-                    {% for _ in product.full_stars %}
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    {% endfor %}
-                    {% for _ in product.empty_stars %}
-                    <i class="far fa-star" aria-hidden="true"></i>
-                    {% endfor %}
-                </div>
+            <div class="product-rating" id="{{ product.sku }}-rating" aria-label="{{ product.rating }} out of 5 stars">
+                {% for _ in product.full_stars %}
+                <i class="fas fa-star" aria-hidden="true"></i>
+                {% endfor %}
+                {% for _ in product.empty_stars %}
+                <i class="far fa-star" aria-hidden="true"></i>
+                {% endfor %}
             </div>
             <p id="{{ product.sku }}-price" class="product-price" aria-label="Price: {{ product.price|floatformat:2 }} euros">€{{ product.price|floatformat:2 }}</p>
             <button class="add-to-cart-btn" aria-label="Add {{ product.name }} to your cart">Add to Cart</button>
@@ -56,6 +54,4 @@
         </div>
     </div>
     
-    
 </section>
-

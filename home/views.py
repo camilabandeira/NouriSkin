@@ -15,7 +15,7 @@ def homepage(request):
         avg_rating = ProductReview.objects.filter(product=product).aggregate(Avg('rating'))['rating__avg'] or 0
         product.rating = round(avg_rating, 1)
         product.full_stars = range(int(product.rating)) 
-        product.empty_stars = range(6 - int(product.rating))  
+        product.empty_stars = range(5 - int(product.rating))  
         product.save()
 
 
