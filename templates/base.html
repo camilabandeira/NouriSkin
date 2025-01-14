@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NouriSkin - Skincare for You</title>
+    <title>{% block title %}NouriSkin | Tailored Skincare for Every Need{% endblock %}</title>
+    <meta name="description" content="{% block description %}Discover NouriSkin's range of skincare products, designed to meet the needs of individuals aged 30 to 35 while being suitable for all ages. Our focus is on hydration, collagen support, and solutions for hormonal changes.{% endblock %}">
+    <meta name="keywords" content="skincare, anti-aging, hydration, collagen, fine lines, sensitive skin, glowing skin routine, skincare for 30s, early aging solutions">
+    <meta name="author" content="NouriSkin">
 
     <!-- Base CSS -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
