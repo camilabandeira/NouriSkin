@@ -2,9 +2,9 @@
 
 <link rel="stylesheet" href="{% static '/css/best-sellers.css' %}">
 
-<section class="best-sellers-container" aria-labelledby="best-sellers-heading">
+<div class="best-sellers-container" aria-labelledby="best-sellers-heading">
     <h2 id="best-sellers-heading">Best Sellers</h2>
-    <div class="product-grid" role="list">
+    <div class="product-grid">
         
         {% for product in best_sellers %}
         <div class="product-card">
@@ -54,4 +54,4 @@
         </div>
     </div>
     
-</section>
+</div>
