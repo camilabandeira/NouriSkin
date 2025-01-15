@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" href="{% static '/css/best-sellers.css' %}">
 
-<section class="best-sellers-container" role="region" aria-labelledby="best-sellers-heading">
+<section class="best-sellers-container" aria-labelledby="best-sellers-heading">
     <h2 id="best-sellers-heading">Best Sellers</h2>
     <div class="product-grid" role="list">
         
@@ -19,7 +19,7 @@
             </div>
             <a id="{{ product.sku }}-title" class="product-title" href="/products/{{ product.id }}">{{ product.name }}</a>
             <p class="product-description">{{ product.description|truncatechars:100 }}</p>
-            <div class="product-rating" id="{{ product.sku }}-rating" aria-label="{{ product.rating }} out of 5 stars">
+            <div class="product-rating" id="{{ product.sku }}-rating">
                 {% for _ in product.full_stars %}
                 <i class="fas fa-star" aria-hidden="true"></i>
                 {% endfor %}

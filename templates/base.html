@@ -28,7 +28,7 @@
 </head>
 <body>
 
-    <header class="navbar-header" role="banner">
+    <header class="navbar-header">
         <nav class="navbar" role="navigation" aria-label="Main navigation">
 
             <button class="navbar-toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Toggle navigation menu" onclick="toggleMenu()">
@@ -36,7 +36,7 @@
                 <i id="close-icon" class="fa-solid fa-xmark hidden" aria-hidden="true"></i>
             </button>
             <div class="navbar-logo"><a href="{% url 'homepage' %}" aria-label="NouriSkin Home">NouriSkin</a></div>
-            <ul class="navbar-menu" id="navbar-menu" role="menu">
+            <ul class="navbar-menu" id="navbar-menu">
                 <li role="none"><a href="{% url 'homepage' %}" role="menuitem">Home</a></li>
                 <li role="none"><a href="{% url 'products' %}" role="menuitem">Shop</a></li>
                 <li role="none"><a href="{% url 'about' %}" role="menuitem">About</a></li>
@@ -48,7 +48,7 @@
                     <button id="search-icon" aria-label="Open search" aria-expanded="false" onclick="toggleSearch()"><i class="fas fa-search" aria-hidden="true"></i></button>
                     <form class="search-form" action="/search" method="GET">
                         <label for="search-input" class="sr-only">Search</label>
-                        <input id="search-input" class="search-input" type="text" name="q" placeholder="Search..." />
+                        <input id="search-input" class="search-input" type="text" name="q" placeholder="Search...">
                     </form>
                 </div>
 
@@ -84,7 +84,7 @@
     <!-- Toasts -->
     {% include 'toasts/toasts.html' %}
 
-    <main class="main" role="main">
+    <main class="main">
         {% block content %}{% endblock %}
     </main>
 
