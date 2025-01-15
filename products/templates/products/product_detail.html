@@ -3,24 +3,24 @@
 
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'css/product_detail.css' %}" />
+<link rel="stylesheet" href="{% static 'css/product_detail.css' %}">
 
 <section class="product-detail-section" aria-labelledby="product-title">
-  <div class="breadcrumb-navigation" aria-label="Breadcrumb">
+  <nav class="breadcrumb-navigation" aria-label="Breadcrumb">
     <a href="{% url 'homepage' %}">Home</a> &gt; 
     <a href="{% url 'products' %}">Products</a> &gt; 
     <span aria-current="page">{{ product.name }}</span>
-  </div>
+  </nav>
 
   <div class="product-detail-container">
     <div class="product-detail-image">
-      <img src="{{ product.image.url }}" alt="Image of {{ product.name }}" width="400" height="400" loading="lazy"/>
+      <img src="{{ product.image.url }}" alt="Image of {{ product.name }}" width="400" height="400" loading="lazy">
     </div>
     <div class="product-detail-content">
       <div class="content-header">
         <h1 id="product-title">{{ product.name }}</h1>
         <div class="content-header-feedback">
-          <div class="content-header-rating" aria-label="Product rating">
+          <div class="content-header-rating">
             {% for i in stars_range %}
               {% if i <= average_rating %}
                 <i class="fas fa-star"></i>
@@ -33,7 +33,6 @@
             ({{ total_reviews }}) {{ total_reviews|pluralize:"comment,comments" }}
           </span>
         </div>
-
         <div class="content-header-price">
           <span>€{{ product.price }}</span>
         </div>
@@ -48,40 +47,39 @@
             {% csrf_token %}
             <div class="actions-container">
               <div class="quantity-selector-container">
-                <div class="quantity-selector" aria-label="Quantity selector">
-                  <button class="quantity-btn decrement" type="button" aria-label="Decrease quantity">
+                <div class="quantity-selector">
+                  <button class="quantity-btn decrement" type="button">
                     <i class="fa-solid fa-minus" aria-hidden="true"></i>
                   </button>
-                  <input type="number" name="quantity" class="quantity-input" value="1" min="1" max="99" aria-label="Product quantity" />
-                  <button class="quantity-btn increment" type="button" aria-label="Increase quantity">
+                  <input type="number" name="quantity" class="quantity-input" value="1" min="1" max="99">
+                  <button class="quantity-btn increment" type="button">
                     <i class="fa-solid fa-plus" aria-hidden="true"></i>
                   </button>
                 </div>
               </div>
               <div class="add-to-cart-container">
-                <input type="hidden" name="redirect_url" value="{{ request.path }}" />
-                <button type="submit" class="add-to-cart-btn" aria-label="Add {{ product.name }} to cart">
+                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                <button type="submit" class="add-to-cart-btn">
                   Add to Cart
                 </button>
               </div>
             </div>
           </form>
-
-            {% if user.is_superuser %}
+          {% if user.is_superuser %}
           <div class="admin-actions">
-          <a href="{% url 'product_update' product.id %}" class="edit-product-btn">Edit Product</a>
-          <a href="{% url 'delete_product' product.id %}" class="delete-btn">Delete Product</a>
+            <a href="{% url 'product_update' product.id %}" class="edit-product-btn">Edit Product</a>
+            <a href="{% url 'delete_product' product.id %}" class="delete-btn">Delete Product</a>
           </div>
-             {% endif %}
+          {% endif %}
         </div>
 
         <div class="shipping-info">
           <span class="shipping-text">
-            <img src="{% static 'images/shipping-icon.svg' %}" alt="Shipping Icon" width="21" height="auto" />
+            <img src="{% static 'images/shipping-icon.svg' %}" alt="Shipping Icon" width="21" style="height: auto;">
             Free Shipping on Orders Over €50
           </span>
           <span class="return-text">
-            <img src="{% static 'images/return-icon.svg' %}" alt="Return Icon" width="21" height="auto" />
+            <img src="{% static 'images/return-icon.svg' %}" alt="Return Icon" width="21" style="height: auto;">
             Free 30-day returns
           </span>
         </div>
@@ -123,7 +121,6 @@
           </select>
         </form>
       </div>
-
       <div class="write-review">
         <a href="{% url 'write_review' product.id %}" class="btn">Write a Review</a>
       </div>
@@ -152,14 +149,12 @@
               </div>
             </div>
             <div class="customer-date">
-              <time>{{ review.submitted_at|date:"F d, Y" }}</time>
+              <time datetime="{{ review.submitted_at|date:'Y-m-d' }}">{{ review.submitted_at|date:"F d, Y" }}</time>
             </div>
           </div>
-
           <div class="customer-review-text">
             <p>{{ review.review_text }}</p>
           </div>
-
           <div class="review-details">
             <p><strong>Skin Type:</strong> {{ review.skin_type }}</p> 
             <p><strong>Age:</strong> {{ review.age_group }}</p>

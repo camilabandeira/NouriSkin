@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/add_product.css' %}" />
+<link rel="stylesheet" href="{% static 'css/add_product.css' %}" >
 
 <nav class="breadcrumb-navigation" aria-label="Breadcrumb">
     <a href="{% url 'homepage' %}">Home</a> &gt; 
@@ -89,7 +89,7 @@
         </div>
 
         <div class="form-group">
-            <label for="id_concern">Concerns:</label>
+            <label>Concerns:</label>
             <div class="scrollable-checkbox">
                 {{ form.concern.as_widget }}
             </div>
@@ -103,7 +103,7 @@
         </div>
 
         <div class="form-group">
-            <label for="id_skin_types">Skin Types:</label>
+            <label>Skin Types:</label>
             <div class="scrollable-checkbox">
                 {{ form.skin_types.as_widget }}
             </div>
@@ -117,7 +117,7 @@
         </div>
 
         <div class="form-group">
-            <label for="id_key_ingredients">Key Ingredients:</label>
+            <label>Key Ingredients:</label>
             <div class="scrollable-checkbox">
                 {{ form.key_ingredients.as_widget }}
             </div>
