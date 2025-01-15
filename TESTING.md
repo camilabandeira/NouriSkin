@@ -48,3 +48,20 @@ The validator flagged any errors or warnings in the CSS. These issues were revie
 - [Profile Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Fprofile&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - [FAQ Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Ffaq&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - [Return and Refund Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Freturn-refund&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+### JavaScript Testing
+
+I tested and validated the JavaScript code of this project using [JSHint](https://jshint.com/). The tool analyzes the JavaScript files, checking for syntax errors, potential issues, and adherence to best practices.
+
+By running the scripts through JSHint, I identified and resolved any flagged issues. This ensures that the JavaScript code is clean, efficient, and compatible with modern web standards.
+
+- Homepage
+  - [Contact Us](https://github.com/user-attachments/assets/4847e437-4223-4b1e-8e24-f4723f9759f8)
+  - [FAQ](https://github.com/user-attachments/assets/4847e437-4223-4b1e-8e24-f4723f9759f8)
+  - [Account](https://github.com/user-attachments/assets/c463635e-1201-425d-85be-7f724ebe6d35)
+  - [Base](https://github.com/user-attachments/assets/c54a40c0-3580-4edc-8527-0588e1ceaa73)
+  - [Toasts](https://github.com/user-attachments/assets/51b4ec40-2ae1-45c0-b16a-95f4ef71dc1a)
+
+- [Checkout Page](https://github.com/user-attachments/assets/1e22c374-2737-4b90-b6df-0649ce510b59)
+- [Products Page](https://github.com/user-attachments/assets/420f8c50-997f-45ad-a40d-6f2b76f45f24)
+
