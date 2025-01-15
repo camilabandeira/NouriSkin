@@ -601,7 +601,11 @@ The development of **NouriSkin** was supported by various tools and resources th
    The high-quality visuals used in this project were generated with **Leonardo.ai**, ensuring a professional and cohesive look for the platform.  
    - [Leonardo.ai](https://leonardo.ai)
 
-3. **Django Documentation**  
+3. **AWS S3**  
+   **AWS S3** was used for storing and delivering media files, including product images. Its scalability and reliability ensured smooth performance and quick image loading for users.  
+   - [AWS S3](https://aws.amazon.com/s3/)
+
+4. **Django Documentation**  
    The official **Django Documentation** was essential for understanding and implementing key features, such as database models, views, and authentication. Its clear examples and explanations ensured the project adhered to modern web development standards.  
    - [Django Documentation](https://docs.djangoproject.com/en/stable/)
 
