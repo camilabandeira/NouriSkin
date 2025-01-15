@@ -14,8 +14,10 @@ from pathlib import Path
 import os
 import dj_database_url
 from decouple import config
+from storages.backends.s3boto3 import S3Boto3Storage
+from django.core.files.storage import default_storage
 if os.path.isfile('env.py'):
-    import env  
+    import env
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -43,20 +45,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',  
-    'allauth',  
-    'allauth.account',  
-    'home', 
-    'products',  
-    'storages', 
-    'cart', 
-    'checkout', 
-    'profiles',  
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'home',
+    'products',
+    'storages',
+    'cart',
+    'checkout',
+    'profiles',
 ]
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'allauth.account.middleware.AccountMiddleware',  
+    'allauth.account.middleware.AccountMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -71,21 +73,21 @@ ROOT_URLCONF = 'NouriSkin.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates"],  
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',  
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'cart.context_processors.cart_contents',  
+                'cart.context_processors.cart_contents',
             ],
         },
     },
 ]
 
-FREE_DELIVERY_THRESHOLD = 50  
+FREE_DELIVERY_THRESHOLD = 50
 FIXED_DELIVERY_FEE = 4.99
 
 
@@ -106,16 +108,28 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'UserAttributeSimilarityValidator'
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'MinimumLengthValidator'
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'CommonPasswordValidator'
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'NumericPasswordValidator'
+        ),
     },
 ]
 
@@ -137,8 +151,8 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Media files (for local storage; overridden for AWS S3 in production)
-MEDIA_URL = '/media/'  
-MEDIA_ROOT = BASE_DIR / 'media' 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 
 # AWS S3 settings for media storage
@@ -148,8 +162,10 @@ if 'USE_AWS' in os.environ:
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
     AWS_S3_REGION_NAME = config('AWS_S3_REGION_NAME', default='us-east-1')
-    AWS_QUERYSTRING_AUTH = config('AWS_QUERYSTRING_AUTH', default='False').lower() == 'true'
-
+    AWS_QUERYSTRING_AUTH = (
+        config('AWS_QUERYSTRING_AUTH', default='False')
+        .lower() == 'true'
+    )
 
     MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/'
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
@@ -158,8 +174,8 @@ if 'USE_AWS' in os.environ:
 # Allauth settings
 SITE_ID = 1
 AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',  # Default Django auth backend
-    'allauth.account.auth_backends.AuthenticationBackend',  # Allauth backend
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 # Allauth configuration
@@ -210,6 +226,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Workaround: Force default_storage to use S3 backend
 # This ensures that default_storage is correctly initialized as S3Boto3Storage,
 # even if prematurely initialized by third-party code or Django during startup.
-from storages.backends.s3boto3 import S3Boto3Storage
-from django.core.files.storage import default_storage
 default_storage._wrapped = S3Boto3Storage()
