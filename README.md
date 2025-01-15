@@ -5,6 +5,52 @@
 
 ![Entity-Relationship Diagram](https://github.com/user-attachments/assets/0582f837-017b-4784-b02f-053e29739812)
 
+## Table of Contents
+
+1. [User Experience (UX)](#user-experience-ux)  
+   - [User Stories](#user-stories)  
+     - [Site Owner Goals](#site-owner-goals)  
+     - [User Goals](#user-goals)  
+   - [Color Scheme](#color-scheme)  
+   - [Typography](#typography)  
+   - [Wireframe](#wireframe)  
+
+2. [Entity-Relationship Diagram (ERD)](#entity-relationship-diagram-erd)  
+
+3. [Features](#features)  
+   - [Homepage](#homepage)  
+   - [About Page](#about-page)  
+   - [Contact Page](#contact-page)  
+   - [Products Page](#products-page)  
+   - [Product Detail Page](#product-detail-page)  
+   - [Review Form Page](#review-form-page)  
+   - [Add Product Page](#add-product-page)  
+   - [Update Product Page](#update-product-page)  
+   - [Delete Product Page](#delete-product-page)  
+   - [Shopping Cart Page](#shopping-cart-page)  
+   - [Checkout Page](#checkout-page)  
+   - [Order Success Page](#order-success-page)  
+   - [Login Page](#login-page)  
+   - [Logout Page](#logout-page)  
+   - [Sign Up Page](#sign-up-page)  
+   - [Profile Page](#profile-page)  
+
+4. [SEO and Marketing](#seo-and-marketing)  
+   - [Purpose](#purpose)  
+   - [Strategy](#strategy)  
+   - [Goals](#goals)  
+   - [Marketing Approach](#marketing-approach)  
+   - [Keyword Research](#keyword-research)  
+
+5. [Tools and Technologies](#tools-and-technologies)  
+
+6. [Deployment & Local Development](#deployment--local-development)  
+   - [Local Development](#local-development)  
+   - [Environment Variables](#environment-variables)  
+   - [Heroku Deployment](#heroku-deployment)  
+
+7. [Credits](#credits)  
+
 
 ## User Experience (UX)
 
@@ -553,18 +599,8 @@ The development of **NouriSkin** was supported by various tools and resources th
    The high-quality visuals used in this project were generated with **Leonardo.ai**, ensuring a professional and cohesive look for the platform.  
    - [Leonardo.ai](https://leonardo.ai)
 
-3. **GitHub**  
-   **GitHub** was instrumental for version control, allowing for efficient tracking of changes and a well-documented development process. Hosting the repository on GitHub made collaboration and organization seamless.  
-   - [NouriSkin Repository](https://github.com/camilabandeira/NouriSkin)
-
-4. **Other Tools and Resources**  
-   - **Figma**: Used to design wireframes and visualize the layout of the site.  
-   - **drawSQL**: Helped structure and plan the database schema visually.  
-   - **Stripe Documentation**: Provided detailed steps for integrating secure payment functionality.
-
-5. **Django Documentation**  
+3. **Django Documentation**  
    The official **Django Documentation** was essential for understanding and implementing key features, such as database models, views, and authentication. Its clear examples and explanations ensured the project adhered to modern web development standards.  
    - [Django Documentation](https://docs.djangoproject.com/en/stable/)
-
 
 These resources collectively contributed to the successful creation of the **NouriSkin** project.
