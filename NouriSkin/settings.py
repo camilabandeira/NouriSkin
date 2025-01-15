@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [
     'nouriskin-6effcd55f9fe.herokuapp.com'
 ]
 
+X_FRAME_OPTIONS = 'ALLOWALL'
 
 # Application definition
 INSTALLED_APPS = [
