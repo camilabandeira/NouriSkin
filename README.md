@@ -464,7 +464,7 @@ Key Actions:
 
 The Facebook page strengthens NouriSkin’s connection with its audience, driving growth and loyalty while maintaining compliance with platform policies.
 
-# Sitemap Configuration
+#### Sitemap Configuration
 
 I generated the sitemap for the website using [XML Sitemaps](https://www.xml-sitemaps.com/). The sitemap includes important information about all the pages on the site, such as the last update date, how frequently they change, and their priority relative to other pages. After generating the sitemap, I placed it in the root directory of the website.
 
