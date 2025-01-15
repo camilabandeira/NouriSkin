@@ -5,7 +5,7 @@
 
 **NouriSkin** is a full-stack e-commerce platform built to showcase web development practices in the context of a fictional skincare brand. The project focuses on creating a scalable, user-friendly application with features like dynamic product catalogs, personalized user experiences, secure payment integration, and responsive design. Designed with clean, maintainable code and best practices, NouriSkin demonstrate how technology can enhance the shopping experience for targeted skincare solutions.
 
-![Entity-Relationship Diagram](https://github.com/user-attachments/assets/0582f837-017b-4784-b02f-053e29739812)
+![Responsiveness screenshot](https://github.com/user-attachments/assets/0582f837-017b-4784-b02f-053e29739812)
 
 ## Table of Contents
 
@@ -429,7 +429,7 @@ To attract more visitors, NouriSkin will share helpful skincare tips and advice 
 - **Partnerships:** Collaborate with like-minded businesses and skincare professionals to increase brand awareness and reach a wider audience.
 
 
-## Keyword Research  
+#### Keyword Research  
 
 Choosing the right keywords is essential for connecting with the target audience and making the platform easy to discover. The selected keywords are designed to address the specific needs and concerns of users, particularly those aged 30 to 35, while remaining inclusive for all age groups.  
 
@@ -442,6 +442,27 @@ The keywords focus on several core areas:
 
 By incorporating these keywords into product descriptions, marketing campaigns, and social media content, the goal is to increase visibility, attract the right audience, and provide a seamless user experience.  
 
+
+
+#### Facebook Page
+
+<img src="https://github.com/user-attachments/assets/47f70536-f250-4b8b-8bf1-86be953c65e3" alt="Facebook Page Screenshot" width="360"/>
+
+A Facebook page is vital for expanding our market reach and connecting with our audience. It allows us to:
+
+- Engage directly with customers.
+- Showcase products and promotions.
+- Drive traffic to our e-commerce store.
+- Build trust and credibility.
+
+Key Actions:
+
+1. Created a complete page with accurate details and branding.
+2. Uploaded essential assets like profile and cover images.
+3. Published an engaging introductory post.
+4. Captured a screenshot of the final page view for reference.
+
+The Facebook page strengthens NouriSkin’s connection with its audience, driving growth and loyalty while maintaining compliance with platform policies.
 
 ## Tools and Technologies
 
