@@ -28,15 +28,16 @@
     left: 50%;
     top: 32%;
     max-width: 42%;
+    z-index: 1000;
 
 }
 
-.hero-text h3 {
+.hero-wrapper h3 {
     font-size: 2.7rem;
     font-weight: 400;
 }
 
-.hero-text p {
+.hero-wrapper p {
     font-size: 1.4rem;
 }
 
