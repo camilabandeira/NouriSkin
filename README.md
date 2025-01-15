@@ -58,361 +58,268 @@ For designing the wireframes of this project, I chose Figma because of its stron
 For creating and visualizing the Entity-Relationship Diagram (ERD) for this project, I decided to use drawSQL because it’s easy to use and has great features. Its simple interface makes designing ERDs straightforward, while its tools help create clear and detailed diagrams efficiently.
 
 
-## Features
+# Features
 
-### Homepage  
-The Homepage is designed to engage visitors with these key sections:
+## Homepage  
+
+The **Homepage** is designed to engage visitors with the following features:  
 
 1. **Header**  
-   - Includes links to important pages like Home, Products, About, Contact, and Account.  
-   - Makes it easy for users to navigate the website and find what they need quickly.  
-   - Includes a search bar to help users quickly find specific products by typing keywords.  
+   - Provides links to important pages like Home, Products, About, Contact, and Account.  
+   - Includes a search bar for users to find specific products quickly.  
 
 2. **Hero Section**  
-   - Highlights a featured product with a large, eye-catching image.  
-   - Includes a short description to grab attention and explain why the product is special.  
-   - Designed to interest users right when they land on the page.  
+   - Highlights a featured product with an eye-catching image and description.  
+   - Captures user interest immediately.  
 
 3. **Best Sellers Section**  
-   - Displays the most popular products on the website.  
-   - Makes it easy for users to find items that are well-loved by others.  
-   - Encourages confident choices by showing customer favorites.  
+   - Displays the most popular products to help users make confident choices.  
 
 4. **Product Collection Overview**  
-   - Features a selected range of skincare products.  
-   - Helps users understand and choose products that match their needs.  
+   - Features a curated selection of skincare products to suit various needs.  
 
 5. **Newsletter Signup**  
-   - Offers an easy way for users to sign up for updates and special discounts.  
-   - Keeps users informed about new products and offers.  
-   - Simple and quick process to encourage more sign-ups.  
+   - Enables users to sign up for updates and exclusive discounts easily.  
 
 6. **Footer**  
-   - Provides important information like contact details for support.  
-   - Includes links to FAQs, terms, policies, and social media pages.  
-   - Makes it easy for users to find answers or reach out for help.  
+   - Includes contact details, FAQs, terms, policies, and social media links.  
 
-These sections come together to create a clear, user-friendly homepage that helps visitors explore and enjoy NouriSkin’s products.
+This page ensures a clear and engaging experience for exploring NouriSkin’s products.
 
-### About Page  
+## About Page  
 
-The **About Page** introduces NouriSkin and its core values, providing an insight into the brand's mission and commitment to skincare. Key features include:
+The **About Page** introduces NouriSkin's mission and values with these features:  
 
 1. **Header Section**  
-   - Displays the title "Our Journey to Radiant Skin" to set the tone of the page.
+   - Features the title "Our Journey to Radiant Skin" to set the tone.  
 
 2. **Introduction**  
-   - **Who We Are**:  
-     - Explains NouriSkin's mission to enhance natural beauty through safe and effective skincare.  
-     - Highlights the use of ethically sourced, high-quality ingredients.  
-     - Emphasizes the balance between nature and science in their formulations.  
+   - Highlights NouriSkin's commitment to enhancing natural beauty through ethical, high-quality skincare.  
 
 3. **Values and Commitments**  
-   - **Purity and Quality**:  
-     - Focuses on using plant-based ingredients free from harmful chemicals, parabens, and artificial additives.  
-   - **Science-Driven Formulations**:  
-     - Combines natural ingredients with scientific research for effective results.  
-   - **Sustainability and Responsibility**:  
-     - Commits to eco-friendly practices, including recyclable packaging and responsible sourcing.  
+   - **Purity and Quality:** Focus on natural, safe ingredients.  
+   - **Science-Driven Formulations:** Combines nature with science for effective results.  
+   - **Sustainability:** Practices eco-friendly and responsible sourcing.  
 
 4. **Visuals**  
-   - Includes a high-quality image showcasing a NouriSkin product to enhance visual engagement.
+   - Includes an engaging product image to enhance the user experience.  
 
-This page effectively communicates NouriSkin's mission, values, and dedication to high-quality, sustainable skincare.
+This page effectively communicates NouriSkin’s story and values.
 
-### Contact Page  
+## Contact Page  
 
-The **Contact Page** provides users with multiple ways to connect with NouriSkin and includes the following features:
+The **Contact Page** provides users with the following ways to reach NouriSkin:  
 
-1. **Header Section**  
-   - Displays the title "Contact Us" to introduce the purpose of the page.
+1. **Contact Information**  
+   - **Email:** `support@nouriskin.com`  
+   - **Phone:** `(123) 456-7890`  
+   - **Hours:** Monday to Friday, 9 AM - 5 PM.  
 
-2. **Contact Information**  
-   - **Get in Touch** section:  
-     - Email: Provides the customer support email (`support@nouriskin.com`).  
-     - Phone: Lists the support phone number (`(123) 456-7890`).  
-     - Hours: Specifies availability (Monday to Friday, 9 AM - 5 PM).  
+2. **Contact Form**  
+   - Allows users to send messages directly by entering:  
+     - **Name**, **Email**, and **Message**.  
 
-3. **Contact Form**  
-   - A simple form for users to send messages directly, including fields for:  
-     - **Name**: User's full name.  
-     - **Email**: User's email address.  
-     - **Message**: A text area for detailed inquiries or feedback.  
-   - Includes a submit button to send the message securely with CSRF protection.
+3. **Success Message**  
+   - Confirms form submission with a friendly message.  
 
-4. **Success Message**  
-   - Displays a confirmation message when the form is successfully submitted:  
-     - Example: "Your account has been saved successfully."
+4. **Responsive Design**  
+   - Optimized for both desktop and mobile devices.  
 
-5. **Responsive Design**  
-   - Ensures the page layout works well on both desktop and mobile devices.
+This page ensures simple and effective communication with NouriSkin.
 
-This page simplifies user communication with NouriSkin, ensuring queries and feedback are addressed effectively.
+## Products Page  
 
+The **Products Page** makes it easy to browse and find skincare products with the following features:  
 
-### Products Page  
+1. **Sorting Options**  
+   - Allows sorting by price to help users find budget-friendly options.  
 
-The **Products Page** provides an organized and user-friendly layout for browsing skincare products. Key features include:
+2. **Filters**  
+   - Filters products by skin type, concerns, and categories.  
 
-1. **Page Title and Product Count**  
-   - Displays the title "Shop All" and the total number of products available, helping users understand the variety on offer.
+3. **Product Grid**  
+   - Displays products with images, names, descriptions, prices, and ratings.  
+   - Includes an "Add to Cart" button for each product.  
 
-2. **Sorting Options**  
-   - Allows users to sort products by price, either from low to high or high to low, making it easier to find items within their budget.
+4. **Empty State Message**  
+   - Shows a message if no products match the selected filters.  
 
-3. **Filters**  
-   - **Skin Type**: Filters products based on skin types like Dry, Oily, Combination, etc.  
-   - **Skin Concerns**: Lets users select products for specific concerns, such as dryness or fine lines.  
-   - **Product Categories**: Filters products by categories like Retinol Treatments or Moisturisers.  
+This page offers a user-friendly shopping experience.
 
-4. **Mobile-Friendly Filters**  
-   - Includes a filter toggle button for smaller screens, ensuring a smooth experience on mobile devices.
+## Product Detail Page  
 
-5. **Product Grid**  
-   - Displays products in a clean, grid-based layout with images, names, descriptions, prices, and ratings.  
-   - Includes an "Add to Cart" button for each product, allowing quick and easy purchases.
-
-6. **Empty State Message**  
-   - Shows a friendly message if no products match the selected filters, guiding users to explore other options.
-
-This page combines a clear design with helpful features to enhance the shopping experience for users.
-
-### Product Detail Page  
-
-The **Product Detail Page** provides users with detailed information about a specific product and includes these features:
+The **Product Detail Page** provides comprehensive product information:  
 
 1. **Breadcrumb Navigation**  
-   - Shows the user's location within the site (Home > Products > Product Name).  
-   - Makes navigation back to other sections easy.
+   - Helps users navigate back to previous pages.  
 
 2. **Product Information**  
-   - Displays product details such as name, image, description, and price.  
-   - Includes a product rating and total reviews.  
+   - Includes name, image, description, price, and ratings.  
 
 3. **Add to Cart**  
-   - Allows users to select quantity and add the product to their cart easily.  
+   - Allows users to select quantity and add the product to their cart.  
 
-4. **Admin Actions** (for admin users)  
-   - Provides options to edit or delete the product directly from this page.  
+4. **Shipping and Returns Info**  
+   - Highlights free shipping and return policies.  
 
-5. **Shipping and Returns Info**  
-   - Highlights free shipping on orders over €50 and free 30-day returns.
+5. **Customer Reviews Section**  
+   - Displays reviews and allows users to submit their own.  
 
-6. **Additional Product Details**  
-   - Includes expandable sections for Key Ingredients and How to Use, making the page clean and organized.  
+This page ensures an informative and easy shopping experience.
 
-7. **Customer Reviews Section**  
-   - Displays customer reviews with filters for sorting (Most Recent, Lowest Rating, Highest Rating).  
-   - Allows users to write a review.  
-   - Provides review details, including the reviewer’s skin type and age group.  
+## Review Form Page  
 
-This page offers a comprehensive view of the product while keeping it user-friendly and organized.
-
-### Review Form Page  
-
-The **Review Form Page** allows users to submit feedback about a product with the following features:
+The **Review Form Page** allows users to submit product feedback with these features:  
 
 1. **Product Information**  
-   - Displays the product name and image to ensure users are reviewing the correct item.  
+   - Displays the product name and image for context.  
 
 2. **Rating System**  
-   - Includes a star-based rating system (1-5 stars).  
-   - Shows the selected rating in real-time.  
+   - Includes a star-based system to rate the product.  
 
 3. **Review Form**  
-   - **Review Title**: Allows users to provide a short title for their review.  
-   - **Name and Email**: Collects the user's name and email (required for non-authenticated users).  
+   - Collects review title, text, and user details (name, email).  
 
 4. **Filters**  
-   - **Skin Type**: Users can select their skin type (e.g., Dry, Oily).  
-   - **Age Group**: Users can choose their age range.  
+   - Lets users specify skin type and age group.  
 
-5. **Review Text**  
-   - Provides a text area for users to write detailed feedback about the product.  
+This page makes it easy for users to provide meaningful feedback.
 
-6. **Submit Button**  
-   - Allows users to submit their review with all required fields.  
+## Add Product Page  
 
-This page is designed to make submitting reviews easy and intuitive while collecting valuable product feedback.
+The **Add Product Page** enables admins to add new products with these features:  
 
-### Add Product Page  
+1. **Product Form**  
+   - Includes fields for product details like name, description, price, and image.  
 
-The **Add Product Page** allows admins to add new products to the store with the following features:
+2. **Additional Options**  
+   - Multi-select fields for concerns, skin types, and ingredients.  
 
-1. **Breadcrumb Navigation**  
-   - Provides a navigation trail (Home > Products > Add Product) to guide users back to other sections.
+3. **Error Handling**  
+   - Provides inline validation for missing or invalid fields.  
 
-2. **Product Form**  
-   - Includes fields for entering product details:  
-     - **Product Name**: Specifies the product's name.  
-     - **Description**: Provides a detailed product description.  
-     - **Price**: Allows entering the product price in euros.  
-     - **SKU**: Optional unique identifier for the product.  
-     - **Category**: Lets admins select the product category.  
-     - **Image**: Enables uploading an image for the product.  
+This page simplifies adding products to the store.
 
-3. **Additional Options**  
-   - **Concerns**: Multi-select for relevant skin concerns the product addresses.  
-   - **Skin Types**: Multi-select for skin types the product is suitable for.  
-   - **Key Ingredients**: Multi-select for listing the product’s main ingredients.  
-   - **How to Use**: A text area for usage instructions.  
+## Update Product Page  
 
-4. **Error Handling**  
-   - Displays error messages for each field if the input is invalid or incomplete.
+The **Update Product Page** allows admins to edit existing product details with these features:  
 
-5. **Submit Button**  
-   - Adds the product to the store when all required fields are completed correctly.
+1. **Editable Product Form**  
+   - Includes fields for updating product details like name, price, and description.  
 
-This page simplifies the process of adding new products while ensuring all necessary details are included.
+2. **Additional Options**  
+   - Allows updates to concerns, skin types, and usage instructions.  
 
-### Update Product Page  
+3. **Error Handling**  
+   - Displays validation errors for any issues.  
 
-The **Update Product Page** allows admins to edit existing product details with the following features:
+This page ensures accurate and simple product updates.
 
-1. **Breadcrumb Navigation**  
-   - Guides users with a trail (Home > Product > Product Update) for easy navigation.
+## Delete Product Page  
 
-2. **Product Form**  
-   - Includes editable fields for updating product details:  
-     - **Product Name**: Modify the product's name.  
-     - **Description**: Update the product description.  
-     - **Price**: Adjust the product price in euros.  
-     - **SKU**: Edit the product's unique identifier.  
-     - **Category**: Change the product's category.  
-     - **Image**: Replace or upload a new product image.  
+The **Delete Product Page** ensures intentional product deletions with these features:  
 
-3. **Additional Options**  
-   - **Concerns**: Update the skin concerns the product addresses.  
-   - **Skin Types**: Modify the skin types the product is suitable for.  
-   - **Key Ingredients**: Adjust the list of main ingredients.  
-   - **How to Use**: Edit the product usage instructions.  
+1. **Confirmation Message**  
+   - Clearly asks if the admin wants to delete the product.  
 
-4. **Error Handling**  
-   - Displays error messages for invalid or incomplete fields to guide users in making corrections.
+2. **Action Buttons**  
+   - Includes options to confirm or cancel the deletion.  
 
-5. **Submit Button**  
-   - Updates the product details once all required fields are completed correctly.
+This page prevents accidental product removals.
 
-This page ensures admins can easily manage and update product information while maintaining accuracy.
+## Shopping Cart Page  
 
+The **Shopping Cart Page** provides users with an overview of their selected items:  
 
-### Delete Product Page  
+1. **Cart Items Table**  
+   - Displays products with name, image, quantity, and price.  
 
-The **Delete Product Page** allows admins to confirm the deletion of a product with the following features:
-
-1. **Page Title**  
-   - Clearly displays "Delete Product" to indicate the purpose of the page.
-
-2. **Confirmation Message**  
-   - Asks the admin to confirm the deletion with a message:  
-     - "Are you sure you want to delete the product <strong>{{ product.name }}</strong>?"
+2. **Cart Summary Section**  
+   - Shows subtotal, delivery charges, and grand total.  
 
 3. **Action Buttons**  
-   - **Delete Button**: Submits the form to delete the product after confirmation.  
-   - **Cancel Button**: Redirects the user back to the product detail page if they choose not to proceed.
+   - Allows users to adjust the cart or proceed to checkout.  
 
-This page ensures product deletions are intentional and prevents accidental removals.
+This page ensures a seamless shopping experience.
 
-### Shopping Cart Page  
+## Checkout Page  
 
-The **Shopping Cart Page** provides a comprehensive view of the user's selected items with the following features:
-
-1. **Page Title**  
-   - Clearly labeled as "Shopping Cart" to indicate the purpose of the page.
-
-2. **Cart Items Table**  
-   - Displays all items in the cart with columns for:  
-     - **Product**: Includes the product name and image.  
-     - **Total**: Shows the total price for the quantity selected.  
-     - **Quantity**: Allows users to adjust the quantity directly from the table using:  
-       - Decrease (-) and increase (+) buttons.  
-       - A remove button to delete the product from the cart.  
-
-3. **Empty Cart Message**  
-   - If no items are in the cart, displays a message encouraging users to continue shopping with a link to the products page.
-
-4. **Cart Summary Section**  
-   - Displays a detailed summary including:  
-     - **Subtotal**: Total price of all items before delivery.  
-     - **Delivery**: Delivery charges or a free delivery message if applicable.  
-     - **Grand Total**: Final amount including delivery.  
-   - Includes buttons for:  
-     - **Continue Shopping**: Redirects users back to the products page.  
-     - **Checkout**: Proceeds to the checkout page with a secure icon for reassurance.  
-
-5. **Responsive Design**  
-   - Organized layout for desktop and mobile screens for an optimized shopping experience.
-
-This page ensures users can easily review, adjust, and proceed with their purchases efficiently.
-
-### Checkout Page  
-
-The **Checkout Page** provides users with a seamless process to complete their orders with the following features:
+The **Checkout Page** provides a secure process for completing purchases:  
 
 1. **User Details Form**  
-   - Collects essential user information:  
-     - Full name and email address.  
-     - Option to save this information for future use.  
+   - Collects personal and delivery details.  
 
-2. **Delivery Details**  
-   - Collects delivery-specific details:  
-     - Phone number, address, postcode, town or city, and county.  
-     - Country selection for accurate delivery charges.  
+2. **Payment Section**  
+   - Powered by Stripe for secure card payments.  
 
-3. **Payment Section**  
-   - Includes a Stripe-powered card input field for secure payment processing.  
-   - Displays any card errors in real-time for clarity.  
-   - Provides a payment summary showing the total amount, including delivery charges.  
+3. **Order Summary**  
+   - Displays a breakdown of items and total costs.  
 
-4. **Order Summary**  
-   - Shows a breakdown of items in the cart with:  
-     - Product name, quantity, price, and image.  
-     - Subtotal, delivery charges (or "Free" if applicable), and grand total.  
+This page ensures a smooth and secure checkout process.
 
-5. **Action Buttons**  
-   - **Adjust Cart**: Redirects users back to the cart page for changes.  
-   - **Complete Order**: Finalizes the purchase with a secure payment button.  
+## Order Success Page  
 
-6. **Responsive Design**  
-   - Designed for both desktop and mobile users for a smooth checkout experience.
-
-7. **Loading Overlay**  
-   - Displays a loading spinner during payment processing for user feedback.  
-
-This page ensures a clear and secure checkout experience, giving users confidence in their purchase.
-
-### Order Success Page  
-
-The **Order Success Page** confirms a successful purchase and provides important details about the order with the following features:
+The **Order Success Page** confirms successful purchases with these features:  
 
 1. **Thank You Message**  
-   - Displays a thank-you note to appreciate the user's trust in the store.  
-   - Provides a contact link for any order-related inquiries.  
+   - Displays a thank-you note and order confirmation.  
 
-2. **Continue Shopping Button**  
-   - Redirects users back to the products page for additional shopping.  
+2. **Order Summary**  
+   - Shows purchased items, total cost, and delivery details.  
 
-3. **Order Information**  
-   - Shows the order number and date of purchase for easy reference.  
+This page provides clear confirmation and order details.
 
-4. **Delivery Information**  
-   - Provides full delivery details, including:  
-     - Full name, address (including optional second line), city, county, postcode, country, and phone number.  
+## Login Page  
 
-5. **Order Summary**  
-   - Lists all purchased items with:  
-     - Product name, image, quantity, price, and line item total.  
-   - Displays a detailed cost breakdown:  
-     - Subtotal, delivery cost (or "Free" if applicable), and the grand total.  
+The **Login Page** provides a secure way for users to access their account:  
 
-6. **Responsive Design**  
-   - Optimized layout for desktop and mobile for a seamless user experience.
+1. **Login Form**  
+   - Includes fields for username/email and password with visibility toggle.  
 
-This page ensures users receive clear confirmation of their purchase and access to all necessary order details.
+2. **Error Handling**  
+   - Displays general and field-specific error messages.  
 
-### Profile Page  
+3. **Signup Link**  
+   - Provides a link for users to register.  
 
-The **Profile Page** allows users to manage their delivery information and view their order history with the following features:
+This page ensures an accessible and user-friendly login experience.
+
+## Logout Page  
+
+The **Logout Page** provides a simple way to log out securely:  
+
+1. **Logout Confirmation**  
+   - Asks users to confirm their action with a clear message.  
+
+2. **Logout Form**  
+   - Includes CSRF protection for security.  
+
+3. **Return to Login**  
+   - Provides a link to navigate back to the login page.  
+
+This page ensures a secure and straightforward logout process.
+
+## Sign Up Page  
+
+The **Sign Up Page** allows users to create an account with ease:  
+
+1. **Registration Form**  
+   - Includes fields for name, username, email, and passwords.  
+
+2. **Error Handling**  
+   - Provides general and field-specific error messages.  
+
+3. **Password Toggle**  
+   - Allows users to toggle password visibility.  
+
+4. **Redirect to Login**  
+   - Includes a link to navigate to the login page.  
+
+This page ensures a simple and secure registration process.
+
+## Profile Page  
+
+The **Profile Page** allows users to manage their delivery information and view their order history with the following features:  
 
 1. **Delivery Information Form**  
    - Users can update their default delivery details, including:  
@@ -423,7 +330,6 @@ The **Profile Page** allows users to manage their delivery information and view 
      - Postal code.  
      - Country.  
      - Phone number (optional).  
-   - Includes a "Update Information" button to save changes securely.
 
 2. **Order History**  
    - Displays a list of past orders, including:  
@@ -436,12 +342,55 @@ The **Profile Page** allows users to manage their delivery information and view 
 
 3. **Pagination**  
    - Handles large order histories by dividing them into pages.  
-   - Includes navigation buttons to move between pages.
 
 4. **Responsive Design**  
-   - Ensures the page layout is user-friendly on both desktop and mobile devices.
+   - Ensures the page layout is user-friendly on both desktop and mobile devices.  
 
 This page offers an organized and efficient way for users to manage their profile and review their purchase history.
+
+
+## SEO and Marketing
+
+#### Purpose
+ The ain is to connect with individuals seeking skincare solutions, especially those aged 30 to 35. While the platform is designed to address the unique needs of this age group, many products are suitable for all ages, making NouriSkin a versatile and inclusive option. The goal is to attract more visitors, boost product sales, and build lasting trust in the brand.
+
+#### Strategy 
+ Focuses on making the platform easy to find and appealing to its target audience. Product pages will feature clear and descriptive names, along with high-quality images, to ensure users can easily discover products that suit their needs. The website will be optimized for speed, especially on mobile devices, providing a smooth and enjoyable browsing experience.
+
+To attract more visitors, NouriSkin will share helpful skincare tips and advice on social media, connecting with users through valuable content.
+
+#### Goals
+
+ The platform’s goals focus on achieving measurable success in key areas:
+
+- **Increasing Website Traffic:** Attracting more visitors by improving visibility for skincare-related searches.
+- **Enhancing User Engagement:** Encouraging users to explore products through a seamless browsing experience.
+- **Building Brand Trust:** Establishing a reputation for quality and reliability through clear information and excellent products.
+- **Driving Sales Growth:** Boosting sales by catering to the specific needs of users aged 30 to 35 while offering products that suit all age groups.
+- **Fostering Loyalty:** Creating a positive experience that encourages customers to return and recommend the brand.
+
+#### Marketing Approach
+
+ The marketing approach focuses on building connections with the right audience and creating meaningful engagement:
+
+- **Facebook Business Page:** Establish a professional presence to share updates, promotions, and skincare tips while interacting with potential customers.
+- **Newsletter Campaigns:** Keep users informed and engaged with regular updates on product launches, exclusive offers, and helpful skincare advice.
+- **Partnerships:** Collaborate with like-minded businesses and skincare professionals to increase brand awareness and reach a wider audience.
+
+
+## Keyword Research  
+
+Choosing the right keywords is essential for connecting with the target audience and making the platform easy to discover. The selected keywords are designed to address the specific needs and concerns of users, particularly those aged 30 to 35, while remaining inclusive for all age groups.  
+
+The keywords focus on several core areas:  
+- **Product-Specific Terms:** Words like "collagen-boosting serum" and "anti-aging moisturizer" highlight the key benefits of the products, making it easier for users to find exactly what they’re looking for.  
+- **Age-Focused Keywords:** Phrases such as "skincare for 30-year-olds" and "early signs of aging solutions" cater to the unique skincare needs of the target demographic.  
+- **General Skincare Topics:** Broader terms like "natural skincare essentials" and "sensitive skin products" ensure the platform appeals to a wide audience.  
+- **Benefit-Driven Keywords:** Keywords such as "glowing skin routine" and "hydrating face products" emphasize the positive results users can achieve.  
+- **Specific Concerns:** Words like "fine lines and wrinkles treatment" and "pore-minimizing products" address common skincare issues, helping customers find solutions tailored to their needs.  
+
+By incorporating these keywords into product descriptions, marketing campaigns, and social media content, the goal is to increase visibility, attract the right audience, and provide a seamless user experience.  
+
 
 ## Tools and Technologies
 
