@@ -7,7 +7,7 @@
     <div class="product-grid" role="list">
         
         {% for product in best_sellers %}
-        <div class="product-card" role="listitem" aria-labelledby="{{ product.sku }}-title" aria-describedby="{{ product.sku }}-description {{ product.sku }}-price {{ product.sku }}-rating">
+        <div class="product-card">
             <div class="product-image">
                 {% if product.image %}
                     <img src="{{ product.image.url }}" alt="{{ product.name }} - packaging of the product">
@@ -27,8 +27,8 @@
                 <i class="far fa-star" aria-hidden="true"></i>
                 {% endfor %}
             </div>
-            <p id="{{ product.sku }}-price" class="product-price" aria-label="Price: {{ product.price|floatformat:2 }} euros">€{{ product.price|floatformat:2 }}</p>
-            <button class="add-to-cart-btn" aria-label="Add {{ product.name }} to your cart">Add to Cart</button>
+            <p id="{{ product.sku }}-price" class="product-price">€{{ product.price|floatformat:2 }}</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
         </div>
         {% endfor %}
 

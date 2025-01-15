@@ -29,7 +29,7 @@
 <body>
 
     <header class="navbar-header">
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <nav class="navbar" aria-label="Main navigation">
 
             <button class="navbar-toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Toggle navigation menu" onclick="toggleMenu()">
                 <i id="menu-icon" class="fa-solid fa-bars" aria-hidden="true"></i>
@@ -37,10 +37,10 @@
             </button>
             <div class="navbar-logo"><a href="{% url 'homepage' %}" aria-label="NouriSkin Home">NouriSkin</a></div>
             <ul class="navbar-menu" id="navbar-menu">
-                <li role="none"><a href="{% url 'homepage' %}" role="menuitem">Home</a></li>
-                <li role="none"><a href="{% url 'products' %}" role="menuitem">Shop</a></li>
-                <li role="none"><a href="{% url 'about' %}" role="menuitem">About</a></li>
-                <li role="none"><a href="{% url 'contact'%}" role="menuitem">Contact Us</a></li>
+                <li><a href="{% url 'homepage' %}" >Home</a></li>
+                <li><a href="{% url 'products' %}" >Shop</a></li>
+                <li><a href="{% url 'about' %}" >About</a></li>
+                <li><a href="{% url 'contact'%}" >Contact Us</a></li>
             </ul>
             <div class="navbar-icons">
                 
