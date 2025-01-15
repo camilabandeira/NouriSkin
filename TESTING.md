@@ -25,3 +25,26 @@ The tool checked if the HTML followed proper standards and highlighted any error
 - [FAQ Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Ffaq%2F)
 - [Return and Refund Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Freturn-refund%2F)
 
+### CSS Testing
+
+I reviewed and validated the CSS files of this project using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/). I entered the links to the stylesheets into the tool, which checked for proper syntax and standards compliance.
+
+The validator flagged any errors or warnings in the CSS. These issues were reviewed and corrected to ensure the styles are clean, functional, and adhere to web standards.
+
+- [Homepage](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Produts Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Fproducts%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Produts Detail](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Fproducts%2F1%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Add Product](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Fproducts%2Fadd&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Update Product](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Fproducts%2Fproduct%2F1%2Fupdate%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Delete Product](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Fproducts%2F1%2Fdelete%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [About Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Fabout%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Contact Us](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Fcontact%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Seach Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Fsearch%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Cart Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Fcart%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Chcekout Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Fcheckout%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Signup Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Faccounts%2Fsignup&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Login Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Faccounts%2Flogin&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Logout Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Faccounts%2Flogout&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Profile Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Fprofile&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [FAQ Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Ffaq&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Return and Refund Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnouriskin-6effcd55f9fe.herokuapp.com%2Freturn-refund&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
