@@ -3,6 +3,9 @@
 
 **NouriSkin** is a full-stack e-commerce platform built to showcase web development practices in the context of a fictional skincare brand. The project focuses on creating a scalable, user-friendly application with features like dynamic product catalogs, personalized user experiences, secure payment integration, and responsive design. Designed with clean, maintainable code and best practices, NouriSkin demonstrate how technology can enhance the shopping experience for targeted skincare solutions.
 
+![Entity-Relationship Diagram](https://github.com/user-attachments/assets/0582f837-017b-4784-b02f-053e29739812)
+
+
 ## User Experience (UX)
 
 **NouriSkin**  platform is designed to provide a seamless and intuitive user experience for skincare enthusiasts. By prioritizing usability, accessibility, and responsive design, the platform ensures users can easily navigate and interact with the site across all devices. Here’s how the UX is crafted:
@@ -537,3 +540,31 @@ Store these variables in a `.env` file and never hardcode them in the codebase. 
      ```
 
 This ensures a smooth deployment process to Heroku and a functional local development setup.
+
+## Credits
+
+The development of **NouriSkin** was supported by various tools and resources that helped guide and shape the project. Below is a list of key contributors:
+
+1. **Code Institute's Boutique Ado Project**  
+   The **Boutique Ado** project provided an excellent foundation for building a full-stack e-commerce application. It served as a practical learning tool, offering insights into best practices for creating scalable, user-friendly platforms.  
+   - [Code Institute](https://learn.codeinstitute.net)
+
+2. **Leonardo.ai**  
+   The high-quality visuals used in this project were generated with **Leonardo.ai**, ensuring a professional and cohesive look for the platform.  
+   - [Leonardo.ai](https://leonardo.ai)
+
+3. **GitHub**  
+   **GitHub** was instrumental for version control, allowing for efficient tracking of changes and a well-documented development process. Hosting the repository on GitHub made collaboration and organization seamless.  
+   - [NouriSkin Repository](https://github.com/camilabandeira/NouriSkin)
+
+4. **Other Tools and Resources**  
+   - **Figma**: Used to design wireframes and visualize the layout of the site.  
+   - **drawSQL**: Helped structure and plan the database schema visually.  
+   - **Stripe Documentation**: Provided detailed steps for integrating secure payment functionality.
+
+5. **Django Documentation**  
+   The official **Django Documentation** was essential for understanding and implementing key features, such as database models, views, and authentication. Its clear examples and explanations ensured the project adhered to modern web development standards.  
+   - [Django Documentation](https://docs.djangoproject.com/en/stable/)
+
+
+These resources collectively contributed to the successful creation of the **NouriSkin** project.
