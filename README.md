@@ -464,6 +464,12 @@ Key Actions:
 
 The Facebook page strengthens NouriSkin’s connection with its audience, driving growth and loyalty while maintaining compliance with platform policies.
 
+# Sitemap Configuration
+
+I generated the sitemap for the website using [XML Sitemaps](https://www.xml-sitemaps.com/). The sitemap includes important information about all the pages on the site, such as the last update date, how frequently they change, and their priority relative to other pages. After generating the sitemap, I placed it in the root directory of the website.
+
+I also created a `robots.txt` file to guide search engine crawlers. This file helps manage which parts of the website can be indexed and prevents unnecessary sections from being crawled. I added the `robots.txt` file to the root directory alongside the sitemap.
+
 ## Tools and Technologies
 
 This project was built using the following tools and technologies:
