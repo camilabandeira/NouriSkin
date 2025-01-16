@@ -128,8 +128,42 @@ The tool flagged areas of the code that required adjustments to align with PEP 8
   - [urls.py](https://github.com/user-attachments/assets/fa156529-0f9f-4778-81eb-bcf118ada6a8)
   - [views.py](https://github.com/user-attachments/assets/d9f54cd5-8365-4fa9-9435-90c3e23b431a)
 
+### Lighthouse Testing
 
+The project was tested and validated using [Lighthouse](https://developers.google.com/web/tools/lighthouse). This tool audited performance, accessibility, best practices, and SEO.
 
+- [Homepage - Mobile](https://github.com/user-attachments/assets/f1a8fc65-10e9-4dd1-a1ae-932a393ac554)
+- [Homepage - Desktop](https://github.com/user-attachments/assets/45d7c573-9d82-4359-a6bc-26001e365b73)
+- [Produts Page - Mobile](https://github.com/user-attachments/assets/7ee8efec-e7fc-4403-9bde-ed8a803174c5)
+- [Produts Page - Desktop](https://github.com/user-attachments/assets/c461f06b-e740-4257-b249-799839f2b2de)
+- [Produts Detail](https://github.com/user-attachments/assets/ee229a50-593e-47dc-b84c-856e8ebb685b)
+- [Produts Detail](https://github.com/user-attachments/assets/31ba5a81-06e2-4b70-8246-84a073afda97)
+- [Add Product](https://github.com/user-attachments/assets/29a479be-3755-46df-954b-e16ba2f205e9)
+- [Add Product](https://github.com/user-attachments/assets/b2c9702a-49d3-4316-be75-8a3df24d3894)
+- [About Page - Mobile](https://github.com/user-attachments/assets/6bdb0c52-7a88-495d-8873-7d57a69d6cc8)
+- [About Page - Desktop](https://github.com/user-attachments/assets/7fec59bd-fd7a-463c-a2d0-be14bfce72e4)
+- [Contact Us - Mobile](https://github.com/user-attachments/assets/33c47911-3edf-4286-b714-6babf6c0bab5)
+- [Contact Us - Desktop](https://github.com/user-attachments/assets/33c47911-3edf-4286-b714-6babf6c0bab5)
+- [Seach Page - Mobile](https://github.com/user-attachments/assets/2eb154f7-6c22-4e8d-9388-233efd14205d)
+- [Seach Page - Desktop](https://github.com/user-attachments/assets/9e87a02a-cc0b-4a63-88f8-71516609da97)
+- [Cart Page - Mobile](https://github.com/user-attachments/assets/2094b9cf-8c07-4520-9618-7cc7c50d32f0)
+- [Cart Page - Desktop](https://github.com/user-attachments/assets/bcb238a1-2200-4950-bd24-61d81533a19f)
+- [Signup Page - Mobile](https://github.com/user-attachments/assets/8ad5e0c5-eddb-48f8-81b5-5d05b56e5902)
+- [Signup Page - Desktop](https://github.com/user-attachments/assets/8ad5e0c5-eddb-48f8-81b5-5d05b56e5902)
+- [Login Page - Mobile](https://github.com/user-attachments/assets/ee64913f-1067-4442-bc50-b2990d23e16e)
+- [Login Page - Desktop](https://github.com/user-attachments/assets/cb99b23d-7c44-4992-b305-1817d516fc7a)
+- [Logout Page-  Mobile](https://github.com/user-attachments/assets/ce3f548e-f2c3-4251-ba2c-1290d8acfce)
+- [Logout Page-  Desktop](https://github.com/user-attachments/assets/ce3f548e-f2c3-4251-ba2c-1290d8acfce)
+- [Checkout Page - Mobile](https://github.com/user-attachments/assets/d6224dba-abe6-444a-bd5b-a0180fbcf6f0)
+- [Checkout Page - Desktop](https://github.com/user-attachments/assets/58da1c47-36df-4607-acb3-c5ee4322f200)
+- [Checkout Success Page - Mobile](https://github.com/user-attachments/assets/21ce4d96-baba-4e74-982a-f8468341e13a)
+- [Checkout Sucess Page - Desktop](https://github.com/user-attachments/assets/bc9eb97a-a213-495d-87fe-55d8fbd5ca55)
+- [Profile Page - Mobile](https://github.com/user-attachments/assets/8f883344-e1dc-4ad8-98cd-066d1c0776ed)
+- [Profile Page - Desktop](https://github.com/user-attachments/assets/fbec33c2-691a-4ff7-9fa4-34f36ceff4e1)
+- [FAQ Page - Mobile](https://github.com/user-attachments/assets/e2bcd0e0-1213-446e-8fcd-467743f572eb)
+- [FAQ Page - Desktop](https://github.com/user-attachments/assets/1eb3ae5f-7b84-4a73-b32f-ee6b922621b5)
+- [Return and Refund Page - Mobile](https://github.com/user-attachments/assets/ad74d203-34f2-4fe7-91c5-0c0ab7807a60)
+- [Return and Refund Page - Desktop](https://github.com/user-attachments/assets/6f799784-db4b-42e8-a09c-b3d65b1d0176)
 
 
 
