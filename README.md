@@ -7,19 +7,22 @@
 
 ![Responsiveness screenshot](https://github.com/user-attachments/assets/0582f837-017b-4784-b02f-053e29739812)
 
-## Table of Contents
+# Table of Contents
 
-1. [User Experience (UX)](#user-experience-ux)  
+1. **[User Experience (UX)](#user-experience-ux)**  
    - [User Stories](#user-stories)  
      - [Site Owner Goals](#site-owner-goals)  
      - [User Goals](#user-goals)  
-   - [Color Scheme](#color-scheme)  
-   - [Typography](#typography)  
-   - [Wireframe](#wireframe)  
 
-2. [Entity-Relationship Diagram (ERD)](#entity-relationship-diagram-erd)  
+2. **[Color Scheme](#color-scheme)**  
 
-3. [Features](#features)  
+3. **[Typography](#typography)**  
+
+4. **[Wireframe](#wireframe)**  
+
+5. **[Entity-Relationship Diagram (ERD)](#entity-relationship-diagram-erd)**  
+
+6. **[Features](#features)**  
    - [Homepage](#homepage)  
    - [About Page](#about-page)  
    - [Contact Page](#contact-page)  
@@ -37,21 +40,40 @@
    - [Sign Up Page](#sign-up-page)  
    - [Profile Page](#profile-page)  
 
-4. [SEO and Marketing](#seo-and-marketing)  
+7. **[SEO and Marketing](#seo-and-marketing)**  
    - [Purpose](#purpose)  
    - [Strategy](#strategy)  
    - [Goals](#goals)  
    - [Marketing Approach](#marketing-approach)  
    - [Keyword Research](#keyword-research)  
+   - [Facebook Page](#facebook-page)  
+   - [Sitemap Configuration](#sitemap-configuration)  
 
-5. [Tools and Technologies](#tools-and-technologies)  
+8. **[Tools and Technologies](#tools-and-technologies)**  
+   - [Backend Framework](#backend-framework)  
+   - [Frontend](#frontend)  
+   - [Design Tool](#design-tool)  
+   - [Database](#database)  
+   - [Cloud Services](#cloud-services)  
+   - [Payment Integration](#payment-integration)  
+   - [Package Management](#package-management)  
+   - [Deployment Tools](#deployment-tools)  
+   - [Environment Management](#environment-management)  
+   - [Other Libraries](#other-libraries)  
 
-6. [Deployment & Local Development](#deployment--local-development)  
+9. **[Deployment & Local Development](#deployment--local-development)**  
    - [Local Development](#local-development)  
    - [Environment Variables](#environment-variables)  
    - [Heroku Deployment](#heroku-deployment)  
 
-7. [Credits](#credits)  
+10. **[Test](#test)**  
+    - [Testing File](#testing-file)  
+
+11. **[Credits](#credits)**  
+    - [Code Institute's Boutique Ado Project](#code-institutes-boutique-ado-project)  
+    - [Leonardo.ai](#leonardoai)  
+    - [AWS S3](#aws-s3)  
+    - [Django Documentation](#django-documentation)  
 
 
 ## User Experience (UX)
@@ -616,6 +638,9 @@ Store these variables in a `.env` file and never hardcode them in the codebase. 
 
 This ensures a smooth deployment process to Heroku and a functional local development setup.
 
+
+## Test
+[Testing file](https://github.com/camilabandeira/NouriSkin/blob/main/TESTING.md)
 ## Credits
 
 The development of **NouriSkin** was supported by various tools and resources that helped guide and shape the project. Below is a list of key contributors:
