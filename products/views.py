@@ -1,7 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.db.models import Avg
 from django.contrib import messages
-from .models import Product, Category, Concern, SkinType, ProductReview
+from .models import (
+    Product, Category, Concern,
+    SkinType, ProductReview
+)
 from .forms import ProductForm
 from .review_form import ReviewForm
 from django.contrib.auth.decorators import login_required
@@ -11,15 +14,21 @@ def all_products(request):
     """ A view to show all products """
     categories = Category.objects.all()
     for category in categories:
-        category.product_count = Product.objects.filter(category=category).count()
+        category.product_count = Product.objects.filter(
+            category=category
+        ).count()
 
     concerns = Concern.objects.all()
     for concern in concerns:
-        concern.product_count = Product.objects.filter(concern=concern).count()
+        concern.product_count = Product.objects.filter(
+            concern=concern
+        ).count()
 
     skin_types = SkinType.objects.all()
     for skin_type in skin_types:
-        skin_type.product_count = Product.objects.filter(skin_types=skin_type).count()
+        skin_type.product_count = Product.objects.filter(
+            skin_types=skin_type
+        ).count()
 
     selected_category = request.GET.get('category')
     selected_concern = request.GET.get('concern')
@@ -36,16 +45,15 @@ def all_products(request):
         products = products.filter(skin_types__id=selected_skin_type)
 
     for product in products:
-        average_rating = ProductReview.objects.filter(product=product).aggregate(Avg('rating'))['rating__avg'] or 0
-        average_rating = round(average_rating)
-        product.average_rating = average_rating
+        average_rating = ProductReview.objects.filter(
+            product=product
+        ).aggregate(Avg('rating'))['rating__avg'] or 0
+        product.average_rating = round(average_rating)
 
     if sort_option == "price-low-to-high":
         products = products.order_by('price')
     elif sort_option == "price-high-to-low":
         products = products.order_by('-price')
-
-    product_count = products.count()
 
     context = {
         'products': products,
@@ -66,7 +74,7 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to display the product details """
     product = get_object_or_404(Product, id=product_id)
-    
+
     product_concerns = product.concern.all()
     product_skin_types = product.skin_types.all()
     product_key_ingredients = product.key_ingredients.all()
@@ -74,11 +82,17 @@ def product_detail(request, product_id):
     filter_option = request.GET.get('filter', 'most-recent')
 
     if filter_option == 'highest-rating':
-        reviews = ProductReview.objects.filter(product=product).order_by('-rating')
+        reviews = ProductReview.objects.filter(
+            product=product
+        ).order_by('-rating')
     elif filter_option == 'lowest-rating':
-        reviews = ProductReview.objects.filter(product=product).order_by('rating')
+        reviews = ProductReview.objects.filter(
+            product=product
+        ).order_by('rating')
     else:
-        reviews = ProductReview.objects.filter(product=product).order_by('-submitted_at')
+        reviews = ProductReview.objects.filter(
+            product=product
+        ).order_by('-submitted_at')
 
     average_rating = reviews.aggregate(Avg('rating'))['rating__avg'] or 0
     average_rating = round(average_rating, 1)
@@ -90,9 +104,9 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
-        'product_concerns': product_concerns, 
-        'product_skin_types': product_skin_types, 
-        'product_key_ingredients': product_key_ingredients,  
+        'product_concerns': product_concerns,
+        'product_skin_types': product_skin_types,
+        'product_key_ingredients': product_key_ingredients,
         'reviews': reviews,
         'average_rating': average_rating,
         'total_reviews': total_reviews,
@@ -107,7 +121,7 @@ def write_review(request, product_id):
 
     if request.method == 'POST':
         form = ReviewForm(request.POST, user=request.user)
-        rating = request.POST.get('rating') 
+        rating = request.POST.get('rating')
 
         if not rating or int(rating) == 0:
             form.add_error('rating', "Please select a star rating!")
@@ -116,7 +130,9 @@ def write_review(request, product_id):
             review.product = product
             if request.user.is_authenticated:
                 review.user = request.user
-                review.name = request.user.get_full_name() or request.user.username
+                review.name = (
+                    request.user.get_full_name() or request.user.username
+                )
             else:
                 review.email = form.cleaned_data.get('email')
                 review.name = form.cleaned_data.get('name')
@@ -124,7 +140,11 @@ def write_review(request, product_id):
             messages.success(request, "Thank you for your review!")
             return redirect('product_detail', product_id=product.id)
         else:
-            messages.error(request, "There was an error with your review. Please check the form and try again.")
+            messages.error(
+                request,
+                "There was an error with your review. "
+                "Please check the form and try again."
+            )
     else:
         form = ReviewForm(user=request.user)
 
@@ -134,6 +154,7 @@ def write_review(request, product_id):
     }
 
     return render(request, 'products/review_form.html', context)
+
 
 @login_required
 def add_product(request):
@@ -150,6 +171,7 @@ def add_product(request):
         form = ProductForm()
 
     return render(request, 'products/add_product.html', {'form': form})
+
 
 @login_required
 def product_update(request, pk):
@@ -176,14 +198,14 @@ def product_update(request, pk):
 
 @login_required
 def delete_product(request, product_id):
-    """
-    A view to delete a product.
-    """
+    """ A view to delete a product """
     product = get_object_or_404(Product, id=product_id)
 
     if request.method == "POST":
         product.delete()
         messages.success(request, "Product deleted successfully!")
-        return redirect('products') 
+        return redirect('products')
 
-    return render(request, 'products/delete_product.html', {'product': product})
+    return render(
+        request, 'products/delete_product.html', {'product': product}
+        )

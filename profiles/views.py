@@ -27,7 +27,7 @@ def profile(request):
             user.save()
             return redirect('profile')
         else:
-            print(form.errors)  
+            print(form.errors)
     else:
         initial_data = {
             'first_name': user.first_name,

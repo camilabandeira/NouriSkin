@@ -1,10 +1,16 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+
+
 def view_cart(request):
     """ A view that renders the cart contents page """
     return render(request, 'cart/cart.html')
 
+
 def add_to_cart(request, item_id):
+    """
+    Add a specified quantity of the item to the cart
+    """
     quantity = int(request.POST.get('quantity', 1))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
@@ -20,12 +26,13 @@ def add_to_cart(request, item_id):
     request.session.modified = True
 
     messages.success(request, "Item added to cart!")
-
-
     return redirect(redirect_url)
 
+
 def update_cart(request, item_id):
-    """ Update the quantity of the specified product to the specified amount """
+    """
+    Update the quantity of the specified product
+    """
     action = request.POST.get('action', None)
     cart = request.session.get('cart', {})
 

@@ -7,13 +7,17 @@ class ProfileForm(forms.ModelForm):
         max_length=150,
         required=True,
         label="First Name",
-        widget=forms.TextInput(attrs={'placeholder': 'First Name'})
+        widget=forms.TextInput(
+            attrs={'placeholder': 'First Name'}
+        )
     )
     last_name = forms.CharField(
         max_length=150,
         required=True,
         label="Last Name",
-        widget=forms.TextInput(attrs={'placeholder': 'Last Name'})
+        widget=forms.TextInput(
+            attrs={'placeholder': 'Last Name'}
+        )
     )
 
     class Meta:
@@ -21,23 +25,54 @@ class ProfileForm(forms.ModelForm):
         fields = [
             'default_phone_number', 'default_country', 'default_postcode',
             'default_town_or_city', 'default_street_address1',
-            'default_street_address2', 'default_county'
+            'default_street_address2', 'default_county',
         ]
         widgets = {
-            'default_phone_number': forms.TextInput(attrs={'placeholder': 'Phone Number'}),
-            'default_country': forms.Select(attrs={'placeholder': 'Country'}),
-            'default_postcode': forms.TextInput(attrs={'placeholder': 'Postcode'}),
-            'default_town_or_city': forms.TextInput(attrs={'placeholder': 'Town or City'}),
-            'default_street_address1': forms.TextInput(attrs={'placeholder': 'Street Address 1'}),
-            'default_street_address2': forms.TextInput(attrs={'placeholder': 'Street Address 2'}),
-            'default_county': forms.TextInput(attrs={'placeholder': 'County'}),
+            'default_phone_number': forms.TextInput(
+                attrs={'placeholder': 'Phone Number'}
+            ),
+            'default_country': forms.Select(
+                attrs={'placeholder': 'Country'}
+            ),
+            'default_postcode': forms.TextInput(
+                attrs={'placeholder': 'Postcode'}
+            ),
+            'default_town_or_city': forms.TextInput(
+                attrs={'placeholder': 'Town or City'}
+            ),
+            'default_street_address1': forms.TextInput(
+                attrs={'placeholder': 'Street Address 1'}
+            ),
+            'default_street_address2': forms.TextInput(
+                attrs={'placeholder': 'Street Address 2'}
+            ),
+            'default_county': forms.TextInput(
+                attrs={'placeholder': 'County'}
+            ),
         }
 
+
 class CustomSignupForm(forms.Form):
-    username = forms.CharField(max_length=150, required=True, label="Username")
-    email = forms.EmailField(max_length=254, required=True, label="Email")
-    first_name = forms.CharField(max_length=30, required=True, label="First Name")
-    last_name = forms.CharField(max_length=30, required=True, label="Last Name")
+    username = forms.CharField(
+        max_length=150,
+        required=True,
+        label="Username"
+    )
+    email = forms.EmailField(
+        max_length=254,
+        required=True,
+        label="Email"
+    )
+    first_name = forms.CharField(
+        max_length=30,
+        required=True,
+        label="First Name"
+    )
+    last_name = forms.CharField(
+        max_length=30,
+        required=True,
+        label="Last Name"
+    )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -48,7 +83,9 @@ class CustomSignupForm(forms.Form):
             'last_name': 'Enter your last name',
         }
         for field_name, field in self.fields.items():
-            field.widget.attrs['placeholder'] = placeholders.get(field_name, f"Enter {field_name}")
+            field.widget.attrs['placeholder'] = placeholders.get(
+                field_name, f"Enter {field_name}"
+            )
 
     def signup(self, request, user):
         user.username = self.cleaned_data['username']

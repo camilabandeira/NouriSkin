@@ -26,9 +26,14 @@ class OrderForm(forms.ModelForm):
         for field in self.fields:
             if field == 'country':
                 self.fields[field].widget.attrs.pop('placeholder', None)
-                self.fields[field].empty_label = 'Select your Country'
+                self.fields[field].empty_label = (
+                    'Select your Country'
+                )
             else:
-                placeholder = f"{placeholders[field]} *" if self.fields[field].required else placeholders[field]
+                placeholder = (
+                    f"{placeholders[field]} *"
+                    if self.fields[field].required else placeholders[field]
+                )
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False

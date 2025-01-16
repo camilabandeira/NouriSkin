@@ -65,3 +65,78 @@ By running the scripts through JSHint, I identified and resolved any flagged iss
 - [Checkout Page](https://github.com/user-attachments/assets/1e22c374-2737-4b90-b6df-0649ce510b59)
 - [Products Page](https://github.com/user-attachments/assets/420f8c50-997f-45ad-a40d-6f2b76f45f24)
 
+
+### Python Code Testing
+
+I tested and validated the Python code of this project using [PEP8CI](https://pep8ci.herokuapp.com/). This tool checks the code against the PEP 8 Python Style Guide, highlighting any formatting issues, errors, or warnings.
+
+The tool flagged areas of the code that required adjustments to align with PEP 8 standards. These issues were reviewed and corrected to ensure the code is clean, readable, and adheres to Python's best practices.
+
+
+- [manage.py](https://github.com/user-attachments/assets/a55a7193-7bbc-4836-adf0-41c10179f2f4)
+
+- NouriSkin
+  - [asgi.py](https://github.com/user-attachments/assets/0850f572-9cf7-419d-8d69-af2042607e96)
+  - [settings.py](https://github.com/user-attachments/assets/9c289deb-55ba-4c24-b29d-b0ca1f8d8f68)
+  - [urls.py](https://github.com/user-attachments/assets/ddcc7c1a-b438-425b-961a-129779d771e6)
+  - [wsgi.py](https://github.com/user-attachments/assets/4a8eccc0-d25b-4030-b755-05ef22feadfe)
+
+- home
+  - [admin.py](https://github.com/user-attachments/assets/541273d3-2b27-45c9-8865-f03370e7ff10)
+  - [apps.py](https://github.com/user-attachments/assets/8c0eddd5-296d-4573-9d59-1f894715f8a9)
+  - [models.py](https://github.com/user-attachments/assets/a00ef2a1-9997-4a31-ba6b-22bc6c3480e9)
+  - [tests.py](https://github.com/user-attachments/assets/ba7f0a66-4f01-4460-818d-5a7b319c8c40)
+  - [urls.py](https://github.com/user-attachments/assets/4667ad7c-275b-4cfc-a7e0-37b0ef15df1f)
+  - [views.py](https://github.com/user-attachments/assets/c9f1a4a1-6f92-4269-9848-d3ef9c035d48)
+
+- products
+  - [admin.py](https://github.com/user-attachments/assets/f5643d4e-0008-4f49-bc21-a1e702d01db9)
+  - [apps.py](https://github.com/user-attachments/assets/75db4ede-4f07-4111-953f-d02e54b07d26)
+  - [forms.py](https://github.com/user-attachments/assets/978bdfc7-0247-4384-aedb-fb9417c4ad22)
+  - [models.py](https://github.com/user-attachments/assets/8fcbe2fc-7fa6-43c8-b05d-c7b4229581f3)
+  - [review_form](https://github.com/user-attachments/assets/9af1f7f4-f123-4937-bf19-cb813b79d10a)
+  - [tests.py](https://github.com/user-attachments/assets/ba7f0a66-4f01-4460-818d-5a7b319c8c40)
+  - [urls.py](https://github.com/user-attachments/assets/2c67c94f-61d3-41fb-b43d-29fd7970a646)
+  - [views.py](https://github.com/user-attachments/assets/fbeb0db1-9d21-42c5-9ba4-3fa6f659e8a7)
+  - [signals.py](https://github.com/user-attachments/assets/b0133763-27fa-42f0-a446-9d341a2ed556)
+
+- cart
+  - [admin.py](https://github.com/user-attachments/assets/f5643d4e-0008-4f49-bc21-a1e702d01db9)
+  - [apps.py](https://github.com/user-attachments/assets/002ecbb9-27ed-4996-8cfd-728a2ad30aea)
+  - [context_processors.py](https://github.com/user-attachments/assets/be858bb4-af32-4db9-868a-67b2aed37435)
+  - [models.py](https://github.com/user-attachments/assets/a00ef2a1-9997-4a31-ba6b-22bc6c3480e9)
+  - [tests.py](https://github.com/user-attachments/assets/ba7f0a66-4f01-4460-818d-5a7b319c8c40)
+  - [urls.py](https://github.com/user-attachments/assets/6a3af328-139f-481e-8e2f-7d94d7b39542)
+  - [views.py](https://github.com/user-attachments/assets/887594e9-b06d-4127-9bc5-9fe222b41dee)
+
+- checkout
+  - [admin.py](https://github.com/user-attachments/assets/38b03dc5-0f5a-4aab-9ab2-bf8b5e47b0fa)
+  - [apps.py](https://github.com/user-attachments/assets/e3e1943c-8eb9-4ce8-a3af-9c3c1e02741e)
+  - [forms](https://github.com/user-attachments/assets/109f2787-e30b-4516-a1fb-9719373cb84e)
+  - [models.py](https://github.com/user-attachments/assets/79f805cc-1f26-475f-a428-779adb11b5cb)
+  - [signals.py](https://github.com/user-attachments/assets/491edbc6-ea50-4126-bb52-af7c3b639706)
+  - [tests.py](https://github.com/user-attachments/assets/ba7f0a66-4f01-4460-818d-5a7b319c8c40)
+  - [urls.py](https://github.com/user-attachments/assets/b5701ac7-29b9-4c23-b540-579687260773)
+  - [views.py](https://github.com/user-attachments/assets/36498115-9a62-4d6c-b831-da3fedb37589)
+
+- profile
+  - [admin.py](https://github.com/user-attachments/assets/4304f8f6-989a-4017-b9bc-29872a51a2c4)
+  - [apps.py](https://github.com/user-attachments/assets/98e4503f-5f4a-4f86-ab26-ab4e5b9bd990)
+  - [forms.py](https://github.com/user-attachments/assets/1b0e670d-12d8-47a4-9e2a-14e674cdc1e0)
+  - [models.py](https://github.com/user-attachments/assets/5a1979c6-4f98-47de-826c-a04903f462bd)
+  - [tests.py](https://github.com/user-attachments/assets/ba7f0a66-4f01-4460-818d-5a7b319c8c40)
+  - [urls.py](https://github.com/user-attachments/assets/fa156529-0f9f-4778-81eb-bcf118ada6a8)
+  - [views.py](https://github.com/user-attachments/assets/d9f54cd5-8365-4fa9-9435-90c3e23b431a)
+
+
+
+
+
+
+
+
+
+
+
+
+

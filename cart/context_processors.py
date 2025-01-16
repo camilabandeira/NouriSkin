@@ -2,6 +2,7 @@ from decimal import Decimal
 from django.conf import settings
 from products.models import Product
 
+
 def cart_contents(request):
     cart_items = []
     total = Decimal("0.00")
@@ -30,7 +31,10 @@ def cart_contents(request):
         free_delivery_message = None
     else:
         delivery = Decimal(settings.FIXED_DELIVERY_FEE)
-        free_delivery_message = f"Spend €{settings.FREE_DELIVERY_THRESHOLD - total:.2f} more for free delivery"
+        free_delivery_message = (
+            f"Spend €{settings.FREE_DELIVERY_THRESHOLD - total:.2f} "
+            "more for free delivery"
+        )
 
     grand_total = total if delivery == "Free" else total + delivery
 
@@ -38,7 +42,10 @@ def cart_contents(request):
         'cart_items': cart_items,
         'total': total.quantize(Decimal("0.01")),
         'product_count': product_count,
-        'delivery': delivery if delivery == "Free" else delivery.quantize(Decimal("0.01")),
+        'delivery': (
+            delivery if delivery == "Free"
+            else delivery.quantize(Decimal("0.01"))
+        ),
         'free_delivery_message': free_delivery_message,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total.quantize(Decimal("0.01")),

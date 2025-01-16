@@ -3,21 +3,23 @@ from django.core.paginator import Paginator
 from products.models import Product, ProductReview
 from django.db.models import Avg
 
+
 def homepage(request):
     """Render the homepage"""
-    best_sellers_list = Product.objects.filter(rating__gte=4.0).order_by('-rating')
-    paginator = Paginator(best_sellers_list, 4)  
+    best_sellers_list = Product.objects.filter(
+        rating__gte=4.0).order_by('-rating')
+    paginator = Paginator(best_sellers_list, 4)
     page_number = request.GET.get('page')
     best_sellers = paginator.get_page(page_number)
 
-
     for product in best_sellers:
-        avg_rating = ProductReview.objects.filter(product=product).aggregate(Avg('rating'))['rating__avg'] or 0
+        avg_rating = ProductReview.objects.filter(product=product).aggregate(
+            Avg('rating')
+        )['rating__avg'] or 0
         product.rating = round(avg_rating, 1)
-        product.full_stars = range(int(product.rating)) 
-        product.empty_stars = range(5 - int(product.rating))  
+        product.full_stars = range(int(product.rating))
+        product.empty_stars = range(5 - int(product.rating))
         product.save()
-
 
     context = {
         'best_sellers': best_sellers,
@@ -31,17 +33,21 @@ def faq_page(request):
     """Render the FAQ page"""
     return render(request, 'faq.html')
 
+
 def return_refund(request):
     """Render the Return & Refund page"""
     return render(request, 'return_refund.html')
+
 
 def custom_404_view(request, exception):
     """Render the 404 page"""
     return render(request, '404.html', status=404)
 
+
 def about(request):
     """Render the About page"""
     return render(request, 'about.html')
+
 
 def contact(request):
     """Render the Contact page"""
@@ -56,7 +62,9 @@ def contact(request):
 
     return render(request, "contact.html")
 
+
 def search_results(request):
+    """Render the search results page"""
     query = request.GET.get('q')
     products = Product.objects.filter(name__icontains=query) if query else []
     context = {
